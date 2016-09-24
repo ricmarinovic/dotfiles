@@ -40,8 +40,11 @@ then
   brew bundle --verbose
 fi
 
+echo "Updating homebrew ..."
 brew update
 brew upgrade
+
+echo "Updating gems ..."
 gem update --system
 gem update
 
@@ -50,14 +53,13 @@ then
   gem install rails
 fi
 
-# Run all of the install files
-for file in $(find . -name "install.sh"); do
-  echo "Installing $(file) ..."
-  sh -c "${file}"
-done
-
 # Copy files
 echo "Copying files ..."
 copy_files
+
+# Run all of the install files
+for file in $(find . -name "install.sh"); do
+  sh -c "${file}"
+done
 
 echo "... done!"

@@ -5,6 +5,7 @@
 	email = marinovic.ricardo@gmail.com
 [core]
 	editor = atom --wait
+	excludesfile = /Users/sheikbox/.gitignore
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
