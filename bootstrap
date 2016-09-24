@@ -1,0 +1,63 @@
+# #!/usr/bin/env bash
+
+set -e
+
+dir=$(pwd -P)
+cd $dir
+
+copy_files () {
+  for symlink in $(find . -name "*.symlink"); do
+    # If a directory ends with symlink
+    if [ -d ${symlink} ]; then
+      for file in $symlink/*; do
+        local directory=${symlink##*/}
+
+        # Create the directory if it doesn't exist
+        if ! [ -d ~/.${directory%.*} ]; then
+          mkdir ~/.${directory%.*}
+        fi
+
+        echo "- Copying ./${file#'./'} => ~/.${directory%.*}/${file##*/}"
+        ln -shf $dir/${file#'./'} ~/.${directory%.*}/${file##*/}
+      done
+
+    # If a file ends with symlink
+    else
+      local filename=${symlink##*/}
+
+      echo "- Copying ./${symlink#'./'} => ~/.${filename%.*}"
+      ln -shf $dir/${symlink#'./'} ~/.${filename%.*}
+    fi
+  done
+}
+
+# Install Homebrew if it is not installed already
+if test ! $(which brew)
+then
+  echo "Installing Homebrew ..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew tap homebrew/bundle
+  brew bundle --verbose
+fi
+
+brew update
+brew upgrade
+gem update --system
+gem update
+
+if test ! $(which rails)
+then
+  gem install rails
+fi
+
+# Run all of the install files
+for file in $(find . -name "install.sh"); do
+  echo "Installing $(file) ..."
+  sh -c "${file}"
+done
+
+# Copy files
+echo "Copying files ..."
+copy_files
+
+echo "... done!"

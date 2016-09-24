@@ -1,0 +1,11 @@
+# Git Config
+
+[user]
+	name = Ricardo Marinovic
+	email = marinovic.ricardo@gmail.com
+[core]
+	editor = atom --wait
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true

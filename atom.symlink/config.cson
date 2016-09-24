@@ -1,0 +1,55 @@
+"*":
+  "autocomplete-plus":
+    confirmCompletion: "tab always, enter when suggestion explicitly selected"
+    enableBuiltinProvider: false
+    fileBlacklist: [
+      ".*"
+      "*.md"
+      "*.txt"
+    ]
+  core:
+    themes: [
+      "one-dark-ui"
+      "academie-syntax"
+    ]
+  editor:
+    fontFamily: "FiraCode-Regular"
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "4b7e022d-8d05-6269-e9e3-8051770d0eef"
+  linter:
+    lintOnFly: false
+    showErrorTabFile: false
+    showErrorTabProject: false
+  "linter-js-standard": {}
+  minimap:
+    plugins:
+      bookmarks: true
+      bookmarksDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+  "one-dark-ui":
+    layoutMode: "Compact"
+    tabSizing: "Even"
+  pigments: {}
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+    ]
+  "terminal-plus":
+    style:
+      theme: "homebrew"
+    toggles: {}
+  welcome:
+    showOnStartup: false
