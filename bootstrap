@@ -36,20 +36,22 @@ if test ! $(which brew)
 then
   echo "Installing Homebrew ..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew tap homebrew/bundle
-  brew bundle --verbose
+
+  echo "Updating homebrew ..."
+  brew update
+  brew upgrade
 fi
 
-echo "Updating homebrew ..."
-brew update
-brew upgrade
-
-echo "Updating gems ..."
-gem update --system
-gem update
+echo "Brew bundle ..."
+brew tap homebrew/bundle
+brew bundle --verbose
 
 if test ! $(which rails)
 then
+  echo "Updating gems ..."
+  gem update --system
+  gem update
+  echo "Installing rails ..."
   gem install rails
 fi
 
