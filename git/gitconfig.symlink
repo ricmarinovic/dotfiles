@@ -6,7 +6,16 @@
 [core]
 	editor = atom --wait
 	excludesfile = /Users/sheikbox/.gitignore
+	autocrlf = input
 [filter "lfs"]
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[color]
+	ui = true
+[pull]
+	rebase = true
+[merge]
+	ff = false
+[alias]
+	l = log --oneline --decorate --all

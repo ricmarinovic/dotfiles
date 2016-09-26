@@ -1,5 +1,6 @@
 "*":
   "autocomplete-plus":
+    backspaceTriggersAutocomplete: true
     confirmCompletion: "tab always, enter when suggestion explicitly selected"
     enableBuiltinProvider: false
     fileBlacklist: [
@@ -20,7 +21,6 @@
     showInvisibles: true
     softWrap: true
     softWrapAtPreferredLineLength: true
-    tabType: "soft"
   "exception-reporting":
     userId: "4b7e022d-8d05-6269-e9e3-8051770d0eef"
   linter:
