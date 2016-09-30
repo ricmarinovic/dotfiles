@@ -46,15 +46,6 @@ echo "Brew bundle ..."
 brew tap homebrew/bundle
 brew bundle --verbose
 
-if test ! $(which rails)
-then
-  echo "Updating gems ..."
-  gem update --system
-  gem update
-  echo "Installing rails ..."
-  gem install rails
-fi
-
 # Copy files
 echo "Copying files ..."
 copy_files

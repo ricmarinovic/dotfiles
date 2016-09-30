@@ -5,10 +5,13 @@
     enableBuiltinProvider: false
     fileBlacklist: [
       ".*"
-      "*.md"
       "*.txt"
     ]
   core:
+    packagesWithKeymapsDisabled: [
+      "minimap-git-diff"
+      "spell-check"
+    ]
     themes: [
       "one-dark-ui"
       "academie-syntax"
