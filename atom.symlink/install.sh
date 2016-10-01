@@ -1,7 +1,7 @@
 # #!/usr/bin/env bash
 
 # Installs academie theme if apm is installed
-if test ! $(which apm)
+if test $(which apm)
 then
   echo "Installing atom packages ..."
   apm install academie-syntax
