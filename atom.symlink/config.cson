@@ -12,6 +12,7 @@
       "minimap-git-diff"
       "spell-check"
     ]
+    telemetryConsent: "no"
     themes: [
       "one-dark-ui"
       "academie-syntax"
@@ -50,6 +51,12 @@
       "text.plain"
       "text.plain.null-grammar"
     ]
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   "terminal-plus":
     style:
       theme: "homebrew"

@@ -37,6 +37,10 @@
     'prefix': 'fn'
     'body': 'fn ($1) -> $2 end$0'
 
+  'Module constant':
+    'prefix': 'module'
+    'body': '__MODULE__'
+
 
 # JavasCript ------------------------------------------------------
 '.source.js':
@@ -47,3 +51,9 @@
   'Anonymous function':
     'prefix': 'fn'
     'body': '($1) => {\n\t$2\n}'
+
+# Ruby -------------------------------------------------------------
+'.source.ruby':
+  'Test':
+    'prefix': 'test'
+    'body': 'test \'$1\' do\n\t$2\nend'
