@@ -57,3 +57,9 @@
   'Test':
     'prefix': 'test'
     'body': 'test \'$1\' do\n\t$2\nend'
+
+# GitHub Markup Language
+'.source.gfm':
+  'Elixir code':
+    'prefix': 'excode'
+    'body': '```elixir\n$1\n```'

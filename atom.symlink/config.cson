@@ -8,6 +8,9 @@
       "*.txt"
     ]
   core:
+    disabledPackages: [
+      "linter-rubocop"
+    ]
     packagesWithKeymapsDisabled: [
       "minimap-git-diff"
       "spell-check"
@@ -25,6 +28,7 @@
     showInvisibles: true
     softWrap: true
     softWrapAtPreferredLineLength: true
+    tabType: "soft"
   "exception-reporting":
     userId: "4b7e022d-8d05-6269-e9e3-8051770d0eef"
   linter:
@@ -50,6 +54,7 @@
       "text.git-commit"
       "text.plain"
       "text.plain.null-grammar"
+      "source.gfm"
     ]
   "split-diff":
     diffWords: true
