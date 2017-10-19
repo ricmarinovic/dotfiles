@@ -164,6 +164,7 @@
 - Open preferences                       cmd ,
 - Keyboard shortcuts                     cmd K cmd S
 - User snippets                          cmd K cmd U
+- Insert snippet                         cmd K S
 - Color theme                            cmd K cmd T
 - Change language                        cmd K cmd L
 - Format document                        cmd K cmd F

@@ -1,38 +1,22 @@
 {
-/*
-	// Place your snippets for Elixir here. Each snippet is defined under a snippet name and has a prefix, body and
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
-	// same ids are connected.
-	// Example:
-	"Print to console": {
-		"prefix": "log",
-		"body": [
-			"console.log('$1');",
-			"$2"
-		],
-		"description": "Log output to console"
-	}
-*/
-
-  "Module": {
-    "prefix": "defm",
-    "description": "Module definition",
+  // # DEFINITIONS
+  "Function": {
+    "description": "Function definition",
+    "prefix": "def",
     "body": [
-      "defmodule $1 do",
-      "\t$0",
+      "def $1($2) do",
+      "\t$3",
       "end"
     ]
   },
-  "IO.puts": {
-    "prefix": "ip",
-    "description": "Print to screen",
-    "body": "IO.puts \"$1\""
-  },
-  "IO.inspect": {
-    "prefix": "ii",
-    "description": "Print variable to screen",
-    "body": "IO.inspect($1${2:, label: $3})"
+  "Private function": {
+    "description": "Private function definition",
+    "prefix": "defp",
+    "body": [
+      "defp $1($2) do",
+      "\t$3",
+      "end"
+    ]
   },
   "Inline function": {
     "prefix": "idef",
@@ -47,30 +31,183 @@
   "Annonymous function": {
     "prefix": "af",
     "description": "Annonymous function",
-    "body": "fn($1) -> $2 end$0"
+    "body": "fn ($1) -> $2 end$0"
   },
+  "Module": {
+    "prefix": "defmodule",
+    "description": "Module definition",
+    "body": [
+      "defmodule $1 do",
+      "\t$0",
+      "end"
+    ]
+  },
+  "defc": {
+    "description": "defcallback",
+    "prefix": "defcallback",
+    "body": "defcallback $1 :: $0"
+  },
+  "defd": {
+    "prefix": "defdelegate",
+    "body": "defdelegate $1 to: $0",
+    "description": "defdelegate"
+  },
+  "defe": {
+    "prefix": "defexception",
+    "body": "defexception [${1::message}]",
+    "description": "defexception"
+  },
+  "defi": {
+    "prefix": "defimpl",
+    "body": "defimpl $1, for: $2 do\n  $0\nend",
+    "description": "defimpl"
+  },
+  "defm": {
+    "prefix": "defmacro",
+    "body": "defmacro $1 do\n\t$0\nend",
+    "description": "defmacro"
+  },
+  "defmc": {
+    "prefix": "defmacrocallback",
+    "body": "defmacrocallback $1 :: $0",
+    "description": "defmacrocallback"
+  },
+  "defmp": {
+    "prefix": "defmacrop",
+    "body": "defmacrop $1 do\n\t$0\nend",
+    "description": "defmacrop"
+  },
+  "defmod": {
+    "prefix": "defmodule",
+    "body": "defmodule $1 do\n\t$0\nend",
+    "description": "defmodule"
+  },
+  "defp": {
+    "prefix": "defp",
+    "body": "defp $1 do\n\t$0\nend",
+    "description": "defp"
+  },
+  "defpro": {
+    "prefix": "defprotocol",
+    "body": "defprotocol $1 do\n  $0\nend",
+    "description": "defprotocol"
+  },
+  "defs": {
+    "prefix": "defstruct",
+    "body": "defstruct $1: $2",
+    "description": "defstruct"
+  },
+
+
+  // # IO
+  "IO.puts": {
+    "prefix": "ip",
+    "description": "Print to screen",
+    "body": "IO.puts \"$1\""
+  },
+  "IO.inspect": {
+    "prefix": "ii",
+    "description": "Print variable to screen",
+    "body": "IO.inspect($1${2:, label: $3})"
+  },
+
   "Module constant": {
     "prefix": "mod",
     "description": "Module constant",
     "body": "__MODULE__"
   },
-  "With": {
-    "prefix": "with",
-    "description": "With keyword",
-    "body": [
-      "with $1",
-      "do",
-      "\t$2",
-      "end"
-    ]
-  },
-  "If statement": {
-    "prefix": "if",
+
+
+  // # CONDITIONALS
+  "if statement": {
     "description": "if statement",
+    "prefix": "if",
     "body": [
       "if $1 do",
       "\t$2",
       "end"
     ]
+  },
+  "case statement": {
+    "description": "case statement",
+    "prefix": "case",
+    "body": [
+      "case $1 do",
+      "\t$2 ->",
+      "\t\t$3",
+      "end"
+    ]
+  },
+  "cond statement": {
+    "description": "cond statement",
+    "prefix": "cond",
+    "body": [
+      "cond do",
+      "\t$1 ->",
+      "\t\t$2",
+      "end"
+    ]
+  },
+
+  // TESTS
+  "test case": {
+    "description": "test",
+    "body": [
+      "test $1 do",
+      "\t$2",
+      "end"
+    ],
+    "prefix": "test"
+  },
+  "describe": {
+    "description": "describe test",
+    "prefix": "describe",
+    "body": [
+      "describe $1 do",
+      "\t$2",
+      "end"
+    ]
+  },
+
+
+  "do/end block": {
+    "descripton": "do/end block",
+    "prefix": "do",
+    "body": [
+      "do",
+      "\t$1",
+      "end"
+    ]
+  },
+  "doc": {
+    "prefix": "@doc",
+    "body": "@doc \"\"\"\n$1\n\"\"\"",
+    "description": "doc"
+  },
+  "mdoc": {
+    "prefix": "@moduledoc",
+    "body": "@moduledoc \"\"\"\n$1\n\"\"\"",
+    "description": "moduledoc"
+  },
+  "spec": {
+    "prefix": "@spec",
+    "body": "@spec $1",
+    "description": "spec"
+  },
+  "rec": {
+    "prefix": "receive",
+    "body": [
+      "receive do",
+      "\t${1:{${2::message_type}, ${3:value}\\}} ->",
+      "\t\t${4:# code}",
+      "end\n"
+    ],
+    "description": "receive"
+  },
+  "req": {
+    "prefix": "require",
+    "body": "require $0",
+    "description": "require"
   }
 }
+

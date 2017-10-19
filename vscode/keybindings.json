@@ -592,16 +592,22 @@
     "command": "editor.action.openDeclarationToTheSide",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
-  // Peek definition                        cmd g P
+  // Peek definition                        cmd G P
   {
     "key": "cmd+g p",
     "command": "editor.action.previewDeclaration",
     "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
   },
-  // Show hover                             cmd g H
+  // Show hover                             cmd G H
   {
     "key": "cmd+g h",
     "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  // Go to matching bracket                 cmd G [
+  {
+    "key": "cmd+g [",
+    "command": "editor.action.jumpToBracket",
     "when": "editorTextFocus"
   },
   // Go back                                cmd G B
@@ -918,6 +924,11 @@
   {
     "key": "cmd+k cmd+u",
     "command": "workbench.action.openSnippets"
+  },
+  // Insert snippet                         cmd K S
+  {
+    "key": "cmd+k s",
+    "command": "editor.action.insertSnippet"
   },
   // Color theme                            cmd K cmd T
   {
