@@ -32,19 +32,5 @@
   "editor.occurrencesHighlight": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "html.format.endWithNewline": true,
-  "rust.rustup": {
-    "toolchain": "stable-x86_64-apple-darwin",
-    "nightlyToolchain": "nightly-x86_64-apple-darwin"
-  },
-  "rust.mode": null,
-  "rust.rls": {
-    "useRustfmt": true
-  },
-  "workbench.startupEditor": "newUntitledFile",
-  "[rust]": {
-    "editor.tabSize": 4
-  },
-  "[elm]": {
-    "editor.tabSize": 2
-  }
+  "workbench.editor.enablePreview": false
 }
