@@ -1,5 +1,5 @@
 # Make Homebrew work
-export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:/usr/local/bin:$PATH"
 
 # Editor of choice
 export EDITOR=/usr/bin/nano
@@ -15,3 +15,5 @@ dump() { rm ./db/development.sqlite3; rails db:migrate; rails db:seed; }
 cd() { builtin cd "$@"; ls; }
 mcd () { mkdir -p "$1" && cd "$1"; }
 trash () { command mv "$@" ~/.Trash ; }
+
+export PATH="$HOME/.cargo/bin:$PATH"

@@ -10,6 +10,11 @@
   core:
     disabledPackages: [
       "linter-rubocop"
+      "linter-js-standard"
+      "spell-check"
+      "atom-elixir"
+      "linter-elixir-credo"
+      "linter-rust"
     ]
     packagesWithKeymapsDisabled: [
       "minimap-git-diff"
@@ -21,7 +26,7 @@
       "academie-syntax"
     ]
   editor:
-    fontFamily: "FiraCode-Regular"
+    fontFamily: "Fira Code"
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
@@ -31,11 +36,10 @@
     tabType: "soft"
   "exception-reporting":
     userId: "4b7e022d-8d05-6269-e9e3-8051770d0eef"
-  linter:
-    lintOnFly: false
-    showErrorTabFile: false
-    showErrorTabProject: false
+  linter: {}
   "linter-js-standard": {}
+  "linter-ui-default":
+    panelHeight: 69
   minimap:
     plugins:
       bookmarks: true
@@ -45,7 +49,6 @@
       "git-diff": true
       "git-diffDecorationsZIndex": 0
   "one-dark-ui":
-    layoutMode: "Compact"
     tabSizing: "Even"
   pigments: {}
   "spell-check":
@@ -61,6 +64,7 @@
     ignoreWhitespace: true
     leftEditorColor: "red"
     rightEditorColor: "green"
+    scrollSyncType: "Vertical + Horizontal"
     syncHorizontalScroll: true
   "terminal-plus":
     style:

@@ -35,7 +35,7 @@
 
   'Anonymous function':
     'prefix': 'fn'
-    'body': 'fn ($1) -> $2 end$0'
+    'body': 'fn($1) -> $2 end$0'
 
   'Module constant':
     'prefix': 'module'
@@ -58,8 +58,23 @@
     'prefix': 'test'
     'body': 'test \'$1\' do\n\t$2\nend'
 
-# GitHub Markup Language
+# GitHub Markup Language -------------------------------------------------------------
 '.source.gfm':
   'Elixir code':
     'prefix': 'excode'
     'body': '```elixir\n$1\n```'
+
+  'Rust code':
+    'prefix': 'rscode'
+    'body': '```rust\n$1\n```'
+
+# JavaScript -------------------------------------------------------------
+
+'.source.js':
+  'console log':
+    'prefix': 'log'
+    'body': 'console.log($1)$0'
+
+  'import':
+    'prefix': 'import'
+    'body': 'import $1 from \'$2\'$0'
