@@ -1,0 +1,50 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.rulers": [
+    80
+  ],
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.snippetSuggestions": "top",
+  "editor.renderWhitespace": "boundary",
+  "editor.dragAndDrop": false,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.quickSuggestions": true
+  },
+  "workbench.colorTheme": "Academie Syntax",
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.formatOnPaste": true,
+  "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.fontLigatures": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.cursorBlinking": true,
+  "zenMode.hideTabs": false,
+  "window.zoomLevel": 0,
+  "editor.occurrencesHighlight": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "html.format.endWithNewline": true,
+  "rust.rustup": {
+    "toolchain": "stable-x86_64-apple-darwin",
+    "nightlyToolchain": "nightly-x86_64-apple-darwin"
+  },
+  "rust.mode": null,
+  "rust.rls": {
+    "useRustfmt": true
+  },
+  "workbench.startupEditor": "newUntitledFile",
+  "[rust]": {
+    "editor.tabSize": 4
+  },
+  "[elm]": {
+    "editor.tabSize": 2
+  }
+}
