@@ -66,13 +66,13 @@
 - Uppercase                              cmd K U
 - Lowercase                              cmd K L
 
-## Folding
-- Fold                                   cmd L F
-- Fold all                               cmd L cmd F
-- Fold all subregions                    cmd L cmd shift F
-- Unfold                                 cmd L U
-- Unfold all                             cmd L cmd U
-- Unfold all subregions                  cmd L cmd shift U
+## Folding [L]
+- Fold                                   cmd L [
+- Fold all                               cmd L cmd [
+- Fold all subregions                    cmd L cmd shift [
+- Unfold                                 cmd L ]
+- Unfold all                             cmd L cmd ]
+- Unfold all subregions                  cmd L cmd shift ]
 - Fold level #                           cmd L #
 
 ## Others
@@ -82,13 +82,15 @@
 - Redo                                   cmd Y
 
 
-# Search [R]
+# Search
 - Find                                   cmd F
 - Find in files                          cmd shift F
-- Replace                                cmd R
-- Replace in files                       cmd shift R
 - Find next                              cmd H
 - Find previous                          cmd shift H
+- Replace                                cmd R
+- Replace in files                       cmd shift R
+- Replace one                            ^R
+- Replace all                            ^shift R
 
 
 # Navigation [G]
@@ -127,6 +129,7 @@
 - Cycle editor groups                    cmd shift E
 - Focus # editor group                   cmd #
 - Split editor                           cmd E /
+- Toggle editor group horizontal         cmd E -
 - Open next                              ^tab
 - Open previous                          ^shift tab
 
@@ -140,27 +143,27 @@
 
 
 # Display [M]
-- Sidebar toggle                         cmd M / | cmd M cmd /
-- Explorer focus toggle                  cmd M P
+- Sidebar toggle                         cmd M /
+- Sidebar focus                          cmd M cmd+/
 - Focus on Files Explorer                cmd M F
 - Focus on open editors                  cmd M E
 - Show search                            cmd M S
-- Show source control                    cmd M G | cmd G cmd G
+- Show source control                    cmd M G
 - Show debug                             cmd M B
 - Show extensions                        cmd M X
-- Show problems                          cmd M shift P
+- Show problems                          cmd M P
 - Show output                            cmd M O
 - Zen mode toggle                        cmd M Z
 - Markdown preview                       cmd M M
 - Integrated terminal toggle             cmd M T
-- Focus Integrated terminal              cmd M cmd T
-- Maximize integrated terminal           cmd M cmd T
+- Panel toggle                           cmd M -
+- Maximize panel                         cmd M = | cmd M cmd T
 - Zoom in                                cmd =
 - Zoom out                               cmd -
 - Reset zoom                             cmd shift = | cmd shift -
 
 
-# Preferences
+# Preferences [K]
 - Open preferences                       cmd ,
 - Keyboard shortcuts                     cmd K cmd S
 - User snippets                          cmd K cmd U
@@ -173,7 +176,7 @@
 - TM Scopes                              ^cmd I
 
 
-# Debug
+# Debug [B]
 - Breakpoint toggle                      cmd B cmd B
 - Start                                  cmd B S
 - Start (without debugging)              cmd B cmd S
@@ -187,16 +190,11 @@
 - Show hover                             cmd B H
 
 
-# Tasks
-- Run build task                         cmd T cmd R
-- Run test task                          cmd T cmd T
-
-
-# Git
+# Git [G]
 - Open changes                           cmd G C
 - Open file                              cmd G O
 - Stash                                  cmd G S
 - Pop stash                              cmd G cmd S
 - Checkout to                            cmd G cmd C
 - Discard changes                        cmd G cmd D
-- Undo last commit                       cmd G cmd U
+- Undo last commit                       cmd G cmd Z

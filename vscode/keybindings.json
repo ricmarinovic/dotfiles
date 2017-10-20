@@ -418,39 +418,39 @@
 
 
   // ## FOLDING
-  // Fold                                   cmd L F
+  // Fold                                   cmd L [
   {
-    "key": "cmd+l f",
+    "key": "cmd+l [",
     "command": "editor.fold",
     "when": "editorTextFocus"
   },
-  // Fold all                               cmd L cmd F
+  // Fold all                               cmd L cmd [
   {
-    "key": "cmd+l cmd+f",
+    "key": "cmd+l cmd+[",
     "command": "editor.foldAll",
     "when": "editorTextFocus"
   },
-  // Fold all subregions                    cmd L cmd shift F
+  // Fold all subregions                    cmd L cmd shift [
   {
-    "key": "cmd+l shift+cmd+f",
+    "key": "cmd+l shift+cmd+[",
     "command": "editor.foldRecursively",
     "when": "editorTextFocus"
   },
-  // Unfold                                 cmd L U
+  // Unfold                                 cmd L ]
   {
-    "key": "cmd+l u",
+    "key": "cmd+l ]",
     "command": "editor.unfold",
     "when": "editorTextFocus"
   },
-  // Unfold all                             cmd L cmd U
+  // Unfold all                             cmd L cmd ]
   {
-    "key": "cmd+l cmd+u",
+    "key": "cmd+l cmd+]",
     "command": "editor.unfoldAll",
     "when": "editorTextFocus"
   },
-  // Unfold all subregions                  cmd L cmd shift U
+  // Unfold all subregions                  cmd L cmd shift ]
   {
-    "key": "cmd+l shift+cmd+u",
+    "key": "cmd+l shift+cmd+]",
     "command": "editor.unfoldRecursively",
     "when": "editorTextFocus"
   },
@@ -507,6 +507,12 @@
   {
     "key": "cmd+/",
     "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // Comment block toggle                   cmd shift /
+  {
+    "key": "shift+cmd+/",
+    "command": "editor.action.blockComment",
     "when": "editorTextFocus && !editorReadonly"
   },
   // Undo                                   cmd Z
@@ -587,6 +593,28 @@
     "command": "editor.action.previousMatchFindAction",
     "when": "editorFocus"
   },
+  // Replace one                            ^H
+  {
+    "key": "ctrl+r",
+    "command": "editor.action.replaceOne",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "search.action.replace",
+    "when": "matchFocus && replaceActive && searchViewletVisible"
+  },
+  // Replace all                            ^shift H
+  {
+    "key": "ctrl+shift+r",
+    "command": "editor.action.replaceAll",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "search.action.replaceAll",
+    "when": "replaceActive && searchViewletVisible && !findWidgetVisible"
+  },
 
 
   // # NAVIGATION
@@ -633,7 +661,7 @@
     "key": "cmd+g h",
     "command": "editor.debug.action.showDebugHover",
     "when": "editorTextFocus && inDebugMode"
-  }
+  },
   // Go to matching bracket                 cmd G [
   {
     "key": "cmd+g [",
@@ -780,6 +808,12 @@
     "key": "cmd+e /",
     "command": "workbench.action.splitEditor"
   },
+  // Toggle editor group horizontal         cmd E -
+  {
+    "key": "cmd+e -",
+    "command": "workbench.action.toggleEditorGroupLayout"
+  },
+
   // Open next                              ^tab
   {
     "key": "ctrl+tab",
@@ -816,14 +850,20 @@
     "key": "cmd+m /",
     "command": "workbench.action.toggleSidebarVisibility"
   },
+  // Sidebar focus                          cmd M cmd+/
   {
     "key": "cmd+m cmd+/",
-    "command": "workbench.action.toggleSidebarVisibility"
+    "command": "workbench.action.focusSideBar"
   },
-  // Explorer focus toggle                  cmd M P
   {
-    "key": "cmd+m p",
-    "command": "workbench.view.explorer"
+    "key": "cmd+m cmd+/",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "cmd+m cmd+/",
+    "command": "workbench.view.explorer",
+    "when": "explorerViewletVisible"
   },
   // Focus on Files Explorer                cmd M F
   {
@@ -856,23 +896,23 @@
     "key": "cmd+m g",
     "command": "workbench.view.scm"
   },
-  {
-    "key": "cmd+g cmd+g",
-    "command": "workbench.view.scm"
-  },
   // Show debug                             cmd M B
   {
     "key": "cmd+m b",
     "command": "workbench.view.debug"
+  },
+  {
+    "key": "cmd+m cmd+b",
+    "command": "workbench.debug.action.toggleRepl"
   },
   // Show extensions                        cmd M X
   {
     "key": "cmd+m x",
     "command": "workbench.view.extensions"
   },
-  // Show problems                          cmd M shift P
+  // Show problems                          cmd M P
   {
-    "key": "cmd+m shift+p",
+    "key": "cmd+m p",
     "command": "workbench.actions.view.problems"
   },
   // Show output                            cmd M O
@@ -880,6 +920,7 @@
     "key": "cmd+m o",
     "command": "workbench.action.output.toggleOutput"
   },
+
   // Zen mode toggle                        cmd M Z
   {
     "key": "cmd+m z",
@@ -904,16 +945,21 @@
   // Integrated terminal toggle             cmd M T
   {
     "key": "cmd+m t",
-    "command": "workbench.action.terminal.toggleTerminal",
-    "when": "terminalFocus"
+    "command": "workbench.action.terminal.focus"
   },
   {
     "key": "cmd+m t",
-    "command": "workbench.action.terminal.focus",
-    "when": "!terminalFocus"
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminalFocus"
   },
+  // Panel toggle                           cmd M -
   {
-    "key": "cmd+m cmd+t",
+    "key": "cmd+m -",
+    "command": "workbench.action.togglePanel"
+  },
+  // Maximize panel                         cmd M =
+  {
+    "key": "cmd+m =",
     "command": "workbench.action.toggleMaximizedPanel"
   },
   // Zoom in                                cmd =
@@ -1068,7 +1114,7 @@
     "key": "cmd+b h",
     "command": "editor.debug.action.showDebugHover",
     "when": "editorTextFocus && inDebugMode"
-  }
+  },
 
 
   // # GIT
@@ -1102,9 +1148,9 @@
     "key": "cmd+g cmd+d",
     "command": "git.clean"
   },
-  // Undo last commit                       cmd G cmd U
+  // Undo last commit                       cmd G cmd Z
   {
-    "key": "cmd+g cmd+u",
+    "key": "cmd+g cmd+Z",
     "command": "git.undoCommit"
   }
 ]
