@@ -176,13 +176,14 @@
 # Debug
 - Breakpoint toggle                      cmd B cmd B
 - Start                                  cmd B S
-- Continue                               cmd B C
 - Start (without debugging)              cmd B cmd S
+- Restart                                cmd B R
+- Continue                               cmd B C
 - Pause                                  cmd B P
 - Step into                              cmd B I
 - Step out                               cmd B O
 - Step over                              cmd B cmd O
-- Stop                                   cmd B cmd T
+- Stop                                   cmd B T
 - Show hover                             cmd B H
 
 

@@ -1,6 +1,7 @@
 // Keybindings MAC
 [
   // # BASIC EDITING
+
   // ## CURSOR
   // Move cursor up                         ^P
   {
@@ -134,6 +135,8 @@
     "command": "workbench.action.terminal.scrollDown",
     "when": "terminalFocus"
   },
+
+
   // SELECT
   // Select up                              shift up
   {
@@ -229,6 +232,8 @@
     "command": "editor.action.selectHighlights",
     "when": "editorFocus"
   },
+
+
   // ## DELETE
   // Delete line                            ^shift K
   {
@@ -260,6 +265,8 @@
     "command": "deleteAllRight",
     "when": "editorTextFocus && !editorReadonly"
   },
+
+
   // ## INSERT
   // Insert line up                         cmd shift enter
   {
@@ -273,6 +280,8 @@
     "command": "editor.action.insertLineAfter",
     "when": "editorTextFocus && !editorReadonly"
   },
+
+
   // MOVE
   // Move line up                           ˆcmd up
   {
@@ -292,6 +301,8 @@
     "command": "editor.action.joinLines",
     "when": "editorTextFocus && !editorReadonly"
   },
+
+
   // ## COPY
   // Cut selection                          cmd X
   {
@@ -353,6 +364,8 @@
     "command": "filesExplorer.paste",
     "when": "explorerViewletVisible && filesExplorerFocus"
   },
+
+
   // ## MULTIPLE CURSORS
   // Insert cursor up                       cmd alt up
   {
@@ -372,6 +385,8 @@
     "command": "editor.action.insertCursorAtEndOfEachLineSelected",
     "when": "editorTextFocus"
   },
+
+
   // ## INDENTATION
   // Indent line                            cmd ]
   {
@@ -385,6 +400,8 @@
     "command": "editor.action.outdentLines",
     "when": "editorTextFocus && !editorReadonly"
   },
+
+
   // ## TRANSFORM
   // Uppercase                              cmd K U
   {
@@ -398,6 +415,8 @@
     "command": "editor.action.transformToLowercase",
     "when": "editorTextFocus && !editorReadonly"
   },
+
+
   // ## FOLDING
   // Fold                                   cmd L F
   {
@@ -481,6 +500,8 @@
     "command": "editor.foldLevel9",
     "when": "editorTextFocus"
   },
+
+
   // ## OTHERS
   // Comment line toggle                    cmd /
   {
@@ -500,6 +521,8 @@
     "command": "redo",
     "when": "editorTextFocus && !editorReadonly"
   },
+
+
   // # SEARCH
   // Find                                   cmd F
   {
@@ -564,6 +587,8 @@
     "command": "editor.action.previousMatchFindAction",
     "when": "editorFocus"
   },
+
+
   // # NAVIGATION
   // Show all commands                      cmd P
   {
@@ -604,6 +629,11 @@
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
   },
+  {
+    "key": "cmd+g h",
+    "command": "editor.debug.action.showDebugHover",
+    "when": "editorTextFocus && inDebugMode"
+  }
   // Go to matching bracket                 cmd G [
   {
     "key": "cmd+g [",
@@ -620,6 +650,8 @@
     "key": "cmd+g f",
     "command": "workbench.action.navigateForward"
   },
+
+
   // # EDITOR
   // New file                               cmd N
   {
@@ -768,12 +800,16 @@
     "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
     "when": "inEditorsPicker && inQuickOpen"
   },
+
+
   // # EXPLORER
   // New file                               N
   // New folder                             F
   // Rename file                            R
   // Move file to trash                     backspace
   // Open file to side                      cmd enter
+
+
   // # DISPLAY
   // Sidebar toggle                         cmd M /
   {
@@ -899,6 +935,8 @@
     "key": "shift+cmd+-",
     "command": "workbench.action.zoomReset"
   },
+
+
   // # PREFERENCES
   // Open preferences                       cmd,
   {
@@ -962,19 +1000,77 @@
     "command": "editor.action.inspectTMScopes",
     "when": "editorTextFocus && !editorReadonly"
   },
+
+
   // # DEBUG
   // Breakpoint toggle                      cmd B cmd B
+  {
+    "key": "cmd+b cmd+b",
+    "command": "editor.debug.action.toggleBreakpoint",
+    "when": "editorTextFocus"
+  },
   // Start                                  cmd B S
-  // Continue                               cmd B C
+  {
+    "key": "cmd+b s",
+    "command": "workbench.action.debug.start",
+    "when": "!inDebugMode"
+  },
   // Start (without debugging)              cmd B cmd S
+  {
+    "key": "cmd+b cmd+s",
+    "command": "workbench.action.debug.run",
+    "when": "!inDebugMode"
+  },
+  // Restart                                cmd B R
+  {
+    "key": "cmd+b r",
+    "command": "workbench.action.debug.restart",
+    "when": "inDebugMode"
+  },
+  // Continue                               cmd B C
+  {
+    "key": "cmd+b c",
+    "command": "workbench.action.debug.continue",
+    "when": "inDebugMode"
+  },
   // Pause                                  cmd B P
+  {
+    "key": "cmd+b p",
+    "command": "workbench.action.debug.pause",
+    "when": "inDebugMode"
+  },
   // Step into                              cmd B I
+  {
+    "key": "cmd+b i",
+    "command": "workbench.action.debug.stepInto",
+    "when": "inDebugMode"
+  },
   // Step out                               cmd B O
+  {
+    "key": "cmd+b o",
+    "command": "workbench.action.debug.stepOut",
+    "when": "inDebugMode"
+  },
   // Step over                              cmd B cmd O
-  // Stop                                   cmd B cmd T
+  {
+    "key": "cmd+b cmd+o",
+    "command": "workbench.action.debug.stepOver",
+    "when": "inDebugMode"
+  },
+  // Stop                                   cmd B T
+  {
+    "key": "cmd+b t",
+    "command": "workbench.action.debug.stop",
+    "when": "inDebugMode"
+  },
   // Show hover                             cmd B H
-  // Run build task                         cmd T cmd R
-  // Run test task                          cmd T cmd T
+  {
+    "key": "cmd+b h",
+    "command": "editor.debug.action.showDebugHover",
+    "when": "editorTextFocus && inDebugMode"
+  }
+
+
   // # GIT
   // Open changes                           cmd G C
   {

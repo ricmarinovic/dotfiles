@@ -24,7 +24,6 @@
   "editor.detectIndentation": false,
   "editor.formatOnPaste": true,
   "terminal.integrated.fontFamily": "Fira Code",
-  "terminal.integrated.fontLigatures": true,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.cursorBlinking": true,
   "zenMode.hideTabs": false,
@@ -32,5 +31,20 @@
   "editor.occurrencesHighlight": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "html.format.endWithNewline": true,
-  "workbench.editor.enablePreview": false
+  "workbench.editor.enablePreview": false,
+  "rest-client.environmentVariables": {
+    "local": {
+      "base_url": "localhost:3000"
+    },
+    "stage": {
+      "base_url": "stage.stant.com.br/api",
+      "token": "3c4aa43a65a23809cf344260b9ed0dd96bcea318a0c31c6b25d1f49332c73ca7"
+    },
+    "production": {
+      "base_url": "web.stant.com.br/api"
+    }
+  },
+  "[http]": {
+    "editor.wordWrap": "off"
+  }
 }
