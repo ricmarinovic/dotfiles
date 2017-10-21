@@ -1,99 +1,108 @@
-# Basic Editing
-## Cursor
-- Move cursor up                         ^P
-- Move cursor down                       ^N
-- Move cursor left                       ^B
-- Move cursor right                      ^F
-- Move cursor page up                    ˆshift P
-- Move cursor page down                  ˆshift N
+# VSCode configuration
+## Extensions
+
+- Academie Syntax
+- Bookmarks
+
+### Language extensions
+- vscode-elixir
+- Ruby
+- Rust (rls)
+
+## Keybindings
+
+### Basic Editing
+##### Cursor
+- Move cursor up                         ctrl P
+- Move cursor down                       ctrl N
+- Move cursor left                       ctrl B
+- Move cursor right                      ctrl F
+- Move cursor page up                    ctrl shift P
+- Move cursor page down                  ctrl shift N
 - Move cursor to start of word           alt left
 - Move cursor to end of word             alt right
-- Move cursor to start of line           ^A | cmd left
-- Move cursor to end of line             ^E | cmd right
+- Move cursor to start of line           ctrl A | cmd left
+- Move cursor to end of line             ctrl E | cmd right
 - Move cursor to top of file             cmd up
-+ Move cursor to bottom of file          cmd down
+- Move cursor to bottom of file          cmd down
 
-## Select
+##### Select
 - Select up                              shift up
 - Select down                            shift down
 - Select previous character              shift left
 - Select next character                  shift right
-- Select to start of word                alt shift left
-- Select to end of word                  alt shift right
-- Select to start of line                cmd shift left
-- Select to end of line                  cmd shift right
-- Select to top of file                  cmd shift up
-- Select to bottom of file               cmd shift down
-- Select all files                       cmd A
+- Select to start of word                shift alt left
+- Select to end of word                  shift alt right
+- Select to start of line                shift cmd left
+- Select to end of line                  shift cmd right
+- Select to top of file                  shift cmd up
+- Select to bottom of file               shift cmd down
+- Select all lines                       cmd A
 - Select line                            cmd I
 - Select word                            cmd D
-- Select all occurrences of word         cmd shift D
-- Select all occurrences of selection    cmd shift L
+- Select all occurrences of word         shift cmd D
+- Select all occurrences of selection    shift cmd L
 
-## Delete
-- Delete line                            ^shift K
+##### Delete
+- Delete line                            ctrl shift K
 - Delete to start of word                alt backspace
 - Delete to end of word                  alt delete
 - Delete to start of line                cmd backspace
 - Delete to end of line                  cmd delete
 
-## Insert
-- Insert line up                         cmd shift enter
+##### Line movement
+- Insert line up                         shift cmd enter
 - Insert line down                       cmd enter
-
-## Move
-- Move line up                           ˆcmd up
-- Move line down                         ˆcmd down
+- Move line up                           ctrl cmd up
+- Move line down                         ctrl cmd down
 - Join lines                             cmd J
 
-## Copy
+##### Copy
 - Cut                                    cmd X
 - Copy                                   cmd C
 - Copy line up                           ctrl alt up
 - Copy line down                         ctrl alt down
 - Paste                                  cmd V
 
-## Multiple cursors
-- Insert cursor up                       cmd alt up
-- Insert cursor down                     cmd alt down
+##### Multiple cursors
+- Insert cursor up                       alt cmd up
+- Insert cursor down                     alt cmd down
 - Insert cursor end of lines selected    shift alt I
 
-## Indentation
+##### Indentation
 - Indent line                            cmd ]
 - Outdent line                           cmd [
 
-## Transform
-- Uppercase                              cmd K U
-- Lowercase                              cmd K L
-
-## Folding [L]
+##### Folding [L]
 - Fold                                   cmd L [
 - Fold all                               cmd L cmd [
-- Fold all subregions                    cmd L cmd shift [
+- Fold all subregions                    cmd L shift cmd [
 - Unfold                                 cmd L ]
 - Unfold all                             cmd L cmd ]
-- Unfold all subregions                  cmd L cmd shift ]
+- Unfold all subregions                  cmd L shift cmd ]
 - Fold level #                           cmd L #
 
-## Others
+##### Others
 - Comment line toggle                    cmd /
-- Comment block toggle                   cmd shift /
+- Comment block toggle                   shift cmd /
 - Undo                                   cmd Z
 - Redo                                   cmd Y
+- Uppercase                              cmd K =
+- Lowercase                              cmd K -
 
 
-# Search
+### Search
 - Find                                   cmd F
-- Find in files                          cmd shift F
+- Find in files                          shift cmd F
 - Find next                              cmd H
-- Find previous                          cmd shift H
+- Find previous                          shift cmd H
 - Replace                                cmd R
-- Replace in files                       cmd shift R
-- Replace one                            ^R
-- Replace all                            ^shift R
+- Replace in files                       shift cmd R
+- Replace one                            ctrl R
+- Replace all                            ctrl shift R
 
 
-# Navigation [G]
+### Navigation [G]
 - Show all commands                      cmd P
 - Go to file                             cmd G cmd G
 - Go to line                             cmd G L
@@ -106,64 +115,59 @@
 - Go forward                             cmd G F
 
 
-# Editor [E]
+### Editor [E]
 - New file                               cmd N
-- New window                             cmd shift N
+- New window                             shift cmd N
 - Save                                   cmd S
-- Save all                               cmd E cmd A
-- Save as                                cmd shift S
+- Save as                                shift cmd S
+- Save all                               ctrl shift cmd s
 - Close editor                           cmd W
-- Close window                           cmd shift W
-- Close all                              cmd E cmd W
-- Close group                            cmd E shift W
+- Close window                           shift cmd W
+- Close group                            cmd E cmd W
 - Close other groups                     cmd E W
+- Close all                              cmd E cmd shift W
 - Reopen closed editor                   cmd E R
-- Next editor                            cmd shift ]
-- Previous editor                        cmd shift [
+- Next editor                            shift cmd ]
+- Previous editor                        shift cmd [
+- Focus # editor                         ctrl #
 - Move editor left                       cmd E left
 - Move editor right                      cmd E right
 - Move editor into previous group        cmd E cmd left
 - Move editor into next group            cmd E cmd right
-- Move editor group left                 cmd E cmd shift left
-- Move editor group right                cmd E cmd shift right
-- Cycle editor groups                    cmd shift E
+- Move editor group left                 cmd E shift cmd left
+- Move editor group right                cmd E shift cmd right
+- Cycle editor groups                    shift cmd E
 - Focus # editor group                   cmd #
 - Split editor                           cmd E /
 - Toggle editor group horizontal         cmd E -
-- Open next                              ^tab
-- Open previous                          ^shift tab
+- Open next                              ctrl tab
+- Open previous                          shift ctrl tab
 
 
-# Explorer
-- New file                               N
-- New folder                             F
-- Rename file                            R
-- Move file to trash                     backspace
-- Open file to side                      cmd enter
-
-
-# Display [M]
+### Display [M]
 - Sidebar toggle                         cmd M /
 - Sidebar focus                          cmd M cmd+/
-- Focus on Files Explorer                cmd M F
 - Focus on open editors                  cmd M E
+- Focus on files Explorer                cmd M F
 - Show search                            cmd M S
 - Show source control                    cmd M G
 - Show debug                             cmd M B
 - Show extensions                        cmd M X
+- Panel toggle                           cmd M -
+- Panel maximize                         cmd M =
 - Show problems                          cmd M P
 - Show output                            cmd M O
+- Show debug console                     cmd M cmd B
+- Integrated terminal toggle             cmd M T
 - Zen mode toggle                        cmd M Z
 - Markdown preview                       cmd M M
-- Integrated terminal toggle             cmd M T
-- Panel toggle                           cmd M -
-- Maximize panel                         cmd M = | cmd M cmd T
+- Markdown preview to side               cmd M cmd M
 - Zoom in                                cmd =
 - Zoom out                               cmd -
-- Reset zoom                             cmd shift = | cmd shift -
+- Reset zoom                             shift cmd = | shift cmd -
 
 
-# Preferences [K]
+### Preferences [K]
 - Open preferences                       cmd ,
 - Keyboard shortcuts                     cmd K cmd S
 - User snippets                          cmd K cmd U
@@ -173,10 +177,11 @@
 - Format document                        cmd K cmd F
 - Word wrap toggle                       cmd K W
 - Copy path of active file               cmd K P
-- TM Scopes                              ^cmd I
+- TM Scopes                              ctrl cmd I
+- Developer tools                        alt cmd I
 
 
-# Debug [B]
+### Debug [B]
 - Breakpoint toggle                      cmd B cmd B
 - Start                                  cmd B S
 - Start (without debugging)              cmd B cmd S
@@ -190,11 +195,27 @@
 - Show hover                             cmd B H
 
 
-# Git [G]
+### Explorer
+- New file                               cmd N
+- New folder                             cmd shift N
+- Rename file                            cmd R
+- Open file                              cmd O
+- Open file to side                      cmd shift O
+
+
+### Git [G]
 - Open changes                           cmd G C
 - Open file                              cmd G O
 - Stash                                  cmd G S
 - Pop stash                              cmd G cmd S
 - Checkout to                            cmd G cmd C
-- Discard changes                        cmd G cmd D
+- Discard changes                        cmd G backspace
 - Undo last commit                       cmd G cmd Z
+
+
+### Bookmarks
+- Bookmark toggle                        cmd L B
+- Bookmark list                          cmd L L | cmd L cmd L
+- Bookmark list all files                cmd L shift cmd L
+- Bookmark clear                         cmd L backspace
+- Bookmark clear all files               cmd L shift cmd backspace

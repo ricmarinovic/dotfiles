@@ -3,7 +3,7 @@
   // # BASIC EDITING
 
   // ## CURSOR
-  // Move cursor up                         ^P
+  // Move cursor up                         ctrl P
   {
     "key": "ctrl+p",
     "command": "cursorUp",
@@ -29,7 +29,7 @@
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
   },
-  // Move cursor down                       ^N
+  // Move cursor down                       ctrl N
   {
     "key": "ctrl+n",
     "command": "cursorDown",
@@ -55,28 +55,28 @@
     "command": "workbench.action.quickOpenSelectNext",
     "when": "inQuickOpen"
   },
-  // Move cursor page up                    ˆshift P
-  {
-    "key": "ctrl+shift+p",
-    "command": "cursorPageUp",
-    "when": "editorTextFocus"
-  },
-  // Move cursor page down                  ˆshift N
-  {
-    "key": "ctrl+shift+n",
-    "command": "cursorPageDown",
-    "when": "editorTextFocus"
-  },
-  // Move cursor left                       ^B
+  // Move cursor left                       ctrl B
   {
     "key": "ctrl+b",
     "command": "cursorLeft",
     "when": "editorTextFocus"
   },
-  // Move cursor right                      ^F
+  // ove cursor right                      ctrl F
   {
     "key": "ctrl+f",
     "command": "cursorRight",
+    "when": "editorTextFocus"
+  },
+  // Move cursor page up                    ctrl shift P
+  {
+    "key": "ctrl+shift+p",
+    "command": "cursorPageUp",
+    "when": "editorTextFocus"
+  },
+  // Move cursor page down                  ctrl shift N
+  {
+    "key": "ctrl+shift+n",
+    "command": "cursorPageDown",
     "when": "editorTextFocus"
   },
   // Move cursor to start of word           alt left
@@ -91,7 +91,7 @@
     "command": "cursorWordEndRight",
     "when": "editorTextFocus"
   },
-  // Move cursor to start of line           ^A | cmd left
+  // Move cursor to start of line           ctrl A | cmd left
   {
     "key": "ctrl+a",
     "command": "cursorLineStart",
@@ -102,7 +102,7 @@
     "command": "cursorHome",
     "when": "editorTextFocus"
   },
-  // Move cursor to end of line             ^E | cmd right
+  // Move cursor to end of line             ctrl E | cmd right
   {
     "key": "ctrl+e",
     "command": "cursorLineEnd",
@@ -162,43 +162,43 @@
     "command": "cursorRightSelect",
     "when": "editorTextFocus"
   },
-  // Select to start of word                alt shift left
+  // Select to start of word                shift alt left
   {
     "key": "shift+alt+left",
     "command": "cursorWordStartLeftSelect",
     "when": "editorTextFocus"
   },
-  // Select to end of word                  alt shift right
+  // Select to end of word                  shift alt right
   {
     "key": "shift+alt+right",
     "command": "cursorWordEndRightSelect",
     "when": "editorTextFocus"
   },
-  // Select to start of line                cmd shift left
+  // Select to start of line                shift cmd left
   {
     "key": "shift+cmd+left",
     "command": "cursorHomeSelect",
     "when": "editorTextFocus"
   },
-  // Select to end of line                  cmd shift right
+  // Select to end of line                  shift cmd right
   {
     "key": "shift+cmd+right",
     "command": "cursorEndSelect",
     "when": "editorTextFocus"
   },
-  // Select to top of file                  cmd shift up
+  // Select to top of file                  shift cmd up
   {
     "key": "shift+cmd+up",
     "command": "cursorTopSelect",
     "when": "editorTextFocus"
   },
-  // Select to bottom of file               cmd shift down
+  // Select to bottom of file               shift cmd down
   {
     "key": "shift+cmd+down",
     "command": "cursorBottomSelect",
     "when": "editorTextFocus"
   },
-  // Select all files                       cmd A
+  // Select all lines                       cmd A
   {
     "key": "cmd+a",
     "command": "editor.action.selectAll"
@@ -220,13 +220,13 @@
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
   },
-  // Select all occurrences of word         cmd shift D
+  // Select all occurrences of word         shift cmd D
   {
     "key": "shift+cmd+D",
     "command": "editor.action.changeAll",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // Select all occurrences of selection    cmd shift L
+  // Select all occurrences of selection    shift cmd L
   {
     "key": "shift+cmd+l",
     "command": "editor.action.selectHighlights",
@@ -235,7 +235,7 @@
 
 
   // ## DELETE
-  // Delete line                            ^shift K
+  // Delete line                            ctrl shift K
   {
     "key": "ctrl+shift+k",
     "command": "editor.action.deleteLines",
@@ -267,8 +267,8 @@
   },
 
 
-  // ## INSERT
-  // Insert line up                         cmd shift enter
+  // ## Line editing
+  // Insert line up                         shift cmd enter
   {
     "key": "shift+cmd+enter",
     "command": "editor.action.insertLineBefore",
@@ -280,16 +280,13 @@
     "command": "editor.action.insertLineAfter",
     "when": "editorTextFocus && !editorReadonly"
   },
-
-
-  // MOVE
-  // Move line up                           ˆcmd up
+  // Move line up                           ctrl cmd up
   {
     "key": "ctrl+cmd+up",
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // Move line down                         ˆcmd down
+  // Move line down                         ctrl cmd down
   {
     "key": "ctrl+cmd+down",
     "command": "editor.action.moveLinesDownAction",
@@ -367,13 +364,13 @@
 
 
   // ## MULTIPLE CURSORS
-  // Insert cursor up                       cmd alt up
+  // Insert cursor up                       alt cmd up
   {
     "key": "alt+cmd+up",
     "command": "editor.action.insertCursorAbove",
     "when": "editorTextFocus"
   },
-  // Insert cursor down                     cmd alt down
+  // Insert cursor down                     alt cmd down
   {
     "key": "alt+cmd+down",
     "command": "editor.action.insertCursorBelow",
@@ -402,21 +399,6 @@
   },
 
 
-  // ## TRANSFORM
-  // Uppercase                              cmd K U
-  {
-    "key": "cmd+k cmd+u",
-    "command": "editor.action.transformToUppercase",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  // Lowercase                              cmd K L
-  {
-    "key": "cmd+k cmd+l",
-    "command": "editor.action.transformToLowercase",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-
-
   // ## FOLDING
   // Fold                                   cmd L [
   {
@@ -430,7 +412,7 @@
     "command": "editor.foldAll",
     "when": "editorTextFocus"
   },
-  // Fold all subregions                    cmd L cmd shift [
+  // Fold all subregions                    cmd L shift cmd [
   {
     "key": "cmd+l shift+cmd+[",
     "command": "editor.foldRecursively",
@@ -448,7 +430,7 @@
     "command": "editor.unfoldAll",
     "when": "editorTextFocus"
   },
-  // Unfold all subregions                  cmd L cmd shift ]
+  // Unfold all subregions                  cmd L shift cmd ]
   {
     "key": "cmd+l shift+cmd+]",
     "command": "editor.unfoldRecursively",
@@ -527,6 +509,18 @@
     "command": "redo",
     "when": "editorTextFocus && !editorReadonly"
   },
+  // Uppercase                              cmd K =
+  {
+    "key": "cmd+k =",
+    "command": "editor.action.transformToUppercase",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // Lowercase                              cmd K -
+  {
+    "key": "cmd+k -",
+    "command": "editor.action.transformToLowercase",
+    "when": "editorTextFocus && !editorReadonly"
+  },
 
 
   // # SEARCH
@@ -565,21 +559,11 @@
     "command": "workbench.action.terminal.focusFindWidget",
     "when": "terminalFocus"
   },
-  // Find in files                          cmd shift F
+  // Find in files                          shift cmd F
   {
-    "command": "workbench.action.findInFiles",
     "key": "shift+cmd+f",
+    "command": "workbench.action.findInFiles",
     "when": "!searchInputBoxFocus"
-  },
-  // Replace                                cmd R
-  {
-    "key": "cmd+r",
-    "command": "editor.action.startFindReplaceAction"
-  },
-  // Replace in files                       cmd shift R
-  {
-    "key": "shift+cmd+r",
-    "command": "workbench.action.replaceInFiles"
   },
   // Find next                              cmd H
   {
@@ -587,13 +571,23 @@
     "command": "editor.action.nextMatchFindAction",
     "when": "editorFocus"
   },
-  // Find previous                          cmd shift H
+  // Find previous                          shift cmd H
   {
     "key": "shift+cmd+h",
     "command": "editor.action.previousMatchFindAction",
     "when": "editorFocus"
   },
-  // Replace one                            ^H
+  // Replace                                cmd R
+  {
+    "key": "cmd+r",
+    "command": "editor.action.startFindReplaceAction"
+  },
+  // Replace in files                       shift cmd R
+  {
+    "key": "shift+cmd+r",
+    "command": "workbench.action.replaceInFiles"
+  },
+  // Replace one                            ctrl R
   {
     "key": "ctrl+r",
     "command": "editor.action.replaceOne",
@@ -604,7 +598,7 @@
     "command": "search.action.replace",
     "when": "matchFocus && replaceActive && searchViewletVisible"
   },
-  // Replace all                            ^shift H
+  // Replace all                            ctrl shift R
   {
     "key": "ctrl+shift+r",
     "command": "editor.action.replaceAll",
@@ -684,9 +678,10 @@
   // New file                               cmd N
   {
     "key": "cmd+n",
-    "command": "workbench.action.files.newUntitledFile"
+    "command": "workbench.action.files.newUntitledFile",
+    "when": "!filesExplorerFocus"
   },
-  // New window                             cmd shift N
+  // New window                             shift cmd N
   {
     "key": "shift+cmd+n",
     "command": "workbench.action.newWindow"
@@ -696,22 +691,22 @@
     "key": "cmd+s",
     "command": "workbench.action.files.save"
   },
-  // Save all                               cmd E cmd A
-  {
-    "key": "cmd+e cmd+a",
-    "command": "workbench.action.files.saveAll"
-  },
   // Save as                                cmd shift S
   {
     "key": "shift+cmd+s",
     "command": "workbench.action.files.saveAs"
+  },
+  // Save all                               cmd E cmd A
+  {
+    "key": "ctrl+shift+cmd+s",
+    "command": "workbench.action.files.saveAll"
   },
   // Close editor                           cmd W
   {
     "key": "cmd+w",
     "command": "workbench.action.closeActiveEditor"
   },
-  // Close window                           cmd shift W
+  // Close window                           shift cmd W
   {
     "key": "cmd+w",
     "command": "workbench.action.closeWindow",
@@ -721,14 +716,9 @@
     "key": "shift+cmd+w",
     "command": "workbench.action.closeWindow"
   },
-  // Close all                              cmd E cmd W
+  // Close group                            cmd E cmd W
   {
     "key": "cmd+e cmd+w",
-    "command": "workbench.action.closeAllEditors"
-  },
-  // Close group                            cmd E shift W
-  {
-    "key": "cmd+e shift+w",
     "command": "workbench.action.closeEditorsInGroup"
   },
   // Close other groups                     cmd E W
@@ -736,20 +726,62 @@
     "key": "cmd+e w",
     "command": "workbench.action.closeEditorsInOtherGroups"
   },
+  // Close all                              cmd E cmd W
+  {
+    "key": "cmd+e shift+cmd+w",
+    "command": "workbench.action.closeAllEditors"
+  },
   // Reopen closed editor                   cmd E R
   {
     "key": "cmd+e r",
     "command": "workbench.action.reopenClosedEditor"
   },
-  // Next editor                            cmd shift ]
+  // Next editor                            shift cmd ]
   {
     "key": "shift+cmd+]",
     "command": "workbench.action.nextEditor"
   },
-  // Previous editor                        cmd shift ]
+  // Previous editor                        shift cmd [
   {
     "key": "shift+cmd+[",
     "command": "workbench.action.previousEditor"
+  },
+  // Focus # editor                         ctrl #
+  {
+    "key": "ctrl+1",
+    "command": "workbench.action.openEditorAtIndex1"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "workbench.action.openEditorAtIndex2"
+  },
+  {
+    "key": "ctrl+3",
+    "command": "workbench.action.openEditorAtIndex3"
+  },
+  {
+    "key": "ctrl+4",
+    "command": "workbench.action.openEditorAtIndex4"
+  },
+  {
+    "key": "ctrl+5",
+    "command": "workbench.action.openEditorAtIndex5"
+  },
+  {
+    "key": "ctrl+6",
+    "command": "workbench.action.openEditorAtIndex6"
+  },
+  {
+    "key": "ctrl+7",
+    "command": "workbench.action.openEditorAtIndex7"
+  },
+  {
+    "key": "ctrl+8",
+    "command": "workbench.action.openEditorAtIndex8"
+  },
+  {
+    "key": "ctrl+9",
+    "command": "workbench.action.openEditorAtIndex9"
   },
   // Move editor left                cmd E left
   {
@@ -771,17 +803,17 @@
     "key": "cmd+E cmd+left",
     "command": "workbench.action.moveEditorToPreviousGroup"
   },
-  // Move editor group left          cmd E cmd shift left
+  // Move editor group left                 cmd E shift cmd left
   {
     "key": "cmd+e shift+cmd+left",
     "command": "workbench.action.moveActiveEditorGroupLeft"
   },
-  // Move editor group right         cmd E cmd shift right
+  //Move editor group right                cmd E shift cmd right
   {
     "key": "cmd+e shift+cmd+right",
     "command": "workbench.action.moveActiveEditorGroupRight"
   },
-  // Cycle editor groups                    cmd shift E
+  // Cycle editor groups                    shift cmd E
   {
     "key": "shift+cmd+e",
     "command": "workbench.action.navigateEditorGroups"
@@ -813,8 +845,7 @@
     "key": "cmd+e -",
     "command": "workbench.action.toggleEditorGroupLayout"
   },
-
-  // Open next                              ^tab
+  // Open next                              ctrl tab
   {
     "key": "ctrl+tab",
     "command": "workbench.action.openNextRecentlyUsedEditorInGroup"
@@ -824,7 +855,7 @@
     "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
     "when": "inEditorsPicker && inQuickOpen"
   },
-  // Open previous                          ^shift tab
+  // Open previous                          shift ctrl tab
   {
     "key": "ctrl+shift+tab",
     "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup"
@@ -834,14 +865,6 @@
     "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
     "when": "inEditorsPicker && inQuickOpen"
   },
-
-
-  // # EXPLORER
-  // New file                               N
-  // New folder                             F
-  // Rename file                            R
-  // Move file to trash                     backspace
-  // Open file to side                      cmd enter
 
 
   // # DISPLAY
@@ -865,15 +888,15 @@
     "command": "workbench.view.explorer",
     "when": "explorerViewletVisible"
   },
-  // Focus on Files Explorer                cmd M F
-  {
-    "key": "cmd+m f",
-    "command": "workbench.files.action.focusFilesExplorer"
-  },
   // Focus on open editors                  cmd M E
   {
     "key": "cmd+m e",
     "command": "workbench.files.action.focusOpenEditorsView"
+  },
+  // Focus on files Explorer                cmd M F
+  {
+    "key": "cmd+m f",
+    "command": "workbench.files.action.focusFilesExplorer"
   },
   // Show search                            cmd M S
   {
@@ -901,14 +924,20 @@
     "key": "cmd+m b",
     "command": "workbench.view.debug"
   },
-  {
-    "key": "cmd+m cmd+b",
-    "command": "workbench.debug.action.toggleRepl"
-  },
   // Show extensions                        cmd M X
   {
     "key": "cmd+m x",
     "command": "workbench.view.extensions"
+  },
+  // Panel toggle                           cmd M -
+  {
+    "key": "cmd+m -",
+    "command": "workbench.action.togglePanel"
+  },
+  // Panel maximize                         cmd M =
+  {
+    "key": "cmd+m =",
+    "command": "workbench.action.toggleMaximizedPanel"
   },
   // Show problems                          cmd M P
   {
@@ -920,7 +949,21 @@
     "key": "cmd+m o",
     "command": "workbench.action.output.toggleOutput"
   },
-
+  // Show debug console                     cmd M cmd B
+  {
+    "key": "cmd+m cmd+b",
+    "command": "workbench.debug.action.toggleRepl"
+  },
+  // Integrated terminal toggle             cmd M T
+  {
+    "key": "cmd+m t",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "cmd+m t",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminalFocus"
+  },
   // Zen mode toggle                        cmd M Z
   {
     "key": "cmd+m z",
@@ -937,30 +980,11 @@
     "command": "markdown.showPreview",
     "when": "editorLangId == 'markdown'"
   },
+  // Markdown preview to side               cmd M cmd M
   {
     "key": "cmd+m cmd+m",
     "command": "markdown.showPreviewToSide",
     "when": "editorLangId == 'markdown'"
-  },
-  // Integrated terminal toggle             cmd M T
-  {
-    "key": "cmd+m t",
-    "command": "workbench.action.terminal.focus"
-  },
-  {
-    "key": "cmd+m t",
-    "command": "workbench.action.terminal.toggleTerminal",
-    "when": "terminalFocus"
-  },
-  // Panel toggle                           cmd M -
-  {
-    "key": "cmd+m -",
-    "command": "workbench.action.togglePanel"
-  },
-  // Maximize panel                         cmd M =
-  {
-    "key": "cmd+m =",
-    "command": "workbench.action.toggleMaximizedPanel"
   },
   // Zoom in                                cmd =
   {
@@ -972,7 +996,7 @@
     "key": "cmd+-",
     "command": "workbench.action.zoomOut"
   },
-  // Reset zoom                             cmd shift = | cmd shift -
+  // Reset zoom                             shift cmd = | shift cmd -
   {
     "key": "shift+cmd+=",
     "command": "workbench.action.zoomReset"
@@ -984,7 +1008,7 @@
 
 
   // # PREFERENCES
-  // Open preferences                       cmd,
+  // Open preferences                       cmd ,
   {
     "key": "cmd+,",
     "command": "workbench.action.openGlobalSettings"
@@ -1024,7 +1048,7 @@
     "key": "cmd+k cmd+l",
     "command": "workbench.action.editor.changeLanguageMode"
   },
-  // Format document                        cmd K F
+  // Format document                        cmd K cmd F
   {
     "key": "cmd+k cmd+f",
     "command": "editor.action.formatDocument",
@@ -1045,6 +1069,11 @@
     "key": "ctrl+cmd+i",
     "command": "editor.action.inspectTMScopes",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  // Developer tools                        alt cmd I
+  {
+    "key": "alt+cmd+i",
+    "command": "workbench.action.toggleDevTools"
   },
 
 
@@ -1117,6 +1146,39 @@
   },
 
 
+  // # EXPLORER
+  // New file                               cmd N
+  {
+    "key": "cmd+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  // New folder                             shift cmd N
+  {
+    "key": "shift+cmd+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  // Rename file                            cmd R
+  {
+    "key": "cmd+r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  // Open file                              cmd O
+  {
+    "key": "cmd+o",
+    "command": "list.select",
+    "when": "listFocus"
+  },
+  // Open file to side                      shift cmd O
+  {
+    "key": "shift+cmd+o",
+    "command": "explorer.openToSide",
+    "when": "listFocus"
+  },
+
+
   // # GIT
   // Open changes                           cmd G C
   {
@@ -1143,14 +1205,50 @@
     "key": "cmd+g cmd+c",
     "command": "git.checkout"
   },
-  // Discard changes                        cmd G cmd D
+  // Discard changes                        cmd G backspace
   {
-    "key": "cmd+g cmd+d",
+    "key": "cmd+g backspace",
     "command": "git.clean"
   },
   // Undo last commit                       cmd G cmd Z
   {
     "key": "cmd+g cmd+Z",
     "command": "git.undoCommit"
+  },
+
+
+  // # Bookmarks
+  // Bookmark toggle                        cmd L B
+  {
+    "key": "cmd+l b",
+    "command": "bookmarks.toggle",
+    "when": "editorTextFocus"
+  },
+  // Bookmark list                          cmd L L | cmd L cmd L
+  {
+    "key": "cmd+l l",
+    "command": "bookmarks.list",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+l cmd+l",
+    "command": "bookmarks.list",
+    "when": "editorTextFocus"
+  },
+  // Bookmark list all files                cmd L shift cmd L
+  {
+    "key": "cmd+l shift+cmd+l",
+    "command": "bookmarks.listFromAllFiles",
+    "when": "editorTextFocus"
+  },
+  // Bookmark clear                         cmd L backspace
+  {
+    "key": "cmd+l backspace",
+    "command": "bookmarks.clear"
+  },
+  // Bookmark clear all files               cmd L cmd shift backspace
+  {
+    "key": "cmd+l shift+cmd+backspace",
+    "command": "bookmarks.clearFromAllFiles"
   }
 ]
