@@ -1,37 +1,47 @@
 // Place your settings in this file to overwrite the default settings
 {
-  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'Fira Code', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
-  "editor.rulers": [
-    80
-  ],
+  "editor.cursorBlinking": "phase",
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 80,
+  "editor.rulers": [ 80 ],
   "editor.tabSize": 2,
   "editor.minimap.enabled": false,
-  "editor.wordWrap": "wordWrapColumn",
   "editor.acceptSuggestionOnEnter": "off",
   "editor.snippetSuggestions": "top",
   "editor.renderWhitespace": "boundary",
   "editor.dragAndDrop": false,
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "[markdown]": {
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.quickSuggestions": true
-  },
-  "workbench.colorTheme": "Academie Syntax",
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "editor.formatOnPaste": true,
+  "editor.occurrencesHighlight": false,
+  "editor.renderIndentGuides": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.renderLineHighlight": "all",
+  "editor.scrollBeyondLastLine": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "workbench.colorTheme": "Academie Syntax",
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "newUntitledFile",
   "terminal.integrated.fontFamily": "Fira Code",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.cursorBlinking": true,
   "zenMode.hideTabs": false,
   "window.zoomLevel": 0,
-  "editor.occurrencesHighlight": false,
-  "editor.multiCursorModifier": "ctrlCmd",
   "html.format.endWithNewline": true,
-  "workbench.editor.enablePreview": false,
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.quickSuggestions": false
+  },
+  "[git-commit]": {
+    "editor.rulers": [
+      72
+    ]
+  },
+  "bookmarks.treeview.visible": false,
   "rest-client.environmentVariables": {
     "local": {
       "base_url": "localhost:3000"
@@ -46,7 +56,5 @@
   },
   "[http]": {
     "editor.wordWrap": "off"
-  },
-  "bookmarks.treeview.visible": false,
-  "workbench.startupEditor": "newUntitledFile"
+  }
 }

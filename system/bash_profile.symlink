@@ -17,3 +17,5 @@ mcd () { mkdir -p "$1" && cd "$1"; }
 trash () { command mv "$@" ~/.Trash ; }
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+eval "$(rbenv init -)"

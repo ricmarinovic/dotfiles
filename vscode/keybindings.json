@@ -493,7 +493,7 @@
   },
   // Comment block toggle                   cmd shift /
   {
-    "key": "shift+cmd+/",
+    "key": "ctrl+shift+/",
     "command": "editor.action.blockComment",
     "when": "editorTextFocus && !editorReadonly"
   },
@@ -736,15 +736,15 @@
     "key": "cmd+e r",
     "command": "workbench.action.reopenClosedEditor"
   },
-  // Next editor                            shift cmd ]
-  {
-    "key": "shift+cmd+]",
-    "command": "workbench.action.nextEditor"
-  },
   // Previous editor                        shift cmd [
   {
     "key": "shift+cmd+[",
     "command": "workbench.action.previousEditor"
+  },
+  // Next editor                            shift cmd ]
+  {
+    "key": "shift+cmd+]",
+    "command": "workbench.action.nextEditor"
   },
   // Focus # editor                         ctrl #
   {
@@ -783,40 +783,73 @@
     "key": "ctrl+9",
     "command": "workbench.action.openEditorAtIndex9"
   },
-  // Move editor left                cmd E left
+  // Move editor left                       ctrl cmd [
   {
-    "key": "cmd+e left",
+    "key": "ctrl+cmd+[",
     "command": "workbench.action.moveEditorLeftInGroup"
   },
-  // Move editor right               cmd E right
+  // Move editor right                      ctrl cmd ]
   {
-    "key": "cmd+e right",
+    "key": "ctrl+cmd+]",
     "command": "workbench.action.moveEditorRightInGroup"
   },
-  // Move editor into next group       cmd E cmd right
+  // Move editor into previous group        cmd E left
   {
-    "key": "cmd+E cmd+right",
-    "command": "workbench.action.moveEditorToNextGroup"
-  },
-  // Move editor into previous group       cmd E cmd left
-  {
-    "key": "cmd+E cmd+left",
+    "key": "cmd+E left",
     "command": "workbench.action.moveEditorToPreviousGroup"
   },
-  // Move editor group left                 cmd E shift cmd left
+  // Move editor into next group            cmd E right | cmd E cmd /
   {
-    "key": "cmd+e shift+cmd+left",
+    "key": "cmd+E right",
+    "command": "workbench.action.moveEditorToNextGroup"
+  },
+  {
+    "key": "cmd+E cmd+/",
+    "command": "workbench.action.moveEditorToNextGroup"
+  },
+  // Move editor group left                 cmd E cmd left
+  {
+    "key": "cmd+e cmd+left",
     "command": "workbench.action.moveActiveEditorGroupLeft"
   },
-  //Move editor group right                cmd E shift cmd right
+  //Move editor group right                cmd E cmd right
   {
-    "key": "cmd+e shift+cmd+right",
+    "key": "cmd+e cmd+right",
     "command": "workbench.action.moveActiveEditorGroupRight"
   },
-  // Cycle editor groups                    shift cmd E
+  // Join editors groups                    cmd E J | cmd E cmd J
   {
-    "key": "shift+cmd+e",
+    "key": "cmd+e j",
+    "command": "workbench.action.joinTwoGroups"
+  },
+  {
+    "key": "cmd+e cmd+j",
+    "command": "workbench.action.joinTwoGroups"
+  },
+  // Cycle editor groups                    cmd shift E | cmd E cmd E
+  {
+    "key": "cmd+shift+e",
     "command": "workbench.action.navigateEditorGroups"
+  },
+  {
+    "key": "cmd+e e",
+    "command": "workbench.action.navigateEditorGroups",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+e e",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "cmd+e cmd+e",
+    "command": "workbench.action.navigateEditorGroups",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+e cmd+e",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "!editorFocus"
   },
   // Focus # editor group                   cmd #
   {
@@ -883,11 +916,6 @@
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "!editorFocus"
   },
-  {
-    "key": "cmd+m cmd+/",
-    "command": "workbench.view.explorer",
-    "when": "explorerViewletVisible"
-  },
   // Focus on open editors                  cmd M E
   {
     "key": "cmd+m e",
@@ -913,6 +941,16 @@
     "key": "cmd+m s",
     "command": "workbench.view.search",
     "when": "!searchViewletVisible"
+  },
+  // Show search and replace                cmd M R
+  {
+    "key": "cmd+m r",
+    "command": "workbench.action.replaceInFiles"
+  },
+  {
+    "key": "cmd+m r",
+    "command": "search.action.focusActiveEditor",
+    "when": "replaceInputBoxFocus && searchViewletVisible"
   },
   // Show source control                    cmd M G
   {
@@ -957,11 +995,16 @@
   // Integrated terminal toggle             cmd M T
   {
     "key": "cmd+m t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  // Integrated terminal focus              cmd M cmd T
+  {
+    "key": "cmd+m cmd+t",
     "command": "workbench.action.terminal.focus"
   },
   {
-    "key": "cmd+m t",
-    "command": "workbench.action.terminal.toggleTerminal",
+    "key": "cmd+m cmd+t",
+    "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus"
   },
   // Zen mode toggle                        cmd M Z
@@ -1047,6 +1090,12 @@
   {
     "key": "cmd+k cmd+l",
     "command": "workbench.action.editor.changeLanguageMode"
+  },
+  // Format selection                       cmd K F
+  {
+    "key": "cmd+k f",
+    "command": "editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorHasSelection && editorTextFocus && !editorReadonly"
   },
   // Format document                        cmd K cmd F
   {
@@ -1165,13 +1214,28 @@
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus"
   },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
   // Open file                              cmd O
+  {
+    "key": "enter",
+    "command": "list.select",
+    "when": "listFocus"
+  },
   {
     "key": "cmd+o",
     "command": "list.select",
     "when": "listFocus"
   },
   // Open file to side                      shift cmd O
+  {
+    "key": "cmd+enter",
+    "command": "explorer.openToSide",
+    "when": "listFocus"
+  },
   {
     "key": "shift+cmd+o",
     "command": "explorer.openToSide",

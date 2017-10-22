@@ -127,16 +127,17 @@
 - Close other groups                     cmd E W
 - Close all                              cmd E cmd shift W
 - Reopen closed editor                   cmd E R
-- Next editor                            shift cmd ]
 - Previous editor                        shift cmd [
+- Next editor                            shift cmd ]
 - Focus # editor                         ctrl #
-- Move editor left                       cmd E left
-- Move editor right                      cmd E right
-- Move editor into previous group        cmd E cmd left
-- Move editor into next group            cmd E cmd right
-- Move editor group left                 cmd E shift cmd left
-- Move editor group right                cmd E shift cmd right
-- Cycle editor groups                    shift cmd E
+- Move editor left                       ctrl cmd [
+- Move editor right                      ctrl cmd ]
+- Move editor into previous group        cmd E left
+- Move editor into next group            cmd E right | cmd E cmd /
+- Move editor group left                 cmd E cmd left
+- Move editor group right                cmd E cmd right
+- Join editors groups                    cmd E J | cmd E cmd J
+- Cycle editor groups                    cmd shift E | cmd E cmd E
 - Focus # editor group                   cmd #
 - Split editor                           cmd E /
 - Toggle editor group horizontal         cmd E -
@@ -150,6 +151,7 @@
 - Focus on open editors                  cmd M E
 - Focus on files Explorer                cmd M F
 - Show search                            cmd M S
+- Show search and replace                cmd M R
 - Show source control                    cmd M G
 - Show debug                             cmd M B
 - Show extensions                        cmd M X
@@ -159,6 +161,7 @@
 - Show output                            cmd M O
 - Show debug console                     cmd M cmd B
 - Integrated terminal toggle             cmd M T
+- Integrated terminal focus              cmd M cmd T
 - Zen mode toggle                        cmd M Z
 - Markdown preview                       cmd M M
 - Markdown preview to side               cmd M cmd M
@@ -174,6 +177,7 @@
 - Insert snippet                         cmd K S
 - Color theme                            cmd K cmd T
 - Change language                        cmd K cmd L
+- Format selection                       cmd K F
 - Format document                        cmd K cmd F
 - Word wrap toggle                       cmd K W
 - Copy path of active file               cmd K P
@@ -199,8 +203,8 @@
 - New file                               cmd N
 - New folder                             cmd shift N
 - Rename file                            cmd R
-- Open file                              cmd O
-- Open file to side                      cmd shift O
+- Open file                              cmd O | enter
+- Open file to side                      cmd shift O | cmd enter
 
 
 ### Git [G]
