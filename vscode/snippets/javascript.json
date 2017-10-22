@@ -63,5 +63,55 @@
   "Object key": {
     "prefix": "kv",
     "body": "${1:key}: $2"
+  },
+  "React Component": {
+    "prefix": "component",
+    "body": [
+      "class $1 extends React.Component {",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t$2",
+      "\t\t)",
+      "\t}",
+      "}"
+    ]
+  },
+  "React PureComponent": {
+    "prefix": "purecomponent",
+    "body": [
+      "class $1 extends React.PureComponent {",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t$2",
+      "\t\t)",
+      "\t}",
+      "}"
+    ]
+  },
+  "React Constructor": {
+    "prefix": "rconstructor",
+    "body": [
+      "constructor(props) {",
+      "\tsuper(props)\n",
+      "\t$1",
+      "}\n"
+    ]
+  },
+  "React boiler": {
+    "prefix": "react",
+    "body": [
+      "import React from 'react'\n",
+      "export default class $1 extends React.Component {",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t$2",
+      "\t\t)",
+      "\t}",
+      "}"
+    ]
+  },
+  "Import react": {
+    "prefix": "impreact",
+    "body": "import React from 'react'"
   }
 }
