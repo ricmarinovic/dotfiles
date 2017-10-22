@@ -1214,11 +1214,6 @@
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus"
   },
-  {
-    "key": "enter",
-    "command": "-renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus"
-  },
   // Open file                              cmd O
   {
     "key": "enter",
@@ -1314,5 +1309,16 @@
   {
     "key": "cmd+l shift+cmd+backspace",
     "command": "bookmarks.clearFromAllFiles"
+  },
+
+  // REMOVED CONFLICTS
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "cmd+k u",
+    "command": "-workbench.action.closeUnmodifiedEditors"
   }
 ]
