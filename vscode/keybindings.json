@@ -989,7 +989,7 @@
   },
   // Show debug console                     cmd M cmd B
   {
-    "key": "cmd+m cmd+b",
+    "key": "cmd+m c",
     "command": "workbench.debug.action.toggleRepl"
   },
   // Integrated terminal toggle             cmd M T
@@ -1195,6 +1195,24 @@
   },
 
 
+  // # TASKS
+  // Run task                               cmd T cmd T
+  {
+    "key": "cmd+t cmd+t",
+    "command": "workbench.action.tasks.runTask"
+  },
+  // Run build task                         cmd T B
+  {
+    "key": "cmd+t b",
+    "command": "workbench.action.tasks.build"
+  },
+  // Run test task                          cmd T T
+  {
+    "key": "cmd+t t",
+    "command": "workbench.action.tasks.test"
+  },
+
+
   // # EXPLORER
   // New file                               cmd N
   {
@@ -1320,5 +1338,25 @@
   {
     "key": "cmd+k u",
     "command": "-workbench.action.closeUnmodifiedEditors"
+  },
+  {
+    "key": "cmd+k f",
+    "command": "-workbench.action.closeFolder"
+  },
+  {
+    "key": "cmd+k m",
+    "command": "-workbench.action.editor.changeLanguageMode"
+  },
+  {
+    "key": "cmd+k cmd+w",
+    "command": "-workbench.action.closeAllEditors"
+  },
+  {
+    "key": "cmd+k w",
+    "command": "-workbench.action.closeEditorsInGroup"
+  },
+  {
+    "key": "cmd+k o",
+    "command": "-workbench.action.files.showOpenedFileInNewWindow"
   }
 ]

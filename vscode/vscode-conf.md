@@ -3,6 +3,7 @@
 
 - Academie Syntax
 - Bookmarks
+- Git lens
 
 ### Language extensions
 - vscode-elixir
@@ -159,7 +160,7 @@
 - Panel maximize                         cmd M =
 - Show problems                          cmd M P
 - Show output                            cmd M O
-- Show debug console                     cmd M cmd B
+- Show debug console                     cmd M C
 - Integrated terminal toggle             cmd M T
 - Integrated terminal focus              cmd M cmd T
 - Zen mode toggle                        cmd M Z
@@ -197,6 +198,12 @@
 - Step over                              cmd B cmd O
 - Stop                                   cmd B T
 - Show hover                             cmd B H
+
+
+### Tasks [T]
+- Run task                               cmd T cmd T
+- Run build task                         cmd T B
+- Run test task                          cmd T T
 
 
 ### Explorer

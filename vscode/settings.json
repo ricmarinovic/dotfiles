@@ -37,9 +37,7 @@
     "editor.quickSuggestions": false
   },
   "[git-commit]": {
-    "editor.rulers": [
-      72
-    ]
+    "editor.rulers": [ 72 ]
   },
   "bookmarks.treeview.visible": false,
   "rest-client.environmentVariables": {
@@ -55,6 +53,18 @@
     }
   },
   "[http]": {
-    "editor.wordWrap": "off"
-  }
+    "editor.wordWrap": "off",
+    "editor.rulers": []
+  },
+  "[rust]": {
+    "editor.tabSize": 4,
+    "editor.wordWrapColumn": 120,
+    "editor.rulers": [ 80, 120 ]
+  },
+  "[ruby]": {
+    "editor.wordWrap": "off",
+    "editor.rulers": []
+  },
+  "gitlens.codeLens.enabled": false,
+  "gitlens.gitExplorer.enabled": false
 }
