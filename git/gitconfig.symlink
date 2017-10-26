@@ -4,8 +4,8 @@
 	name = Ricardo Marinovic
 	email = marinovic.ricardo@gmail.com
 [core]
-	editor = atom --wait
-	excludesfile = /Users/sheikbox/.gitignore
+	editor = code --wait
+	excludesfile = /Users/rkma/.gitignore_global
 	autocrlf = input
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f

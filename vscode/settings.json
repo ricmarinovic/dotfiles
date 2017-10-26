@@ -65,6 +65,9 @@
     "editor.wordWrap": "off",
     "editor.rulers": []
   },
+  "[swift]": {
+    "editor.tabSize": 4
+  },
   "gitlens.codeLens.enabled": false,
   "gitlens.gitExplorer.enabled": false
 }
