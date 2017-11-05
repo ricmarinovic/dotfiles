@@ -85,7 +85,7 @@
 
 ##### Others
 - Comment line toggle                    cmd /
-- Comment block toggle                   shift cmd /
+- Comment block toggle                   ctrl shift /
 - Undo                                   cmd Z
 - Redo                                   cmd Y
 - Uppercase                              cmd K =
@@ -111,9 +111,9 @@
 - Open definition to the side            cmd G cmd D
 - Peek definition                        cmd G P
 - Show hover                             cmd G H
-- Go to matching bracket                 cmd G [
-- Go back                                cmd G B
-- Go forward                             cmd G F
+- Go to matching bracket                 cmd G B
+- Go back                                ctrl+cmd+left
+- Go forward                             ctrl+cmd+right
 
 
 ### Editor [E]
@@ -123,6 +123,7 @@
 - Save as                                shift cmd S
 - Save all                               ctrl shift cmd s
 - Close editor                           cmd W
+- Close other editors                    ctrl shift cmd w
 - Close window                           shift cmd W
 - Close group                            cmd E cmd W
 - Close other groups                     cmd E W

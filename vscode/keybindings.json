@@ -491,7 +491,7 @@
     "command": "editor.action.commentLine",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // Comment block toggle                   cmd shift /
+  // Comment block toggle                   ctrl shift /
   {
     "key": "ctrl+shift+/",
     "command": "editor.action.blockComment",
@@ -656,20 +656,20 @@
     "command": "editor.debug.action.showDebugHover",
     "when": "editorTextFocus && inDebugMode"
   },
-  // Go to matching bracket                 cmd G [
+  // Go to matching bracket                 cmd G B
   {
-    "key": "cmd+g [",
+    "key": "cmd+g b",
     "command": "editor.action.jumpToBracket",
     "when": "editorTextFocus"
   },
   // Go back                                cmd G B
   {
-    "key": "cmd+g b",
+    "key": "ctrl+cmd+left",
     "command": "workbench.action.navigateBack"
   },
   // Go forward                             cmd G F
   {
-    "key": "cmd+g f",
+    "key": "ctrl+cmd+right",
     "command": "workbench.action.navigateForward"
   },
 
@@ -705,6 +705,11 @@
   {
     "key": "cmd+w",
     "command": "workbench.action.closeActiveEditor"
+  },
+  // Close other editors                    ctrl shift cmd w
+  {
+    "key": "ctrl+shift+cmd+w",
+    "command": "workbench.action.closeOtherEditors"
   },
   // Close window                           shift cmd W
   {
@@ -1232,7 +1237,7 @@
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus"
   },
-  // Open file                              cmd O
+  // Open file                              cmd O | enter
   {
     "key": "enter",
     "command": "list.select",
@@ -1243,7 +1248,7 @@
     "command": "list.select",
     "when": "listFocus"
   },
-  // Open file to side                      shift cmd O
+  // Open file to side                      cmd shift O | cmd enter
   {
     "key": "cmd+enter",
     "command": "explorer.openToSide",
@@ -1358,5 +1363,17 @@
   {
     "key": "cmd+k o",
     "command": "-workbench.action.files.showOpenedFileInNewWindow"
+  },
+  {
+    "key": "ctrl+cmd+left",
+    "command": "-workbench.action.moveEditorToPreviousGroup"
+  },
+  {
+    "key": "ctrl+cmd+right",
+    "command": "-workbench.action.moveEditorToNextGroup"
+  },
+  {
+    "key": "alt+z",
+    "command": "-editor.action.toggleWordWrap"
   }
 ]
