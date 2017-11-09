@@ -622,9 +622,13 @@
     "key": "cmd+g cmd+g",
     "command": "workbench.action.quickOpen"
   },
-  // Go to line                             cmd G L
+  // Go to line                             cmd G L | cmd G cmd L
   {
     "key": "cmd+g l",
+    "command": "workbench.action.gotoLine"
+  },
+  {
+    "key": "cmd+g cmd+l",
     "command": "workbench.action.gotoLine"
   },
   // Go to definition                       cmd G D
@@ -1328,9 +1332,9 @@
     "key": "cmd+l backspace",
     "command": "bookmarks.clear"
   },
-  // Bookmark clear all files               cmd L cmd shift backspace
+  // Bookmark clear all files               cmd L cmd backspace
   {
-    "key": "cmd+l shift+cmd+backspace",
+    "key": "cmd+l cmd+backspace",
     "command": "bookmarks.clearFromAllFiles"
   },
 
@@ -1375,5 +1379,10 @@
   {
     "key": "alt+z",
     "command": "-editor.action.toggleWordWrap"
+  },
+  {
+    "key": "alt+c",
+    "command": "-gitlens.showQuickCommitFileDetails",
+    "when": "editorTextFocus && gitlens:enabled"
   }
 ]

@@ -106,7 +106,7 @@
 ### Navigation [G]
 - Show all commands                      cmd P
 - Go to file                             cmd G cmd G
-- Go to line                             cmd G L
+- Go to line                             cmd G L | cmd G cmd L
 - Go to definition                       cmd G D
 - Open definition to the side            cmd G cmd D
 - Peek definition                        cmd G P
@@ -230,4 +230,4 @@
 - Bookmark list                          cmd L L | cmd L cmd L
 - Bookmark list all files                cmd L shift cmd L
 - Bookmark clear                         cmd L backspace
-- Bookmark clear all files               cmd L shift cmd backspace
+- Bookmark clear all files               cmd L cmd backspace
