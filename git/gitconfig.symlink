@@ -19,4 +19,14 @@
 [merge]
 	ff = false
 [alias]
+  b = branch
+  c = commit
+  co = checkout
+  cb = checkout -b
+  d = branch -D
+  f = fetch
 	l = log --oneline --decorate --all
+  p = push
+  r = rebase
+  rl = reflog
+  s = status
