@@ -19,14 +19,16 @@
 [merge]
 	ff = false
 [alias]
+  a = add
   b = branch
+  bd = branch -D
   c = commit
   co = checkout
   cb = checkout -b
-  d = branch -D
   f = fetch
 	l = log --oneline --decorate --all
-  p = push
+  m = merge
+  p = pull
   r = rebase
   rl = reflog
   s = status
