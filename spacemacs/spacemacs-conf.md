@@ -8,64 +8,60 @@
 - Move cursor down                       j
 - Move cursor left                       h
 - Move cursor right                      l
-- Move cursor page up                    [x]
-- Move cursor page down                  [x]
+- Move cursor page up                    C-u
+- Move cursor page down                  C-d
 - Move cursor to start of word           w | W
 - Move cursor to end of word             e | E
-- Move cursor to start of line           [x]
-- Move cursor to end of line             [x]
+- Move cursor to start of line           ^ | 0
+- Move cursor to end of line             $
 - Move cursor to top of file             gg
 - Move cursor to bottom of file          G
 
 ##### Select
-- Select up                              [x]
-- Select down                            [x]
-- Select previous character              [x]
-- Select next character                  [x]
-- Select to start of word                [x]
-- Select to end of word                  [x]
-- Select to start of line                [x]
-- Select to end of line                  [x]
-- Select to top of file                  [x]
-- Select to bottom of file               [x]
-- Select all lines                       [x]
-- Select line                            [x]
-- Select word                            [x]
-- Select all occurrences of word         [x]
+- Select up                              vk
+- Select down                            vj
+- Select previous character              vh
+- Select next character                  vl
+- Select to start of word                vb
+- Select to end of word                  ve
+- Select to start of line                v^ | v0
+- Select to end of line                  v$
+- Select to top of file                  vgg
+- Select to bottom of file               vG
+- Select all lines                       vig
+- Select line                            vip
+- Select word                            viw
+- Select all occurrences of word         *
 - Select all occurrences of selection    [x]
 
 ##### Delete
 - Delete line                            dd
-- Delete to start of word                [x]
-- Delete to end of word                  [x]
-- Delete to start of line                [x]
-- Delete to end of line                  [x]
+- Delete to start of word                db
+- Delete to end of word                  de
+- Delete to start of line                d^ | d0
+- Delete to end of line                  d$
 
 ##### Line movement
-- Insert line up                         [x]
-- Insert line down                       [x]
-- Move line up                           [x]
-- Move line down                         [x]
+- Insert line up                         O
+- Insert line down                       o
+- Insert blank line up                   [ SPC
+- Insert blank line down                 ] SPC 
+- Move line up                           SPC xJ
+- Move line down                         SPC xK
 - Join lines                             J | gJ
 
 ##### Copy
-- Cut                                    [x]
-- Copy                                   y | yy
+- Cut / Copy                             y | yy
 - Copy line up                           yyP
-- Copy line down                         yyp
-- Paste                                  [x]
-
-##### Multiple cursors
-- Insert cursor up                       [x]
-- Insert cursor down                     [x]
-- Insert cursor end of lines selected    [x]
+- Copy line down                         yyp | SPC xld
+- Paste                                  p
 
 ##### Indentation
-- Indent line                            [x]
-- Outdent line                           [x]
+- Indent line                            >>
+- Outdent line                           <<
 
 ##### Folding [L]
-- Fold                                   [x]
+- Fold                                   za
 - Fold all                               [x]
 - Fold all subregions                    [x]
 - Unfold                                 [x]
@@ -74,12 +70,12 @@
 - Fold level #                           [x]
 
 ##### Others
-- Comment line toggle                    [x]
+- Comment line toggle                    gcc
 - Comment block toggle                   [x]
-- Undo                                   [x]
-- Redo                                   [x]
-- Uppercase                              [x]
-- Lowercase                              [x]
+- Undo                                   u
+- Redo                                   C-r
+- Uppercase                              gU
+- Lowercase                              gu
 
 
 ### Search
@@ -95,9 +91,9 @@
 
 ### Navigation [G]
 - Show all commands                      [x]
-- Go to file                             [x]
-- Go to line                             [x]
-- Go to definition                       [x]
+- Go to file                             SPC ff
+- Go to line                             SPC jl
+- Go to definition                       gd
 - Open definition to the side            [x]
 - Peek definition                        [x]
 - Show hover                             [x]
@@ -163,9 +159,9 @@
 
 
 ### Preferences [K]
-- Open preferences                       [x]
-- Keyboard shortcuts                     [x]
-- User snippets                          [x]
+- Open preferences                       SPC fed
+- Describe bindings                      SPC hdb
+- Describe key                           SPC hdk
 - Insert snippet                         [x]
 - Color theme                            [x]
 - Change language                        [x]
@@ -173,28 +169,6 @@
 - Format document                        [x]
 - Word wrap toggle                       [x]
 - Copy path of active file               [x]
-- TM Scopes                              [x]
-- Developer tools                        [x]
-
-
-### Debug [B]
-- Breakpoint toggle                      [x]
-- Start                                  [x]
-- Start (without debugging)              [x]
-- Restart                                [x]
-- Continue                               [x]
-- Pause                                  [x]
-- Step into                              [x]
-- Step out                               [x]
-- Step over                              [x]
-- Stop                                   [x]
-- Show hover                             [x]
-
-
-### Tasks [T]
-- Run task                               [x]
-- Run build task                         [x]
-- Run test task                          [x]
 
 
 ### Explorer
@@ -216,7 +190,7 @@
 
 
 ### Bookmarks
-- Bookmark toggle                        [x]
+- Bookmark toggle                        SPC fb
 - Bookmark list                          [x]
 - Bookmark list all files                [x]
 - Bookmark clear                         [x]
