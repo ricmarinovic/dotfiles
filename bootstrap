@@ -8,6 +8,12 @@ cd $dir
 ln -shf $dir/git/gitconfig.symlink ~/.gitconfig
 ln -shf $dir/git/gitignore.symlink ~/.gitignore_global
 ln -shf $dir/system/bash_profile.symlink ~/.bash_profile
-ln -shf $dir/vscode.symlink ~/Library/Application\ Support/Code
+
+mkdir ~/Library/Application\ Support/Code/User
+ln -shf $dir/vscode/settings.json ~/Library/Application\ Support/Code/User/
+ln -shf $dir/vscode/keybindings.json ~/Library/Application\ Support/Code/User/
+ln -shf $dir/vscode/snippets/elixir.json ~/Library/Application\ Support/Code/User/
+ln -shf $dir/vscode/snippets/ruby.json ~/Library/Application\ Support/Code/User/
+ln -shf $dir/vscode/snippets/javascript.json ~/Library/Application\ Support/Code/User/
 
 echo "Files linked!"
