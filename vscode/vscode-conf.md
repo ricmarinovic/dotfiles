@@ -124,8 +124,8 @@
 - Peek definition                        cmd G P
 - Show hover                             cmd G H
 - Go to matching bracket                 cmd G B
-- Go back                                ctrl cmd left
-- Go forward                             ctrl cmd right
+- Go back                                ctrl [
+- Go forward                             ctrl ]
 
 
 ### Editor [E]
@@ -140,9 +140,9 @@
 - Close group                            cmd E cmd W
 - Close other groups                     cmd E W
 - Close all                              cmd E cmd shift W
-- Reopen closed editor                   cmd E R
-- Previous editor                        ctrl [
-- Next editor                            ctrl ]
+- Reopen closed editor                   cmd E R | shift cmd T
+- Previous editor                        shif cmd [
+- Next editor                            shif cmd ]
 - Focus # editor                         ctrl #
 - Move editor left                       ctrl cmd [
 - Move editor right                      ctrl cmd ]
@@ -228,6 +228,9 @@
 - Rename file                            cmd R
 - Open file                              cmd O | enter
 - Open file to side                      cmd shift O | cmd enter
+- Expand                                 ctrl K
+- Collapse                               ctrl J
+- Collapse all                           shift cmd [
 
 
 ### Git [G]
@@ -238,6 +241,8 @@
 - Checkout to                            cmd G cmd C
 - Discard changes                        cmd G backspace
 - Undo last commit                       cmd G cmd Z
+- Previous change                        ctrl shift cmd [
+- Next change                            ctrl shift cmd ]
 
 
 ### Bookmarks

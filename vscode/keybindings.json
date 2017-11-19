@@ -3,7 +3,7 @@
   // # BASIC EDITING
 
   // ## CURSOR
-  // Move cursor up                         up | ctrl P
+  // Move cursor up                         ctrl P
   {
     "key": "ctrl+p",
     "command": "cursorUp",
@@ -29,7 +29,7 @@
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
   },
-  // Move cursor down                       down | ctrl N
+  // Move cursor down                       ctrl N
   {
     "key": "ctrl+n",
     "command": "cursorDown",
@@ -55,13 +55,13 @@
     "command": "workbench.action.quickOpenSelectNext",
     "when": "inQuickOpen"
   },
-  // Move cursor left                       left | ctrl B
+  // Move cursor left                       ctrl B
   {
     "key": "ctrl+b",
     "command": "cursorLeft",
     "when": "editorTextFocus"
   },
-  // Move cursor right                      right | ctrl F
+  // Move cursor right                      ctrl F
   {
     "key": "ctrl+f",
     "command": "cursorRight",
@@ -79,7 +79,7 @@
     "command": "cursorPageDown",
     "when": "editorTextFocus"
   },
-  // Move cursor to start of word           alt left | ctrl H
+  // Move cursor to start of word           ctrl H
   {
     "key": "alt+left",
     "command": "cursorWordStartLeft",
@@ -90,7 +90,7 @@
     "command": "cursorWordStartLeft",
     "when": "editorTextFocus"
   },
-  // Move cursor to end of word             alt right | ctrl L
+  // Move cursor to end of word             ctrl L
   {
     "key": "alt+right",
     "command": "cursorWordEndRight",
@@ -101,7 +101,7 @@
     "command": "cursorWordEndRight",
     "when": "editorTextFocus"
   },
-  // Move cursor to start of line           cmd left | ctrl A
+  // Move cursor to start of line           ctrl A
   {
     "key": "ctrl+a",
     "command": "cursorHome",
@@ -112,7 +112,7 @@
     "command": "cursorHome",
     "when": "editorTextFocus"
   },
-  // Move cursor to end of line             cmd right | ctrl E
+  // Move cursor to end of line             ctrl E
   {
     "key": "ctrl+e",
     "command": "cursorEnd",
@@ -784,15 +784,17 @@
     "command": "editor.action.jumpToBracket",
     "when": "editorTextFocus"
   },
-  // Go back                                cmd G B
+  // Go back                                ctrl [
   {
-    "key": "ctrl+cmd+left",
-    "command": "workbench.action.navigateBack"
+    "key": "ctrl+[",
+    "command": "workbench.action.navigateBack",
+    "when": "editorFocus"
   },
-  // Go forward                             cmd G F
+  // Go forward                             ctrl ]
   {
-    "key": "ctrl+cmd+right",
-    "command": "workbench.action.navigateForward"
+    "key": "ctrl+]",
+    "command": "workbench.action.navigateForward",
+    "when": "editorFocus"
   },
 
 
@@ -853,19 +855,23 @@
     "key": "cmd+e shift+cmd+w",
     "command": "workbench.action.closeAllEditors"
   },
-  // Reopen closed editor                   cmd E R
+  // Reopen closed editor                   cmd E R | shift cmd T
   {
     "key": "cmd+e r",
     "command": "workbench.action.reopenClosedEditor"
   },
-  // Previous editor                        ctrl [
   {
-    "key": "ctrl+[",
+    "key": "shift+cmd+t",
+    "command": "workbench.action.reopenClosedEditor"
+  },
+  // Previous editor                        shif cmd [
+  {
+    "key": "shift+cmd+[",
     "command": "workbench.action.previousEditor"
   },
-  // Next editor                            ctrl ]
+  // Next editor                            shif cmd ]
   {
-    "key": "ctrl+]",
+    "key": "shift+cmd+]",
     "command": "workbench.action.nextEditor"
   },
   // Focus # editor                         ctrl #
@@ -952,16 +958,6 @@
   {
     "key": "cmd+shift+e",
     "command": "workbench.action.navigateEditorGroups"
-  },
-  {
-    "key": "cmd+e e",
-    "command": "workbench.action.navigateEditorGroups",
-    "when": "editorFocus"
-  },
-  {
-    "key": "cmd+e e",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "!editorFocus"
   },
   {
     "key": "cmd+e cmd+e",
@@ -1391,6 +1387,24 @@
     "command": "explorer.openToSide",
     "when": "listFocus"
   },
+  // Expand                                 ctrl K
+  {
+    "key": "ctrl+k",
+    "command": "list.expand",
+    "when": "listFocus"
+  },
+  // Collapse                               ctrl J
+  {
+    "key": "ctrl+j",
+    "command": "list.collapse",
+    "when": "listFocus"
+  },
+  // Collapse all                           shift cmd [
+  {
+    "key": "shift+cmd+[",
+    "command": "workbench.files.action.collapseExplorerFolders",
+    "when": "listFocus"
+  },
 
 
   // # GIT
@@ -1428,6 +1442,18 @@
   {
     "key": "cmd+g cmd+Z",
     "command": "git.undoCommit"
+  },
+  // Previous change                        ctrl shift cmd [
+  {
+    "key": "ctrl+shift+cmd+[",
+    "command": "editor.action.dirtydiff.previous",
+    "when": "editorTextFocus"
+  },
+  // Next change                            ctrl shift cmd ]
+  {
+    "key": "ctrl+shift+cmd+]",
+    "command": "editor.action.dirtydiff.next",
+    "when": "editorTextFocus"
   },
 
 
