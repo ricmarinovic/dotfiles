@@ -3,7 +3,7 @@
   // # BASIC EDITING
 
   // ## CURSOR
-  // Move cursor up                         ctrl P
+  // Move cursor up                         up | ctrl P
   {
     "key": "ctrl+p",
     "command": "cursorUp",
@@ -29,7 +29,7 @@
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
   },
-  // Move cursor down                       ctrl N
+  // Move cursor down                       down | ctrl N
   {
     "key": "ctrl+n",
     "command": "cursorDown",
@@ -55,46 +55,56 @@
     "command": "workbench.action.quickOpenSelectNext",
     "when": "inQuickOpen"
   },
-  // Move cursor left                       ctrl B
+  // Move cursor left                       left | ctrl B
   {
     "key": "ctrl+b",
     "command": "cursorLeft",
     "when": "editorTextFocus"
   },
-  // ove cursor right                      ctrl F
+  // Move cursor right                      right | ctrl F
   {
     "key": "ctrl+f",
     "command": "cursorRight",
     "when": "editorTextFocus"
   },
-  // Move cursor page up                    ctrl shift P
+  // Move cursor page up                    ctrl K
   {
-    "key": "ctrl+shift+p",
+    "key": "ctrl+k",
     "command": "cursorPageUp",
     "when": "editorTextFocus"
   },
-  // Move cursor page down                  ctrl shift N
+  // Move cursor page down                  ctrl J
   {
-    "key": "ctrl+shift+n",
+    "key": "ctrl+j",
     "command": "cursorPageDown",
     "when": "editorTextFocus"
   },
-  // Move cursor to start of word           alt left
+  // Move cursor to start of word           alt left | ctrl H
   {
     "key": "alt+left",
     "command": "cursorWordStartLeft",
     "when": "editorTextFocus"
   },
-  // Move cursor to end of word             alt right
+  {
+    "key": "ctrl+h",
+    "command": "cursorWordStartLeft",
+    "when": "editorTextFocus"
+  },
+  // Move cursor to end of word             alt right | ctrl L
   {
     "key": "alt+right",
     "command": "cursorWordEndRight",
     "when": "editorTextFocus"
   },
-  // Move cursor to start of line           ctrl A | cmd left
+  {
+    "key": "ctrl+l",
+    "command": "cursorWordEndRight",
+    "when": "editorTextFocus"
+  },
+  // Move cursor to start of line           cmd left | ctrl A
   {
     "key": "ctrl+a",
-    "command": "cursorLineStart",
+    "command": "cursorHome",
     "when": "editorTextFocus"
   },
   {
@@ -102,10 +112,10 @@
     "command": "cursorHome",
     "when": "editorTextFocus"
   },
-  // Move cursor to end of line             ctrl E | cmd right
+  // Move cursor to end of line             cmd right | ctrl E
   {
     "key": "ctrl+e",
-    "command": "cursorLineEnd",
+    "command": "cursorEnd",
     "when": "editorTextFocus"
   },
   {
@@ -137,52 +147,126 @@
   },
 
 
+  // SCROLL
+  // Scroll line up                         ctrl cmd K
+  {
+    "key": "ctrl+cmd+k",
+    "command": "scrollLineUp",
+    "when": "editorTextFocus"
+  },
+  // Scroll line down                       ctrl cmd J
+  {
+    "key": "ctrl+cmd+j",
+    "command": "scrollLineDown",
+    "when": "editorTextFocus"
+  },
+  // Scroll page up                         ctrl cmd L
+  {
+    "key": "ctrl+cmd+l",
+    "command": "scrollPageUp",
+    "when": "editorTextFocus"
+  },
+  // Scroll page down                       ctrl cmd H
+  {
+    "key": "ctrl+cmd+h",
+    "command": "scrollPageDown",
+    "when": "editorTextFocus"
+  },
+
+
   // SELECT
-  // Select up                              shift up
+  // Select up                              shift up | ctrl shift P
   {
     "key": "shift+up",
     "command": "cursorUpSelect",
     "when": "editorTextFocus"
   },
-  // Select down                            shift down
+  {
+    "key": "ctrl+shift+p",
+    "command": "cursorUpSelect",
+    "when": "editorTextFocus"
+  },
+  // Select down                            shift down | ctrl shift N
   {
     "key": "shift+down",
     "command": "cursorDownSelect",
     "when": "editorTextFocus"
   },
-  // Select previous character              shift left
+  {
+    "key": "ctrl+shift+n",
+    "command": "cursorDownSelect",
+    "when": "editorTextFocus"
+  },
+  // Select previous character              shift left | ctrl shift B
   {
     "key": "shift+left",
     "command": "cursorLeftSelect",
     "when": "editorTextFocus"
   },
-  // Select next character                  shift right
   {
-    "key": "shift+right",
+    "key": "ctrl+shift+b",
+    "command": "cursorLeftSelect",
+    "when": "editorTextFocus"
+  },
+  // Select next character                  shift right | ctrl shift F
+  {
+    "key": "ctrl+shift+f",
     "command": "cursorRightSelect",
     "when": "editorTextFocus"
   },
-  // Select to start of word                shift alt left
+  // Select page up                         ctrl shift K
+  {
+    "key": "ctrl+shift+k",
+    "command": "cursorPageUpSelect",
+    "when": "editorTextFocus"
+  },
+  // Select page down                       ctrl shift J
+  {
+    "key": "ctrl+shift+j",
+    "command": "cursorPageDownSelect",
+    "when": "editorTextFocus"
+  },
+  // Select to start of word                shift alt left | ctrl shift H
   {
     "key": "shift+alt+left",
     "command": "cursorWordStartLeftSelect",
     "when": "editorTextFocus"
   },
-  // Select to end of word                  shift alt right
+  {
+    "key": "ctrl+shift+h",
+    "command": "cursorWordStartLeftSelect",
+    "when": "editorTextFocus"
+  },
+  // Select to end of word                  shift alt right | ctrl shift L
   {
     "key": "shift+alt+right",
     "command": "cursorWordEndRightSelect",
     "when": "editorTextFocus"
   },
-  // Select to start of line                shift cmd left
+  {
+    "key": "ctrl+shift+l",
+    "command": "cursorWordEndRightSelect",
+    "when": "editorTextFocus"
+  },
+  // Select to start of line                shift cmd left | ctrl shift A
   {
     "key": "shift+cmd+left",
     "command": "cursorHomeSelect",
     "when": "editorTextFocus"
   },
-  // Select to end of line                  shift cmd right
+  {
+    "key": "ctrl+shift+a",
+    "command": "cursorHomeSelect",
+    "when": "editorTextFocus"
+  },
+  // Select to end of line                  shift cmd right | ctrl shift E
   {
     "key": "shift+cmd+right",
+    "command": "cursorEndSelect",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+e",
     "command": "cursorEndSelect",
     "when": "editorTextFocus"
   },
@@ -235,21 +319,31 @@
 
 
   // ## DELETE
-  // Delete line                            ctrl shift K
+  // Delete line                            shift cmd K
   {
-    "key": "ctrl+shift+k",
+    "key": "shift+cmd+k",
     "command": "editor.action.deleteLines",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // Delete to start of word                alt backspace
+  // Delete to start of word                ctrl backspace
   {
-    "key": "alt+backspace",
+    "key": "ctrl+backspace",
+    "command": "deleteWordLeft",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+backspace",
     "command": "workbench.action.terminal.deleteWordLeft",
     "when": "terminalFocus"
   },
-  // Delete to end of word                  alt delete
+  // Delete to end of word                  ctrl delete
   {
-    "key": "alt+delete",
+    "key": "ctrl+delete",
+    "command": "deleteWordRight",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+delete",
     "command": "workbench.action.terminal.deleteWordRight",
     "when": "terminalFocus"
   },
@@ -280,15 +374,15 @@
     "command": "editor.action.insertLineAfter",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // Move line up                           ctrl cmd up
+  // Move line up                           ctrl cmd P
   {
-    "key": "ctrl+cmd+up",
+    "key": "ctrl+cmd+p",
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // Move line down                         ctrl cmd down
+    // Move line down                         ctrl cmd N
   {
-    "key": "ctrl+cmd+down",
+    "key": "ctrl+cmd+n",
     "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
@@ -338,15 +432,15 @@
     "command": "filesExplorer.copy",
     "when": "explorerViewletVisible && filesExplorerFocus"
   },
-  // Copy line up                           ctrl alt up
+  // Copy line up                           shift cmd P
   {
-    "key": "ctrl+alt+up",
+    "key": "shift+cmd+p",
     "command": "editor.action.copyLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // Copy line down                         ctrl alt down
+  // Copy line down                         shift cmd N
   {
-    "key": "ctrl+alt+down",
+    "key": "shift+cmd+n",
     "command": "editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
@@ -364,22 +458,46 @@
 
 
   // ## MULTIPLE CURSORS
-  // Insert cursor up                       alt cmd up
+  // Insert cursor up                       ctrl cmd up
   {
-    "key": "alt+cmd+up",
+    "key": "ctrl+cmd+up",
     "command": "editor.action.insertCursorAbove",
     "when": "editorTextFocus"
   },
-  // Insert cursor down                     alt cmd down
+  // Insert cursor down                     ctrl cmd down
   {
-    "key": "alt+cmd+down",
+    "key": "ctrl+cmd+down",
     "command": "editor.action.insertCursorBelow",
     "when": "editorTextFocus"
   },
-  // Insert cursor end of lines selected    shift alt i
+  // Insert cursor end of lines selected    shift cmd I
   {
-    "key": "shift+alt+i",
+    "key": "shift+cmd+i",
     "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
+  },
+  // - Column select up                       shift ctrl cmd up
+  {
+    "key": "ctrl+shift+cmd+up",
+    "command": "cursorColumnSelectUp",
+    "when": "editorTextFocus"
+  },
+  // - Column select down                     shift ctrl cmd down
+  {
+    "key": "ctrl+shift+cmd+down",
+    "command": "cursorColumnSelectDown",
+    "when": "editorTextFocus"
+  },
+  // - Column select left                     shift ctrl cmd left
+  {
+    "key": "ctrl+shift+cmd+left",
+    "command": "cursorColumnSelectLeft",
+    "when": "editorTextFocus"
+  },
+  // - Column select right                    shift ctrl cmd right
+  {
+    "key": "ctrl+shift+cmd+right",
+    "command": "cursorColumnSelectRight",
     "when": "editorTextFocus"
   },
 
@@ -685,11 +803,6 @@
     "command": "workbench.action.files.newUntitledFile",
     "when": "!filesExplorerFocus"
   },
-  // New window                             shift cmd N
-  {
-    "key": "shift+cmd+n",
-    "command": "workbench.action.newWindow"
-  },
   // Save                                   cmd S
   {
     "key": "cmd+s",
@@ -745,14 +858,14 @@
     "key": "cmd+e r",
     "command": "workbench.action.reopenClosedEditor"
   },
-  // Previous editor                        shift cmd [
+  // Previous editor                        ctrl [
   {
-    "key": "shift+cmd+[",
+    "key": "ctrl+[",
     "command": "workbench.action.previousEditor"
   },
-  // Next editor                            shift cmd ]
+  // Next editor                            ctrl ]
   {
-    "key": "shift+cmd+]",
+    "key": "ctrl+]",
     "command": "workbench.action.nextEditor"
   },
   // Focus # editor                         ctrl #
@@ -887,6 +1000,16 @@
     "key": "cmd+e -",
     "command": "workbench.action.toggleEditorGroupLayout"
   },
+  // Maximize editor group                  cmd E = | cmd E cmd =
+  {
+    "key": "cmd+e =",
+    "command": "workbench.action.maximizeEditor"
+  },
+  // Even editor groups                     cmd E cmd =
+  {
+    "key": "cmd+e shift+cmd+=",
+    "command": "workbench.action.evenEditorWidths"
+  },
   // Open next                              ctrl tab
   {
     "key": "ctrl+tab",
@@ -1001,12 +1124,12 @@
     "key": "cmd+m c",
     "command": "workbench.debug.action.toggleRepl"
   },
-  // Integrated terminal toggle             cmd M T
+  // Toggle integrated terminal             cmd M T
   {
     "key": "cmd+m t",
     "command": "workbench.action.terminal.toggleTerminal"
   },
-  // Integrated terminal focus              cmd M cmd T
+  // Focus integrated terminal              cmd M cmd T
   {
     "key": "cmd+m cmd+t",
     "command": "workbench.action.terminal.focus"
@@ -1016,15 +1139,20 @@
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus"
   },
-  // Zen mode toggle                        cmd M Z
+  // Toggle zen mode                        cmd M Z
   {
     "key": "cmd+m z",
-    "command": "workbench.action.toggleFullScreen"
+    "command": "workbench.action.toggleZenMode"
   },
   {
     "key": "escape escape",
     "command": "workbench.action.exitZenMode",
     "when": "inZenMode"
+  },
+  // Toggle full screen                     cmd M cmd F
+  {
+    "key": "cmd+m cmd+f",
+    "command": "workbench.action.toggleFullScreen"
   },
   // Markdown preview                       cmd M M
   {

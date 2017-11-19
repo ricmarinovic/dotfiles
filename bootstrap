@@ -5,54 +5,9 @@ set -e
 dir=$(pwd -P)
 cd $dir
 
-copy_files () {
-  for symlink in $(find . -name "*.symlink"); do
-    # If a directory ends with symlink
-    if [ -d ${symlink} ]; then
-      for file in $symlink/*; do
-        local directory=${symlink##*/}
+ln -shf $dir/git/gitconfig.symlink ~/.gitconfig
+ln -shf $dir/git/gitignore.symlink ~/.gitignore_global
+ln -shf $dir/system/bash_profile.symlink ~/.bash_profile
+ln -shf $dir/vscode.symlink ~/Library/Application\ Support/Code
 
-        # Create the directory if it doesn't exist
-        if ! [ -d ~/.${directory%.*} ]; then
-          mkdir ~/.${directory%.*}
-        fi
-
-        echo "- Copying ./${file#'./'} => ~/.${directory%.*}/${file##*/}"
-        ln -shf $dir/${file#'./'} ~/.${directory%.*}/${file##*/}
-      done
-
-    # If a file ends with symlink
-    else
-      local filename=${symlink##*/}
-
-      echo "- Copying ./${symlink#'./'} => ~/.${filename%.*}"
-      ln -shf $dir/${symlink#'./'} ~/.${filename%.*}
-    fi
-  done
-}
-
-# Install Homebrew if it is not installed already
-if test ! $(which brew)
-then
-  echo "Installing Homebrew ..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-  echo "Updating homebrew ..."
-  brew update
-  brew upgrade
-fi
-
-echo "Brew bundle ..."
-brew tap homebrew/bundle
-brew bundle --verbose
-
-# Copy files
-echo "Copying files ..."
-copy_files
-
-# Run all of the install files
-for file in $(find . -name "install.sh"); do
-  sh -c "${file}"
-done
-
-echo "... done!"
+echo "Files linked!"

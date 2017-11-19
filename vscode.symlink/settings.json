@@ -2,11 +2,13 @@
 {
   "editor.fontFamily": "'Fira Code', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 14,
+  "editor.fontSize": 13,
   "editor.cursorBlinking": "phase",
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 80,
-  "editor.rulers": [ 80 ],
+  "editor.rulers": [
+    80
+  ],
   "editor.tabSize": 2,
   "editor.minimap.enabled": false,
   "editor.acceptSuggestionOnEnter": "off",
@@ -29,45 +31,37 @@
   "terminal.integrated.fontFamily": "Fira Code",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.cursorBlinking": true,
-  "zenMode.hideTabs": false,
   "window.zoomLevel": 0,
   "html.format.endWithNewline": true,
   "[markdown]": {
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrap": "bounded",
     "editor.quickSuggestions": false
   },
   "[git-commit]": {
-    "editor.rulers": [ 72 ]
+    "editor.rulers": [
+      72
+    ]
   },
   "bookmarks.treeview.visible": false,
-  "rest-client.environmentVariables": {
-    "local": {
-      "base_url": "localhost:3000"
-    },
-    "stage": {
-      "base_url": "stage.stant.com.br/api",
-      "token": "3c4aa43a65a23809cf344260b9ed0dd96bcea318a0c31c6b25d1f49332c73ca7"
-    },
-    "production": {
-      "base_url": "web.stant.com.br/api"
-    }
-  },
-  "[http]": {
-    "editor.wordWrap": "off",
-    "editor.rulers": []
-  },
   "[rust]": {
     "editor.tabSize": 4,
     "editor.wordWrapColumn": 120,
-    "editor.rulers": [ 80, 120 ]
+    "editor.rulers": [
+      80,
+      120
+    ]
   },
   "[ruby]": {
     "editor.wordWrap": "off",
     "editor.rulers": []
   },
-  "[swift]": {
+  "[python]": {
     "editor.tabSize": 4
   },
-  "gitlens.codeLens.enabled": false,
-  "gitlens.gitExplorer.enabled": false
+  "workbench.panel.location": "bottom",
+  "python.pythonPath": "python3",
+  "python.linting.enabled": false,
+  "workbench.activityBar.visible": true,
+  "python.linting.pylintEnabled": false,
+  "explorer.decorations.badges": false
 }

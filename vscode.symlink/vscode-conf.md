@@ -18,24 +18,32 @@
 - Move cursor down                       ctrl N
 - Move cursor left                       ctrl B
 - Move cursor right                      ctrl F
-- Move cursor page up                    ctrl shift P
-- Move cursor page down                  ctrl shift N
-- Move cursor to start of word           alt left
-- Move cursor to end of word             alt right
-- Move cursor to start of line           ctrl A | cmd left
-- Move cursor to end of line             ctrl E | cmd right
+- Move cursor page up                    ctrl K
+- Move cursor page down                  ctrl J
+- Move cursor to start of word           ctrl H
+- Move cursor to end of word             ctrl L
+- Move cursor to start of line           ctrl A
+- Move cursor to end of line             ctrl E
 - Move cursor to top of file             cmd up
 - Move cursor to bottom of file          cmd down
 
+##### Scroll
+- Scroll line up                         ctrl cmd K
+- Scroll line down                       ctrl cmd J
+- Scroll page up                         ctrl cmd L
+- Scroll page down                       ctrl cmd H
+
 ##### Select
-- Select up                              shift up
-- Select down                            shift down
-- Select previous character              shift left
-- Select next character                  shift right
-- Select to start of word                shift alt left
-- Select to end of word                  shift alt right
-- Select to start of line                shift cmd left
-- Select to end of line                  shift cmd right
+- Select up                              ctrl shift P
+- Select down                            ctrl shift N
+- Select previous character              ctrl shift B
+- Select next character                  ctrl shift F
+- Select page up                         ctrl shift K
+- Select page down                       ctrl shift J
+- Select to start of word                ctrl shift H
+- Select to end of word                  ctrl shift L
+- Select to start of line                ctrl shift A
+- Select to end of line                  ctrl shift E
 - Select to top of file                  shift cmd up
 - Select to bottom of file               shift cmd down
 - Select all lines                       cmd A
@@ -45,30 +53,34 @@
 - Select all occurrences of selection    shift cmd L
 
 ##### Delete
-- Delete line                            ctrl shift K
-- Delete to start of word                alt backspace
-- Delete to end of word                  alt delete
+- Delete line                            shift cmd K
+- Delete to start of word                ctrl backspace
+- Delete to end of word                  ctrl delete
 - Delete to start of line                cmd backspace
 - Delete to end of line                  cmd delete
 
 ##### Line movement
 - Insert line up                         shift cmd enter
 - Insert line down                       cmd enter
-- Move line up                           ctrl cmd up
-- Move line down                         ctrl cmd down
+- Move line up                           ctrl cmd P
+- Move line down                         ctrl cmd N
 - Join lines                             cmd J
 
 ##### Copy
 - Cut                                    cmd X
 - Copy                                   cmd C
-- Copy line up                           ctrl alt up
-- Copy line down                         ctrl alt down
+- Copy line up                           shift cmd P
+- Copy line down                         shift cmd N
 - Paste                                  cmd V
 
 ##### Multiple cursors
-- Insert cursor up                       alt cmd up
-- Insert cursor down                     alt cmd down
-- Insert cursor end of lines selected    shift alt I
+- Insert cursor up                       ctrl cmd up
+- Insert cursor down                     ctrl cmd down
+- Insert cursor end of lines selected    shift cmd I
+- Column select up                       ctrl shift cmd up
+- Column select down                     ctrl shift cmd down
+- Column select left                     ctrl shift cmd left
+- Column select right                    ctrl shift cmd right
 
 ##### Indentation
 - Indent line                            cmd ]
@@ -112,8 +124,8 @@
 - Peek definition                        cmd G P
 - Show hover                             cmd G H
 - Go to matching bracket                 cmd G B
-- Go back                                ctrl+cmd+left
-- Go forward                             ctrl+cmd+right
+- Go back                                ctrl cmd left
+- Go forward                             ctrl cmd right
 
 
 ### Editor [E]
@@ -129,8 +141,8 @@
 - Close other groups                     cmd E W
 - Close all                              cmd E cmd shift W
 - Reopen closed editor                   cmd E R
-- Previous editor                        shift cmd [
-- Next editor                            shift cmd ]
+- Previous editor                        ctrl [
+- Next editor                            ctrl ]
 - Focus # editor                         ctrl #
 - Move editor left                       ctrl cmd [
 - Move editor right                      ctrl cmd ]
@@ -143,28 +155,31 @@
 - Focus # editor group                   cmd #
 - Split editor                           cmd E /
 - Toggle editor group horizontal         cmd E -
+- Maximize editor group                  cmd E = | cmd E cmd =
+- Even editor groups                     cmd E shift cmd =
 - Open next                              ctrl tab
 - Open previous                          shift ctrl tab
 
 
 ### Display [M]
-- Sidebar toggle                         cmd M /
-- Sidebar focus                          cmd M cmd+/
-- Focus on open editors                  cmd M E
-- Focus on files Explorer                cmd M F
+- Toggle sidebar                         cmd M /
+- Focus sidebar                          cmd M cmd+/
+- Focus open editors                     cmd M E
+- Focus files Explorer                   cmd M F
 - Show search                            cmd M S
 - Show search and replace                cmd M R
 - Show source control                    cmd M G
 - Show debug                             cmd M B
 - Show extensions                        cmd M X
-- Panel toggle                           cmd M -
+- Toggle panel                           cmd M -
 - Panel maximize                         cmd M =
 - Show problems                          cmd M P
 - Show output                            cmd M O
 - Show debug console                     cmd M C
-- Integrated terminal toggle             cmd M T
-- Integrated terminal focus              cmd M cmd T
-- Zen mode toggle                        cmd M Z
+- Toggle integrated terminal             cmd M T
+- Focus integrated terminal              cmd M cmd T
+- Toggle zen mode                        cmd M Z
+- Toggle full screen                     cmd M cmd F
 - Markdown preview                       cmd M M
 - Markdown preview to side               cmd M cmd M
 - Zoom in                                cmd =
@@ -184,7 +199,7 @@
 - Word wrap toggle                       cmd K W
 - Copy path of active file               cmd K P
 - TM Scopes                              ctrl cmd I
-- Developer tools                        alt cmd I
+- Developer tools                        ctrl shift cmd I
 
 
 ### Debug [B]
