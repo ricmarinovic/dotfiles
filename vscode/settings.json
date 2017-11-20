@@ -58,5 +58,8 @@
   "python.pythonPath": "python3",
   "python.linting.enabled": false,
   "workbench.activityBar.visible": true,
-  "python.linting.pylintEnabled": false
+  "python.linting.pylintEnabled": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.statusBar.enabled": false,
+  "gitlens.gitExplorer.enabled": false
 }
