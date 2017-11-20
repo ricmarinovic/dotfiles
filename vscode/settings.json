@@ -3,6 +3,7 @@
   "editor.fontFamily": "'Fira Code', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
+  "editor.cursorStyle": "line",
   "editor.cursorBlinking": "phase",
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 80,
@@ -38,30 +39,24 @@
     "editor.quickSuggestions": false
   },
   "[git-commit]": {
-    "editor.rulers": [
-      72
-    ]
+    "editor.rulers": [ 72 ]
   },
   "bookmarks.treeview.visible": false,
   "[rust]": {
     "editor.tabSize": 4,
     "editor.wordWrapColumn": 120,
-    "editor.rulers": [
-      80,
-      120
-    ]
+    "editor.rulers": [ 120 ]
   },
   "[ruby]": {
-    "editor.wordWrap": "off",
-    "editor.rulers": []
+    "editor.wordWrap": "off"
   },
   "[python]": {
     "editor.tabSize": 4
   },
+  "editor.scrollbar.vertical": "visible",
   "workbench.panel.location": "bottom",
   "python.pythonPath": "python3",
   "python.linting.enabled": false,
   "workbench.activityBar.visible": true,
-  "python.linting.pylintEnabled": false,
-  "explorer.decorations.badges": false
+  "python.linting.pylintEnabled": false
 }
