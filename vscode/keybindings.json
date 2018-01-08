@@ -730,12 +730,25 @@
     "key": "cmd+p",
     "command": "workbench.action.showCommands"
   },
+  // Show all opened editors                cmd G E
+  {
+    "key": "cmd+g e",
+    "command": "workbench.action.showAllEditors"
+  },
+  {
+    "key": "cmd+g cmd+e",
+    "command": "workbench.action.showAllEditors"
+  },
   // Go to file                             cmd G cmd G
+  {
+    "key": "cmd+g g",
+    "command": "workbench.action.quickOpen"
+  },
   {
     "key": "cmd+g cmd+g",
     "command": "workbench.action.quickOpen"
   },
-  // Go to line                             cmd G L | cmd G cmd L
+  // Go to line                             cmd G L
   {
     "key": "cmd+g l",
     "command": "workbench.action.gotoLine"
@@ -744,10 +757,23 @@
     "key": "cmd+g cmd+l",
     "command": "workbench.action.gotoLine"
   },
-  // Go to symbol                           cmd G S
+  // Go to symbol                           cmd G F
+  {
+    "key": "cmd+g f",
+    "command": "workbench.action.gotoSymbol"
+  },
   {
     "key": "cmd+g cmd+f",
     "command": "workbench.action.gotoSymbol"
+  },
+  // Go to symbol in workspace              cmd G W
+  {
+    "key": "cmd+g w",
+    "command": "workbench.action.showAllSymbols"
+  },
+  {
+    "key": "cmd+g cmd+w",
+    "command": "workbench.action.showAllSymbols"
   },
   // Go to definition                       cmd G D
   {
@@ -1429,9 +1455,9 @@
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
   },
-  // Kill terminal                          cmd T K
+  // Kill terminal                          cmd T W
   {
-    "key": "cmd+t k",
+    "key": "cmd+t w",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },

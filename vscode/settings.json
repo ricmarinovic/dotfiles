@@ -22,6 +22,7 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderLineHighlight": "all",
   "editor.scrollBeyondLastLine": true,
+  "editor.smoothScrolling": true,
   "explorer.autoReveal": true,
   "explorer.confirmDelete": true,
   "explorer.confirmDragAndDrop": true,

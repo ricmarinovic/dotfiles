@@ -116,9 +116,11 @@
 
 ### Navigation [G]
 - Show all commands                      cmd P
-- Go to file                             cmd G cmd G
-- Go to line                             cmd G L | cmd G cmd L
-- Go to symbol in file                   cmd G cmd F
+- Show all opened editors                cmd G E
+- Go to file                             cmd G G
+- Go to line                             cmd G L
+- Go to symbol in file                   cmd G F
+- Go to symbol in workspace              cmd G W
 - Go to definition                       cmd G D
 - Open definition to the side            cmd G cmd D
 - Peek definition                        cmd G P
@@ -237,7 +239,7 @@
 - New terminal                           cmd T N
 - Focus previous terminal                shift cmd [
 - Focus next terminal                    shift cmd ]
-- Kill terminal                          cmd T K
+- Kill terminal                          cmd T W
 - Rename terminal                        cmd T R
 - Clear                                  cmd K
 
