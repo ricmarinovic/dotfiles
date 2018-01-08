@@ -1278,9 +1278,9 @@
     "command": "editor.action.inspectTMScopes",
     "when": "editorTextFocus && !editorReadonly"
   },
-  // Developer tools                        alt cmd I
+  // Developer tools                        ctrl shift cmd I
   {
-    "key": "alt+cmd+i",
+    "key": "ctrl+shift+cmd+i",
     "command": "workbench.action.toggleDevTools"
   },
 
