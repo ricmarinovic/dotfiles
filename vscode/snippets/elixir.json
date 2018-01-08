@@ -1,164 +1,74 @@
 {
-  // # DEFINITIONS
-  "Function": {
-    "description": "Function definition",
+  "def": {
     "prefix": "def",
     "body": [
-      "def $1($2) do",
-      "\t$3",
-      "end"
-    ]
-  },
-  "Private function": {
-    "description": "Private function definition",
-    "prefix": "defp",
-    "body": [
-      "defp $1($2) do",
-      "\t$3",
-      "end"
-    ]
-  },
-  "Inline function": {
-    "prefix": "idef",
-    "description": "Inline function",
-    "body": "def ${1:function_name}($2), do: $3"
-  },
-  "Inline private function": {
-    "prefix": "idefp",
-    "description": "Inline private function",
-    "body": "defp ${1:function_name}($2), do: $3"
-  },
-  "Annonymous function": {
-    "prefix": "af",
-    "description": "Annonymous function",
-    "body": "fn ($1) -> $2 end$0"
-  },
-  "Module": {
-    "prefix": "defmodule",
-    "description": "Module definition",
-    "body": [
-      "defmodule $1 do",
+      "def ${1:name}($2) do",
       "\t$0",
       "end"
     ]
   },
-  "defc": {
-    "description": "defcallback",
-    "prefix": "defcallback",
-    "body": "defcallback $1 :: $0"
-  },
-  "defd": {
-    "prefix": "defdelegate",
-    "body": "defdelegate $1 to: $0",
-    "description": "defdelegate"
-  },
-  "defe": {
-    "prefix": "defexception",
-    "body": "defexception [${1::message}]",
-    "description": "defexception"
-  },
-  "defi": {
-    "prefix": "defimpl",
-    "body": "defimpl $1, for: $2 do\n  $0\nend",
-    "description": "defimpl"
-  },
-  "defm": {
-    "prefix": "defmacro",
-    "body": "defmacro $1 do\n\t$0\nend",
-    "description": "defmacro"
-  },
-  "defmc": {
-    "prefix": "defmacrocallback",
-    "body": "defmacrocallback $1 :: $0",
-    "description": "defmacrocallback"
-  },
-  "defmp": {
-    "prefix": "defmacrop",
-    "body": "defmacrop $1 do\n\t$0\nend",
-    "description": "defmacrop"
-  },
-  "defmod": {
-    "prefix": "defmodule",
-    "body": "defmodule $1 do\n\t$0\nend",
-    "description": "defmodule"
-  },
+
   "defp": {
     "prefix": "defp",
-    "body": "defp $1 do\n\t$0\nend",
-    "description": "defp"
-  },
-  "defpro": {
-    "prefix": "defprotocol",
-    "body": "defprotocol $1 do\n  $0\nend",
-    "description": "defprotocol"
-  },
-  "defs": {
-    "prefix": "defstruct",
-    "body": "defstruct $1: $2",
-    "description": "defstruct"
-  },
-
-
-  // # IO
-  "IO.puts": {
-    "prefix": "ip",
-    "description": "Print to screen",
-    "body": "IO.puts \"$1\""
-  },
-  "IO.inspect": {
-    "prefix": "ii",
-    "description": "Print variable to screen",
-    "body": "IO.inspect($1${2:, label: $3})"
-  },
-
-  "Module constant": {
-    "prefix": "mod",
-    "description": "Module constant",
-    "body": "__MODULE__"
-  },
-
-
-  // # CONDITIONALS
-  "if statement": {
-    "description": "if statement",
-    "prefix": "if",
     "body": [
-      "if $1 do",
-      "\t$2",
-      "end"
-    ]
-  },
-  "case statement": {
-    "description": "case statement",
-    "prefix": "case",
-    "body": [
-      "case $1 do",
-      "\t$2 ->",
-      "\t\t$3",
-      "end"
-    ]
-  },
-  "cond statement": {
-    "description": "cond statement",
-    "prefix": "cond",
-    "body": [
-      "cond do",
-      "\t$1 ->",
-      "\t\t$2",
+      "defp ${1:name}($2) do",
+      "\t$0",
       "end"
     ]
   },
 
-  // TESTS
-  "test case": {
-    "description": "test",
+  "idef": {
+    "prefix": "idef",
     "body": [
-      "test $1 do",
-      "\t$2",
-      "end"
-    ],
-    "prefix": "test"
+      "def ${1:name}($2), do: $0"
+    ]
   },
+
+  "idefp": {
+    "prefix": "idefp",
+    "body": [
+      "def ${1:name}($2), do: $0"
+    ]
+  },
+
+  "Annonymous function": {
+    "prefix": "af",
+    "description": "Annonymous function",
+    "body": [
+      "fn (${1:}) -> $2 end$3"
+    ]
+  },
+
+  "pry": {
+    "prefix": "pry",
+    "body": [
+      "require IEx; IEx.pry"
+    ]
+  },
+
+  "todo": {
+    "prefix": "todo",
+    "body": [
+      "// TODO: $0"
+    ]
+  },
+
+  "puts": {
+    "prefix": "puts",
+    "body": [
+      "IO.puts ${1:\"$2\"}"
+    ]
+  },
+
+  "test": {
+    "prefix": "test",
+    "body": [
+      "test \"$1\" do",
+      "\t$0",
+      "end"
+    ]
+  },
+
   "describe": {
     "description": "describe test",
     "prefix": "describe",
@@ -169,45 +79,36 @@
     ]
   },
 
-
-  "do/end block": {
-    "descripton": "do/end block",
-    "prefix": "do",
+  "case": {
+    "prefix": "case",
     "body": [
-      "do",
-      "\t$1",
+      "case $1 do",
+      "\t$0",
       "end"
     ]
   },
-  "doc": {
-    "prefix": "@doc",
-    "body": "@doc \"\"\"\n$1\n\"\"\"",
-    "description": "doc"
-  },
-  "mdoc": {
-    "prefix": "@moduledoc",
-    "body": "@moduledoc \"\"\"\n$1\n\"\"\"",
-    "description": "moduledoc"
-  },
-  "spec": {
-    "prefix": "@spec",
-    "body": "@spec $1",
-    "description": "spec"
-  },
-  "rec": {
-    "prefix": "receive",
-    "body": [
-      "receive do",
-      "\t${1:{${2::message_type}, ${3:value}\\}} ->",
-      "\t\t${4:# code}",
-      "end\n"
-    ],
-    "description": "receive"
-  },
-  "req": {
-    "prefix": "require",
-    "body": "require $0",
-    "description": "require"
-  }
-}
 
+  "do": {
+    "prefix": "do",
+    "body": [
+      "do",
+      "\t$0",
+      "end"
+    ]
+  },
+
+  "defmodule": {
+    "prefix": "defmodule",
+    "body": [
+      "defmodule $1 do",
+      "\t$0",
+      "end"
+    ]
+  },
+
+  "Module constant": {
+    "prefix": "mod",
+    "description": "Module constant",
+    "body": "__MODULE__"
+  },
+}

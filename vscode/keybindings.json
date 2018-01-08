@@ -160,18 +160,6 @@
     "command": "scrollLineDown",
     "when": "editorTextFocus"
   },
-  // Scroll page up                         ctrl cmd L
-  {
-    "key": "ctrl+cmd+l",
-    "command": "scrollPageUp",
-    "when": "editorTextFocus"
-  },
-  // Scroll page down                       ctrl cmd H
-  {
-    "key": "ctrl+cmd+h",
-    "command": "scrollPageDown",
-    "when": "editorTextFocus"
-  },
 
 
   // SELECT
@@ -515,6 +503,12 @@
     "command": "editor.action.outdentLines",
     "when": "editorTextFocus && !editorReadonly"
   },
+  // Reindent lines                         cmd L R
+  {
+    "key": "cmd+l r",
+    "command": "editor.action.reindentlines",
+    "when": "editorTextFocus"
+  },
 
 
   // ## FOLDING
@@ -698,7 +692,8 @@
   // Replace                                cmd R
   {
     "key": "cmd+r",
-    "command": "editor.action.startFindReplaceAction"
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorFocus"
   },
   // Replace in files                       shift cmd R
   {
@@ -749,6 +744,11 @@
     "key": "cmd+g cmd+l",
     "command": "workbench.action.gotoLine"
   },
+  // Go to symbol                           cmd G S
+  {
+    "key": "cmd+g cmd+f",
+    "command": "workbench.action.gotoSymbol"
+  },
   // Go to definition                       cmd G D
   {
     "key": "cmd+g d",
@@ -780,7 +780,7 @@
   },
   // Go to matching bracket                 cmd G B
   {
-    "key": "cmd+g b",
+    "key": "shift+cmd+\\",
     "command": "editor.action.jumpToBracket",
     "when": "editorTextFocus"
   },
@@ -867,12 +867,12 @@
   // Previous editor                        shif cmd [
   {
     "key": "shift+cmd+[",
-    "command": "workbench.action.previousEditor"
+    "command": "workbench.action.previousEditorInGroup"
   },
   // Next editor                            shif cmd ]
   {
     "key": "shift+cmd+]",
-    "command": "workbench.action.nextEditor"
+    "command": "workbench.action.nextEditorInGroup"
   },
   // Focus # editor                         ctrl #
   {
@@ -998,12 +998,12 @@
   },
   // Maximize editor group                  cmd E = | cmd E cmd =
   {
-    "key": "cmd+e =",
+    "key": "cmd+e m",
     "command": "workbench.action.maximizeEditor"
   },
   // Even editor groups                     cmd E cmd =
   {
-    "key": "cmd+e shift+cmd+=",
+    "key": "cmd+e =",
     "command": "workbench.action.evenEditorWidths"
   },
   // Open next                              ctrl tab
@@ -1140,11 +1140,6 @@
     "key": "cmd+m z",
     "command": "workbench.action.toggleZenMode"
   },
-  {
-    "key": "escape escape",
-    "command": "workbench.action.exitZenMode",
-    "when": "inZenMode"
-  },
   // Toggle full screen                     cmd M cmd F
   {
     "key": "cmd+m cmd+f",
@@ -1245,6 +1240,11 @@
   {
     "key": "cmd+k p",
     "command": "workbench.action.files.copyPathOfActiveFile"
+  },
+  // Toggle minimap                         cmd K M
+  {
+    "key": "cmd+k m",
+    "command": "editor.action.toggleMinimap"
   },
   // TM Scopes                              ^cmd I
   {
@@ -1372,38 +1372,80 @@
     "when": "listFocus"
   },
   {
-    "key": "cmd+o",
+    "key": "ctrl+l",
     "command": "list.select",
     "when": "listFocus"
   },
-  // Open file to side                      cmd shift O | cmd enter
+  // pen file to side                      ctrl cmd L | cmd enter
   {
     "key": "cmd+enter",
     "command": "explorer.openToSide",
     "when": "listFocus"
   },
   {
-    "key": "shift+cmd+o",
+    "key": "ctrl+cmd+l",
     "command": "explorer.openToSide",
     "when": "listFocus"
   },
-  // Expand                                 ctrl K
+  // Collapse                               ctrl H
   {
-    "key": "ctrl+k",
-    "command": "list.expand",
-    "when": "listFocus"
-  },
-  // Collapse                               ctrl J
-  {
-    "key": "ctrl+j",
+    "key": "ctrl+h",
     "command": "list.collapse",
     "when": "listFocus"
   },
-  // Collapse all                           shift cmd [
+  // Collapse all                           ctrl cmd H
   {
-    "key": "shift+cmd+[",
+    "key": "ctrl+cmd+h",
     "command": "workbench.files.action.collapseExplorerFolders",
     "when": "listFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "list.focusPageDown",
+    "when": "listFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "list.focusPageUp",
+    "when": "listFocus"
+  },
+
+
+  // # TERMINAL
+  // New terminal                           cmd T N
+  {
+    "key": "cmd+t n",
+    "command": "workbench.action.terminal.new"
+  },
+  // Focus previous terminal                shift cmd [
+  {
+    "key": "shift+cmd+[",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  // Focus next terminal                    shift cmd ]
+  {
+    "key": "shift+cmd+]",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  // Kill terminal                          cmd T K
+  {
+    "key": "cmd+t k",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  // Rename terminal                        cmd T R
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.terminal.rename",
+    "when": "terminalFocus"
+  },
+  // Clear                                  cmd K
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
   },
 
 
@@ -1462,6 +1504,18 @@
   {
     "key": "cmd+l b",
     "command": "bookmarks.toggle",
+    "when": "editorTextFocus"
+  },
+  // Bookmark next                          cmd L N
+  {
+    "key": "cmd+l n",
+    "command": "bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
+  // Bookmark previous                      cmd L P
+  {
+    "key": "cmd+l p",
+    "command": "bookmarks.jumpToPrevious",
     "when": "editorTextFocus"
   },
   // Bookmark list                          cmd L L | cmd L cmd L
@@ -1538,5 +1592,15 @@
     "key": "alt+c",
     "command": "-gitlens.showQuickCommitFileDetails",
     "when": "editorTextFocus && gitlens:enabled"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-deleteRight",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "escape escape",
+    "command": "-workbench.action.exitZenMode",
+    "when": "inZenMode"
   }
 ]

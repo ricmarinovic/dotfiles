@@ -1,0 +1,126 @@
+{
+  "fn": {
+    "prefix": "fn",
+    "body": [
+      "fn ${1:name}($2) -> ${3:Type} {",
+      "\t$0",
+      "}"
+    ],
+    "description": "function"
+  },
+
+  "main": {
+    "prefix": "main",
+    "body": [
+      "fn main() {",
+      "\t$0",
+      "}"
+    ],
+    "description": "main function"
+  },
+
+  "testmod": {
+    "prefix": "testmod",
+    "body": [
+      "#[cfg(test)]",
+      "mod ${1:tests} {",
+      "\tuse super::*;",
+      "",
+      "\t#[test]",
+      "\tfn ${2:test_name}() {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "description": "module test"
+  },
+
+  "test": {
+    "prefix": "test",
+    "body": [
+      "#[test]",
+      "fn ${1:test_name}() {",
+      "\t$0",
+      "}"
+    ]
+  },
+
+  "struct": {
+    "prefix": "struct",
+    "body": [
+      "struct ${1:TypeName} {",
+      "\t$0",
+      "}"
+    ]
+  },
+
+  "enum": {
+    "prefix": "enum",
+    "body": [
+      "enum ${1:TypeName} {",
+      "\t$0",
+      "}"
+    ]
+  },
+
+  "trait": {
+    "prefix": "trait",
+    "body": [
+      "trait ${1:Name} {",
+      "\t$0",
+      "}"
+    ]
+  },
+
+  "impl": {
+    "prefix": "impl",
+    "body": [
+      "impl ${1:Type} {",
+      "\t$0",
+      "}"
+    ]
+  },
+
+  "drop": {
+    "prefix": "drop",
+    "body": [
+      "impl Drop for ${1:Type} {",
+      "\tfn drop(&mut self) {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ]
+  },
+
+  "todo": {
+    "prefix": "todo",
+    "body": [
+      "// TODO: $0"
+    ]
+  },
+
+  "closure": {
+    "prefix": "af",
+    "body": [
+      "|${1:arg}| {",
+      "\t$0",
+      "}"
+    ]
+  },
+
+  "match": {
+    "prefix": "match",
+    "body": [
+      "match $(1:expression) {",
+      "\t$0",
+      "}"
+    ]
+  },
+
+  "derive": {
+    "prefix": "derive",
+    "body": [
+      "#[derive(${1:Trait})]$0"
+    ]
+  }
+}

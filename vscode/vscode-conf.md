@@ -30,8 +30,6 @@
 ##### Scroll
 - Scroll line up                         ctrl cmd K
 - Scroll line down                       ctrl cmd J
-- Scroll page up                         ctrl cmd L
-- Scroll page down                       ctrl cmd H
 
 ##### Select
 - Select up                              ctrl shift P
@@ -85,6 +83,7 @@
 ##### Indentation
 - Indent line                            cmd ]
 - Outdent line                           cmd [
+- Reindent lines                         cmd L R
 
 ##### Folding [L]
 - Fold                                   cmd L [
@@ -119,11 +118,12 @@
 - Show all commands                      cmd P
 - Go to file                             cmd G cmd G
 - Go to line                             cmd G L | cmd G cmd L
+- Go to symbol in file                   cmd G cmd F
 - Go to definition                       cmd G D
 - Open definition to the side            cmd G cmd D
 - Peek definition                        cmd G P
 - Show hover                             cmd G H
-- Go to matching bracket                 cmd G B
+- Go to matching bracket                 shift cmd \
 - Go back                                ctrl [
 - Go forward                             ctrl ]
 
@@ -135,14 +135,14 @@
 - Save as                                shift cmd S
 - Save all                               ctrl shift cmd s
 - Close editor                           cmd W
-- Close other editors                    ctrl shift cmd w
+- Close other editors in group           ctrl shift cmd w
 - Close window                           shift cmd W
 - Close group                            cmd E cmd W
 - Close other groups                     cmd E W
 - Close all                              cmd E cmd shift W
 - Reopen closed editor                   cmd E R | shift cmd T
-- Previous editor                        shif cmd [
-- Next editor                            shif cmd ]
+- Previous editor in group               shif cmd [
+- Next editor in group                   shif cmd ]
 - Focus # editor                         ctrl #
 - Move editor left                       ctrl cmd [
 - Move editor right                      ctrl cmd ]
@@ -155,8 +155,8 @@
 - Focus # editor group                   cmd #
 - Split editor                           cmd E /
 - Toggle editor group horizontal         cmd E -
-- Maximize editor group                  cmd E = | cmd E cmd =
-- Even editor groups                     cmd E shift cmd =
+- Maximize editor group                  cmd E M
+- Even editor groups                     cmd E =
 - Open next                              ctrl tab
 - Open previous                          shift ctrl tab
 
@@ -198,6 +198,7 @@
 - Format document                        cmd K cmd F
 - Word wrap toggle                       cmd K W
 - Copy path of active file               cmd K P
+- Toggle minimap                         cmd K M
 - TM Scopes                              ctrl cmd I
 - Developer tools                        ctrl shift cmd I
 
@@ -226,11 +227,19 @@
 - New file                               cmd N
 - New folder                             cmd shift N
 - Rename file                            cmd R
-- Open file                              cmd O | enter
-- Open file to side                      cmd shift O | cmd enter
-- Expand                                 ctrl K
-- Collapse                               ctrl J
-- Collapse all                           shift cmd [
+- Open file to side                      ctrl cmd L | cmd enter
+- Expand                                 ctrl L
+- Collapse                               ctrl H
+- Collapse all                           ctrl cmd H
+
+
+### Terminal
+- New terminal                           cmd T N
+- Focus previous terminal                shift cmd [
+- Focus next terminal                    shift cmd ]
+- Kill terminal                          cmd T K
+- Rename terminal                        cmd T R
+- Clear                                  cmd K
 
 
 ### Git [G]
@@ -247,7 +256,9 @@
 
 ### Bookmarks
 - Bookmark toggle                        cmd L B
-- Bookmark list                          cmd L L | cmd L cmd L
-- Bookmark list all files                cmd L shift cmd L
+- Bookmark next                          cmd L N
+- Bookmark previous                      cmd L P
+- Bookmark list                          cmd L L
+- Bookmark list all files                cmd L cmd L
 - Bookmark clear                         cmd L backspace
 - Bookmark clear all files               cmd L cmd backspace

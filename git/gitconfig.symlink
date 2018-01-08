@@ -30,7 +30,7 @@
   d = diff
   f = fetch
   i = init
-	l = log --oneline --decorate --all
+	l = log --oneline --decorate
   m = merge
   p = pull
   ps = push

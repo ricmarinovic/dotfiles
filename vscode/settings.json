@@ -3,13 +3,11 @@
   "editor.fontFamily": "'Fira Code', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
-  "editor.cursorStyle": "line",
+  "editor.cursorStyle": "block",
   "editor.cursorBlinking": "phase",
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 80,
-  "editor.rulers": [
-    80
-  ],
+  "editor.rulers": [ 80 ],
   "editor.tabSize": 2,
   "editor.minimap.enabled": false,
   "editor.acceptSuggestionOnEnter": "off",
@@ -24,10 +22,16 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderLineHighlight": "all",
   "editor.scrollBeyondLastLine": true,
+  "explorer.autoReveal": true,
+  "explorer.confirmDelete": true,
+  "explorer.confirmDragAndDrop": true,
+  "explorer.enableDragAndDrop": true,
+  "explorer.openEditors.visible": 9,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "workbench.colorTheme": "Academie Syntax",
   "workbench.editor.enablePreview": false,
+  "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "terminal.integrated.fontFamily": "Fira Code",
   "terminal.integrated.fontSize": 14,
@@ -44,8 +48,6 @@
   "bookmarks.treeview.visible": false,
   "[rust]": {
     "editor.tabSize": 4,
-    "editor.wordWrapColumn": 120,
-    "editor.rulers": [ 120 ]
   },
   "[ruby]": {
     "editor.wordWrap": "off"
@@ -54,12 +56,17 @@
     "editor.tabSize": 4
   },
   "editor.scrollbar.vertical": "visible",
-  "workbench.panel.location": "bottom",
-  "python.pythonPath": "python3",
-  "python.linting.enabled": false,
-  "workbench.activityBar.visible": true,
-  "python.linting.pylintEnabled": false,
   "gitlens.codeLens.enabled": false,
   "gitlens.statusBar.enabled": false,
-  "gitlens.gitExplorer.enabled": false
+  "gitlens.gitExplorer.enabled": false,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  }
 }
