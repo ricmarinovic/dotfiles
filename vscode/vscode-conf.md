@@ -4,263 +4,307 @@
 - Academie Syntax
 - Bookmarks
 - Git lens
-
-### Language extensions
 - vscode-elixir
 - Ruby
 - Rust (rls)
 
 ## Keybindings
+<!-- ⌘ ⏎ ⇧ ⌥ ⌃ ⌫ ⌦ ↑ ↓ ← → ⇥ -->
 
 ### Basic Editing
-##### Cursor
-- Move cursor up                         ctrl P
-- Move cursor down                       ctrl N
-- Move cursor left                       ctrl B
-- Move cursor right                      ctrl F
-- Move cursor page up                    ctrl K
-- Move cursor page down                  ctrl J
-- Move cursor to start of word           ctrl H
-- Move cursor to end of word             ctrl L
-- Move cursor to start of line           ctrl A
-- Move cursor to end of line             ctrl E
-- Move cursor to top of file             cmd up
-- Move cursor to bottom of file          cmd down
 
-##### Scroll
-- Scroll line up                         ctrl cmd K
-- Scroll line down                       ctrl cmd J
+#### Cursor
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Move cursor up                         | ⌃ P        |
+| Move cursor down                       | ⌃ N        |
+| Move cursor left                       | ⌃ B        |
+| Move cursor right                      | ⌃ F        |
+| Move cursor page up                    | ⌃ U        |
+| Move cursor page down                  | ⌃ D        |
+| Move cursor to start of word           | ⌃ H        |
+| Move cursor to end of word             | ⌃ L        |
+| Move cursor to start of line           | ⌃ A        |
+| Move cursor to end of line             | ⌃ E        |
+| Move cursor to top of file             | ⌘ ↑        |
+| Move cursor to bottom of file          | ⌘ ↓        |
 
-##### Select
-- Select up                              ctrl shift P
-- Select down                            ctrl shift N
-- Select previous character              ctrl shift B
-- Select next character                  ctrl shift F
-- Select page up                         ctrl shift K
-- Select page down                       ctrl shift J
-- Select to start of word                ctrl shift H
-- Select to end of word                  ctrl shift L
-- Select to start of line                ctrl shift A
-- Select to end of line                  ctrl shift E
-- Select to top of file                  shift cmd up
-- Select to bottom of file               shift cmd down
-- Select all lines                       cmd A
-- Select line                            cmd I
-- Select word                            cmd D
-- Select all occurrences of word         shift cmd D
-- Select all occurrences of selection    shift cmd L
+#### Scroll
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Scroll line up                         | ⌃ K        |
+| Scroll line down                       | ⌃ J        |
 
-##### Delete
-- Delete line                            shift cmd K
-- Delete to start of word                ctrl backspace
-- Delete to end of word                  ctrl delete
-- Delete to start of line                cmd backspace
-- Delete to end of line                  cmd delete
+#### Select
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Select up                              | ⌃ ⇧ P      |
+| Select down                            | ⌃ ⇧ N      |
+| Select previous character              | ⌃ ⇧ B      |
+| Select next character                  | ⌃ ⇧ F      |
+| Select page up                         | ⌃ ⇧ U      |
+| Select page down                       | ⌃ ⇧ D      |
+| Select to start of word                | ⌃ ⇧ H      |
+| Select to end of word                  | ⌃ ⇧ L      |
+| Select to start of line                | ⌃ ⇧ A      |
+| Select to end of line                  | ⌃ ⇧ E      |
+| Select to top of file                  | ⇧ ⌘ ↑      |
+| Select to bottom of file               | ⇧ ⌘ ↓      |
+| Select line                            | ⌘ I        |
+| Select word                            | ⌘ D        |
+| Select all lines                       | ⌘ A        |
+| Select all occurrences of word         | ⇧ ⌘ D      |
+| Select all occurrences of selection    | ⇧ ⌘ L      |
 
-##### Line movement
-- Insert line up                         shift cmd enter
-- Insert line down                       cmd enter
-- Move line up                           ctrl cmd P
-- Move line down                         ctrl cmd N
-- Join lines                             cmd J
+#### Delete
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Delete line                            | ⇧ ⌘ K      |
+| Delete to start of word                | ⌃ ⌫        |
+| Delete to end of word                  | ⌃ ⌦        |
+| Delete to start of line                | ⌘ ⌫        |
+| Delete to end of line                  | ⌘ ⌦        |
 
-##### Copy
-- Cut                                    cmd X
-- Copy                                   cmd C
-- Copy line up                           shift cmd P
-- Copy line down                         shift cmd N
-- Paste                                  cmd V
+#### Line movement
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Insert line up                         | ⇧ ⌘ ⏎      |
+| Insert line down                       | ⌘ ⏎        |
+| Move line up                           | ⌃ ⌘ P      |
+| Move line down                         | ⌃ ⌘ N      |
+| Join lines                             | ⌘ J        |
 
-##### Multiple cursors
-- Insert cursor up                       ctrl cmd up
-- Insert cursor down                     ctrl cmd down
-- Insert cursor end of lines selected    shift cmd I
-- Column select up                       ctrl shift cmd up
-- Column select down                     ctrl shift cmd down
-- Column select left                     ctrl shift cmd left
-- Column select right                    ctrl shift cmd right
+#### Copy
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Cut                                    | ⌘ X        |
+| Copy                                   | ⌘ C        |
+| Copy line up                           | ⇧ ⌘ P      |
+| Copy line down                         | ⇧ ⌘ N      |
+| Paste                                  | ⌘ V        |
 
-##### Indentation
-- Indent line                            cmd ]
-- Outdent line                           cmd [
-- Reindent lines                         cmd L R
+#### Multiple cursors
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Insert cursor up                       | ⌃ ⌘ ↑      |
+| Insert cursor down                     | ⌃ ⌘ ↓      |
+| Insert cursor end of lines selected    | ⇧ ⌘ I      |
+| Column select up                       | ⌃ ⇧ ⌘ ↑    |
+| Column select down                     | ⌃ ⇧ ⌘ ↓    |
+| Column select left                     | ⌃ ⇧ ⌘ ←    |
+| Column select right                    | ⌃ ⇧ ⌘ →    |
 
-##### Folding [L]
-- Fold                                   cmd L [
-- Fold all                               cmd L cmd [
-- Fold all subregions                    cmd L shift cmd [
-- Unfold                                 cmd L ]
-- Unfold all                             cmd L cmd ]
-- Unfold all subregions                  cmd L shift cmd ]
-- Fold level #                           cmd L #
+#### Indentation
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Indent line                            | ⌘ ]        |
+| Outdent line                           | ⌘ [        |
+| Reindent lines                         | ⌘ L R      |
 
-##### Others
-- Comment line toggle                    cmd /
-- Comment block toggle                   ctrl shift /
-- Undo                                   cmd Z
-- Redo                                   cmd Y
-- Uppercase                              cmd K =
-- Lowercase                              cmd K -
+#### Folding [L]
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Fold                                   | ⌘ L [      |
+| Fold all                               | ⌘ L ⌘ [    |
+| Fold all subregions                    | ⌘ L ⇧ ⌘ [  |
+| Unfold                                 | ⌘ L ]      |
+| Unfold all                             | ⌘ L ⌘ ]    |
+| Unfold all subregions                  | ⌘ L ⇧ ⌘ ]  |
+| Fold level #                           | ⌘ L #      |
+
+#### Others
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Comment line toggle                    | ⌘ /        |
+| Comment block toggle                   | ⌃ ⇧ /      |
+| Undo                                   | ⌘ Z        |
+| Redo                                   | ⌘ Y        |
+| Uppercase                              | ⌘ K =      |
+| Lowercase                              | ⌘ K -      |
+| Sort lines ascending                   | ⌘ L A      |
+| Sort lines descending                  | ⌘ L D      |
 
 
 ### Search
-- Find                                   cmd F
-- Find in files                          shift cmd F
-- Find next                              cmd H
-- Find previous                          shift cmd H
-- Replace                                cmd R
-- Replace in files                       shift cmd R
-- Replace one                            ctrl R
-- Replace all                            ctrl shift R
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Find                                   | ⌘ F        |
+| Find in files                          | ⇧ ⌘ F      |
+| Find next                              | ⌘ H        |
+| Find previous                          | ⇧ ⌘ H      |
+| Replace                                | ⌘ R        |
+| Replace in files                       | ⇧ ⌘ R      |
+| Replace one                            | ⌃ R        |
+| Replace all                            | ⌃ ⇧ R      |
 
 
 ### Navigation [G]
-- Show all commands                      cmd P
-- Show all opened editors                cmd G E
-- Go to file                             cmd G G
-- Go to line                             cmd G L
-- Go to symbol in file                   cmd G F
-- Go to symbol in workspace              cmd G W
-- Go to definition                       cmd G D
-- Open definition to the side            cmd G cmd D
-- Peek definition                        cmd G P
-- Show hover                             cmd G H
-- Go to matching bracket                 shift cmd \
-- Go back                                ctrl [
-- Go forward                             ctrl ]
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Show all commands                      | ⌘ P        |
+| Show all opened editors                | ⌘ G E      |
+| Go to file                             | ⌘ O        |
+| Go to line                             | ⌘ G G      |
+| Go to symbol in file                   | ⌘ G F      |
+| Go to symbol in workspace              | ⌘ G W      |
+| Go to definition                       | ⌘ G D      |
+| Open definition to the side            | ⌘ G ⌘ D    |
+| Peek definition                        | ⌘ G P      |
+| Show hover                             | ⌘ G H      |
+| Go to matching bracket                 | ⇧ ⌘ \      |
+| Go back                                | ⌃ [        |
+| Go forward                             | ⌃ ]        |
 
 
 ### Editor [E]
-- New file                               cmd N
-- New window                             shift cmd N
-- Save                                   cmd S
-- Save as                                shift cmd S
-- Save all                               ctrl shift cmd s
-- Close editor                           cmd W
-- Close other editors in group           ctrl shift cmd w
-- Close window                           shift cmd W
-- Close group                            cmd E cmd W
-- Close other groups                     cmd E W
-- Close all                              cmd E cmd shift W
-- Reopen closed editor                   cmd E R | shift cmd T
-- Previous editor in group               shif cmd [
-- Next editor in group                   shif cmd ]
-- Focus # editor                         ctrl #
-- Move editor left                       ctrl cmd [
-- Move editor right                      ctrl cmd ]
-- Move editor into previous group        cmd E left
-- Move editor into next group            cmd E right | cmd E cmd /
-- Move editor group left                 cmd E cmd left
-- Move editor group right                cmd E cmd right
-- Join editors groups                    cmd E J | cmd E cmd J
-- Cycle editor groups                    cmd shift E | cmd E cmd E
-- Focus # editor group                   cmd #
-- Split editor                           cmd E /
-- Toggle editor group horizontal         cmd E -
-- Maximize editor group                  cmd E M
-- Even editor groups                     cmd E =
-- Open next                              ctrl tab
-- Open previous                          shift ctrl tab
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| New file                               | ⌘ N        |
+| Save                                   | ⌘ S        |
+| Save as                                | ⇧ ⌘ S      |
+| Save all                               | ⌃ ⇧ ⌘ S    |
+| Close editor                           | ⌘ W        |
+| Close other editors in group           | ⌃ ⇧ ⌘ W    |
+| Close window                           | ⇧ ⌘ W      |
+| Close other groups                     | ⌘ E W      |
+| Close all                              | ⌘ E ⌘ ⇧ W  |
+| Reopen closed editor                   | ⇧ ⌘ T      |
+| Previous editor in group               | shif ⌘ [   |
+| Next editor in group                   | shif ⌘ ]   |
+| Focus # editor                         | ⌃ #        |
+| Move editor left                       | ⌃ ⌘ [      |
+| Move editor right                      | ⌃ ⌘ ]      |
+| Move editor into previous group        | ⌘ E ←      |
+| Move editor into next group            | ⌘ E → or ⌘ E ⌘ / |
+| Move editor group left                 | ⌘ E ⌘ ←    |
+| Move editor group right                | ⌘ E ⌘ →    |
+| Join editors groups                    | ⌘ E J      |
+| Cycle editor groups                    | ⌘ E ⌘ E    |
+| Focus # editor group                   | ⌘ #        |
+| Split editor                           | ⌘ E /      |
+| Toggle editor group horizontal         | ⌘ E -      |
+| Maximize editor group                  | ⌘ E M      |
+| Even editor groups                     | ⌘ E =      |
+| Open next                              | ⌃ ⇥        |
+| Open previous                          | ⇧ ⌃ ⇥      |
 
 
 ### Display [M]
-- Toggle sidebar                         cmd M /
-- Focus sidebar                          cmd M cmd+/
-- Focus open editors                     cmd M E
-- Focus files Explorer                   cmd M F
-- Show search                            cmd M S
-- Show search and replace                cmd M R
-- Show source control                    cmd M G
-- Show debug                             cmd M B
-- Show extensions                        cmd M X
-- Toggle panel                           cmd M -
-- Panel maximize                         cmd M =
-- Show problems                          cmd M P
-- Show output                            cmd M O
-- Show debug console                     cmd M C
-- Toggle integrated terminal             cmd M T
-- Focus integrated terminal              cmd M cmd T
-- Toggle zen mode                        cmd M Z
-- Toggle full screen                     cmd M cmd F
-- Markdown preview                       cmd M M
-- Markdown preview to side               cmd M cmd M
-- Zoom in                                cmd =
-- Zoom out                               cmd -
-- Reset zoom                             shift cmd = | shift cmd -
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Toggle sidebar                         | ⌘ M /      |
+| Focus sidebar                          | ⌘ M ⌘ /    |
+| Focus open editors                     | ⌘ M E      |
+| Focus files Explorer                   | ⌘ M F      |
+| Show search                            | ⌘ M S      |
+| Show search and replace                | ⌘ M R      |
+| Show source control                    | ⌘ M G      |
+| Show debug                             | ⌘ M B      |
+| Show extensions                        | ⌘ M X      |
+| Toggle panel                           | ⌘ M -      |
+| Panel maximize                         | ⌘ M =      |
+| Show problems                          | ⌘ M P      |
+| Show output                            | ⌘ M O      |
+| Show debug console                     | ⌘ M C      |
+| Toggle integrated terminal             | ⌘ M T      |
+| Focus integrated terminal              | ⌘ M ⌘ T    |
+| Toggle zen mode                        | ⌘ M Z      |
+| Toggle full screen                     | ⌘ M ⌘ F    |
+| Markdown preview                       | ⌘ M M      |
+| Markdown preview to side               | ⌘ M ⌘ M    |
+| Zoom in                                | ⌘ =        |
+| Zoom out                               | ⌘ -        |
+| Reset zoom                             | ⇧ ⌘ = or ⇧ ⌘ - |
 
 
 ### Preferences [K]
-- Open preferences                       cmd ,
-- Keyboard shortcuts                     cmd K cmd S
-- User snippets                          cmd K cmd U
-- Insert snippet                         cmd K S
-- Color theme                            cmd K cmd T
-- Change language                        cmd K cmd L
-- Format selection                       cmd K F
-- Format document                        cmd K cmd F
-- Word wrap toggle                       cmd K W
-- Copy path of active file               cmd K P
-- Toggle minimap                         cmd K M
-- TM Scopes                              ctrl cmd I
-- Developer tools                        ctrl shift cmd I
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Open preferences                       | ⌘ ,        |
+| Keyboard shortcuts                     | ⌘ K ⌘ S    |
+| User snippets                          | ⌘ K ⌘ U    |
+| Insert snippet                         | ⌘ K U      |
+| Color theme                            | ⌘ K ⌘ T    |
+| Change language                        | ⌘ K ⌘ L    |
+| Format selection                       | ⌘ K F      |
+| Format document                        | ⌘ K ⌘ F    |
+| Word wrap toggle                       | ⌘ K W      |
+| Copy path of active file               | ⌘ K P      |
+| Toggle minimap                         | ⌘ K M      |
+| TM Scopes                              | ⌃ ⌘ I      |
+| Developer tools                        | ⌃ ⇧ ⌘ I    |
 
 
 ### Debug [B]
-- Breakpoint toggle                      cmd B cmd B
-- Start                                  cmd B S
-- Start (without debugging)              cmd B cmd S
-- Restart                                cmd B R
-- Continue                               cmd B C
-- Pause                                  cmd B P
-- Step into                              cmd B I
-- Step out                               cmd B O
-- Step over                              cmd B cmd O
-- Stop                                   cmd B T
-- Show hover                             cmd B H
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Breakpoint toggle                      | ⌘ B ⌘ B    |
+| Start                                  | ⌘ B S      |
+| Start (without debugging)              | ⌘ B ⌘ S    |
+| Restart                                | ⌘ B R      |
+| Continue                               | ⌘ B C      |
+| Pause                                  | ⌘ B P      |
+| Step into                              | ⌘ B I      |
+| Step out                               | ⌘ B O      |
+| Step over                              | ⌘ B ⌘ O    |
+| Stop                                   | ⌘ B T      |
+| Show hover                             | ⌘ B H      |
 
 
 ### Tasks [T]
-- Run task                               cmd T cmd T
-- Run build task                         cmd T B
-- Run test task                          cmd T T
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Run task                               | ⌘ T ⌘ T    |
+| Run build task                         | ⌘ T B      |
+| Run test task                          | ⌘ T T      |
 
 
 ### Explorer
-- New file                               cmd N
-- New folder                             cmd shift N
-- Rename file                            cmd R
-- Open file to side                      ctrl cmd L | cmd enter
-- Expand                                 ctrl L
-- Collapse                               ctrl H
-- Collapse all                           ctrl cmd H
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| New file                               | ⌘ N        |
+| New folder                             | ⌘ ⇧ N      |
+| Rename file                            | ⌘ R        |
+| Open file to side                      | ⌃ ⇧ L      |
+| Expand                                 | ⌃ L        |
+| Collapse                               | ⌃ H        |
+| Collapse all                           | ⌃ ⇧ H      |
 
 
 ### Terminal
-- New terminal                           cmd T N
-- Focus previous terminal                shift cmd [
-- Focus next terminal                    shift cmd ]
-- Kill terminal                          cmd T W
-- Rename terminal                        cmd T R
-- Clear                                  cmd K
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| New terminal                           | ⌘ T N      |
+| Focus previous terminal                | ⇧ ⌘ [      |
+| Focus next terminal                    | ⇧ ⌘ ]      |
+| Kill terminal                          | ⌘ T W      |
+| Rename terminal                        | ⌘ T R      |
+| Clear                                  | ⌘ T K      |
 
 
 ### Git [G]
-- Open changes                           cmd G C
-- Open file                              cmd G O
-- Stash                                  cmd G S
-- Pop stash                              cmd G cmd S
-- Checkout to                            cmd G cmd C
-- Discard changes                        cmd G backspace
-- Undo last commit                       cmd G cmd Z
-- Previous change                        ctrl shift cmd [
-- Next change                            ctrl shift cmd ]
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Open changes                           | ⌘ G C      |
+| Open file                              | ⌘ G O      |
+| Stage all                              | ⌘ G ⌘ A    |
+| Commit staged (signed off)             | ⌘ G ⏎      |
+| Stash                                  | ⌘ G S      |
+| Pop stash                              | ⌘ G ⌘ S    |
+| Checkout to                            | ⌘ G ⌘ C    |
+| Discard changes                        | ⌘ G ⌫      |
+| Undo last commit                       | ⌘ G ⌘ Z    |
+| Previous change                        | ⌘ G [      |
+| Next change                            | ⌘ G ]      |
 
 
 ### Bookmarks
-- Bookmark toggle                        cmd L B
-- Bookmark next                          cmd L N
-- Bookmark previous                      cmd L P
-- Bookmark list                          cmd L L
-- Bookmark list all files                cmd L cmd L
-- Bookmark clear                         cmd L backspace
-- Bookmark clear all files               cmd L cmd backspace
+| Command                                | Keybinding |
+| :------------------------------------- | :--------- |
+| Bookmark toggle                        | ⌘ L B      |
+| Bookmark next                          | ⌘ L N      |
+| Bookmark previous                      | ⌘ L P      |
+| Bookmark list                          | ⌘ L L      |
+| Bookmark list all files                | ⌘ L ⌘ L    |
+| Bookmark clear                         | ⌘ L ⌫      |
+| Bookmark clear all files               | ⌘ L ⌘ ⌫    |

@@ -1,0 +1,13 @@
+{
+  "Insert new snippet": {
+    "prefix": "snip",
+    "body": [
+      "\"${1:Snippet Name}\": {",
+      "\t\"prefix\": \"${2:prefix}\",",
+      "\t\"body\": [",
+      "\t\t\"$3\"",
+      "\t]",
+      "}"
+    ]
+  }
+}
