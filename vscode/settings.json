@@ -71,7 +71,9 @@
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": false,
     "suppressNoRepositoryWarning": false,
-    "suppressUpdateNotice": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressUpdateNotice": true,
     "suppressWelcomeNotice": true
-  }
+  },
+  "git.autofetch": true
 }

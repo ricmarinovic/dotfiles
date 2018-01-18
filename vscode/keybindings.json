@@ -190,6 +190,18 @@
     "command": "scrollLineDown",
     "when": "editorTextFocus"
   },
+  // Scroll page up
+  {
+    "key": "ctrl+cmd+k",
+    "command": "scrollPageUp",
+    "when": "editorTextFocus"
+  },
+  // Scroll page down
+  {
+    "key": "ctrl+cmd+j",
+    "command": "scrollPageDown",
+    "when": "editorTextFocus"
+  },
 
 
   // SELECT
@@ -392,6 +404,11 @@
     "command": "editor.action.insertLineAfter",
     "when": "editorTextFocus && !editorReadonly"
   },
+  {
+    "key": "ctrl+enter",
+    "command": "lineBreakInsert",
+    "when": "editorTextFocus && !editorReadonly"
+  },
   // Move line up                           ctrl cmd P
   {
     "key": "ctrl+cmd+p",
@@ -542,39 +559,39 @@
 
 
   // ## FOLDING
-  // Fold                                   cmd L [
+  // Fold                                   cmd L -
   {
-    "key": "cmd+l [",
+    "key": "cmd+l -",
     "command": "editor.fold",
     "when": "editorTextFocus"
   },
-  // Fold all                               cmd L cmd [
+  // Fold all                               cmd L cmd -
   {
-    "key": "cmd+l cmd+[",
+    "key": "cmd+l cmd+-",
     "command": "editor.foldAll",
     "when": "editorTextFocus"
   },
-  // Fold all subregions                    cmd L shift cmd [
+  // Fold all subregions                    cmd L shift cmd -
   {
-    "key": "cmd+l shift+cmd+[",
+    "key": "cmd+l shift+cmd+-",
     "command": "editor.foldRecursively",
     "when": "editorTextFocus"
   },
-  // Unfold                                 cmd L ]
+  // Unfold                                 cmd L =
   {
-    "key": "cmd+l ]",
+    "key": "cmd+l =",
     "command": "editor.unfold",
     "when": "editorTextFocus"
   },
-  // Unfold all                             cmd L cmd ]
+  // Unfold all                             cmd L cmd =
   {
-    "key": "cmd+l cmd+]",
+    "key": "cmd+l cmd+=",
     "command": "editor.unfoldAll",
     "when": "editorTextFocus"
   },
-  // Unfold all subregions                  cmd L shift cmd ]
+  // Unfold all subregions                  cmd L shift cmd =
   {
-    "key": "cmd+l shift+cmd+]",
+    "key": "cmd+l shift+cmd+=",
     "command": "editor.unfoldRecursively",
     "when": "editorTextFocus"
   },
@@ -1050,17 +1067,17 @@
   },
   // Toggle editor group horizontal         cmd E -
   {
-    "key": "cmd+e -",
+    "key": "cmd+e h",
     "command": "workbench.action.toggleEditorGroupLayout"
   },
   // Maximize editor group                  cmd E = | cmd E cmd =
   {
-    "key": "cmd+e m",
+    "key": "cmd+e =",
     "command": "workbench.action.maximizeEditor"
   },
   // Even editor groups                     cmd E cmd =
   {
-    "key": "cmd+e =",
+    "key": "cmd+e -",
     "command": "workbench.action.evenEditorWidths"
   },
   // Open next                              ctrl tab

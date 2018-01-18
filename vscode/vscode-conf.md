@@ -34,6 +34,8 @@
 | :------------------------------------- | :--------- |
 | Scroll line up                         | ⌃ K        |
 | Scroll line down                       | ⌃ J        |
+| Scroll page up                         | ⌃ ⌘ K      |
+| Scroll page down                       | ⌃ ⌘ J      |
 
 #### Select
 | Command                                | Keybinding |
@@ -70,6 +72,7 @@
 | :------------------------------------- | :--------- |
 | Insert line up                         | ⇧ ⌘ ⏎      |
 | Insert line down                       | ⌘ ⏎        |
+| Insert line break                      | ⌃ ⏎        |
 | Move line up                           | ⌃ ⌘ P      |
 | Move line down                         | ⌃ ⌘ N      |
 | Join lines                             | ⌘ J        |
@@ -104,12 +107,12 @@
 #### Folding [L]
 | Command                                | Keybinding |
 | :------------------------------------- | :--------- |
-| Fold                                   | ⌘ L [      |
-| Fold all                               | ⌘ L ⌘ [    |
-| Fold all subregions                    | ⌘ L ⇧ ⌘ [  |
-| Unfold                                 | ⌘ L ]      |
-| Unfold all                             | ⌘ L ⌘ ]    |
-| Unfold all subregions                  | ⌘ L ⇧ ⌘ ]  |
+| Fold                                   | ⌘ L -      |
+| Fold all                               | ⌘ L ⌘ -    |
+| Fold all subregions                    | ⌘ L ⇧ ⌘ -  |
+| Unfold                                 | ⌘ L =      |
+| Unfold all                             | ⌘ L ⌘ =    |
+| Unfold all subregions                  | ⌘ L ⇧ ⌘ =  |
 | Fold level #                           | ⌘ L #      |
 
 #### Others
@@ -182,9 +185,9 @@
 | Cycle editor groups                    | ⌘ E ⌘ E    |
 | Focus # editor group                   | ⌘ #        |
 | Split editor                           | ⌘ E /      |
-| Toggle editor group horizontal         | ⌘ E -      |
-| Maximize editor group                  | ⌘ E M      |
-| Even editor groups                     | ⌘ E =      |
+| Toggle editor group horizontal         | ⌘ E H      |
+| Maximize editor group                  | ⌘ E =      |
+| Even editor groups                     | ⌘ E -      |
 | Open next                              | ⌃ ⇥        |
 | Open previous                          | ⇧ ⌃ ⇥      |
 
@@ -302,8 +305,8 @@
 | Command                                | Keybinding |
 | :------------------------------------- | :--------- |
 | Bookmark toggle                        | ⌘ L B      |
-| Bookmark next                          | ⌘ L N      |
-| Bookmark previous                      | ⌘ L P      |
+| Bookmark next                          | ⌘ L ]      |
+| Bookmark previous                      | ⌘ L [      |
 | Bookmark list                          | ⌘ L L      |
 | Bookmark list all files                | ⌘ L ⌘ L    |
 | Bookmark clear                         | ⌘ L ⌫      |
