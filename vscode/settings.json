@@ -48,6 +48,11 @@
     "editor.wordWrapColumn": 100,
     "editor.rulers": [ 100 ]
   },
+  "[elixir]": {
+    "editor.wordWrapColumn": 92,
+    "editor.rulers": [ 92 ],
+    "editor.quickSuggestions": true
+  },
   "[git-commit]": {
     "editor.rulers": [ 72 ]
   },
