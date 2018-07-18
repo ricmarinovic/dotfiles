@@ -120,6 +120,16 @@
     "command": "cursorWordStartLeft",
     "when": "editorTextFocus"
   },
+  {
+    "key": "ctrl+alt+left",
+    "command": "cursorWordPartStartLeft",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "cursorWordPartStartLeft",
+    "when": "textInputFocus"
+  },
   // Move cursor to end of word             ctrl+l
   {
     "key": "alt+right",
@@ -130,6 +140,16 @@
     "key": "ctrl+l",
     "command": "cursorWordEndRight",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "cursorWordPartRight",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "cursorWordPartRight",
+    "when": "textInputFocus"
   },
   // Move cursor to start of line           ctrl+a
   {
@@ -267,6 +287,16 @@
     "command": "cursorWordStartLeftSelect",
     "when": "editorTextFocus"
   },
+  {
+    "key": "ctrl+shift+alt+left",
+    "command": "cursorWordPartStartLeftSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+h",
+    "command": "cursorWordPartStartLeftSelect",
+    "when": "textInputFocus"
+  },
   // Select to end of word                  ctrl+shift+l
   {
     "key": "shift+alt+right",
@@ -277,6 +307,11 @@
     "key": "ctrl+shift+l",
     "command": "cursorWordEndRightSelect",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+l",
+    "command": "cursorWordPartRightSelect",
+    "when": "textInputFocus"
   },
   // Select to start of line                ctrl+shift+a
   {
@@ -377,6 +412,11 @@
     "command": "workbench.action.terminal.deleteWordRight",
     "when": "terminalFocus"
   },
+  {
+    "key": "ctrl+alt+delete",
+    "command": "deleteWordPartRight",
+    "when": "textInputFocus && !editorReadonly"
+  },
   // Delete to start of line                cmd backspace
   {
     "key": "cmd+backspace",
@@ -388,6 +428,11 @@
     "key": "cmd+delete",
     "command": "deleteAllRight",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+backspace",
+    "command": "deleteWordPartLeft",
+    "when": "textInputFocus && !editorReadonly"
   },
 
 
@@ -779,6 +824,28 @@
     "command": "search.action.replaceAll",
     "when": "replaceActive && searchViewletVisible && !findWidgetVisible"
   },
+  // Toggle Case Sensitive                     cmd alt C
+  {
+    "key": "alt+cmd+c",
+    "command": "toggleFindCaseSensitive",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+cmd+c",
+    "command": "toggleSearchCaseSensitive",
+    "when": "searchInputBoxFocus && searchViewletVisible"
+  },
+  // Toggle Whole Word                         cmd alt W
+    {
+      "key": "alt+cmd+w",
+      "command": "toggleFindWholeWord",
+      "when": "editorFocus"
+    },
+    {
+      "key": "alt+cmd+w",
+      "command": "toggleSearchWholeWord",
+      "when": "searchInputBoxFocus && searchViewletVisible"
+    },
 
 
   // # NAVIGATION
@@ -999,16 +1066,27 @@
     "key": "ctrl+cmd+]",
     "command": "workbench.action.moveEditorRightInGroup"
   },
-  // Move editor into previous group        cmd E left
+  // Move editor into above group            cmd E up
+  {
+    "key": "cmd+E up",
+    "command": "workbench.action.moveEditorToAboveGroup"
+  },
+  // Move editor into below group            cmd E down
+  {
+    "key": "cmd+E down",
+    "command": "workbench.action.moveEditorToBelowGroup"
+  },
+  // Move editor into left group            cmd E left
   {
     "key": "cmd+E left",
-    "command": "workbench.action.moveEditorToPreviousGroup"
+    "command": "workbench.action.moveEditorToLeftGroup"
   },
-  // Move editor into next group            cmd E right | cmd E cmd /
+  // Move editor into right group            cmd E right
   {
     "key": "cmd+E right",
-    "command": "workbench.action.moveEditorToNextGroup"
+    "command": "workbench.action.moveEditorToRightGroup"
   },
+  // Move editor into next group            cmd E cmd /
   {
     "key": "cmd+E cmd+/",
     "command": "workbench.action.moveEditorToNextGroup"
@@ -1058,6 +1136,26 @@
   },
   {
     "key": "cmd+3",
+    "command": "workbench.action.focusThirdEditorGroup"
+  },
+  {
+    "key": "cmd+4",
+    "command": "workbench.action.focusThirdEditorGroup"
+  },
+  {
+    "key": "cmd+5",
+    "command": "workbench.action.focusThirdEditorGroup"
+  },
+  {
+    "key": "cmd+6",
+    "command": "workbench.action.focusThirdEditorGroup"
+  },
+  {
+    "key": "cmd+7",
+    "command": "workbench.action.focusThirdEditorGroup"
+  },
+  {
+    "key": "cmd+8",
     "command": "workbench.action.focusThirdEditorGroup"
   },
   // Split editor                           cmd E /
@@ -1475,9 +1573,8 @@
   },
   // Collapse all                           ctrl+shift+h
   {
-    "key": "ctrl+shift+h",
-    "command": "workbench.files.action.collapseExplorerFolders",
-    "when": "listFocus"
+    "key": "ctrl+cmd+h",
+    "command": "workbench.files.action.collapseExplorerFolders"
   },
 
 
@@ -1591,13 +1688,13 @@
   },
   // Bookmark next                          cmd L N
   {
-    "key": "cmd+l n",
+    "key": "cmd+l ]",
     "command": "bookmarks.jumpToNext",
     "when": "editorTextFocus"
   },
   // Bookmark previous                      cmd L P
   {
-    "key": "cmd+l p",
+    "key": "cmd+l [",
     "command": "bookmarks.jumpToPrevious",
     "when": "editorTextFocus"
   },

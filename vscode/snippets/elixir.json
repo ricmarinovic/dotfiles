@@ -110,5 +110,5 @@
     "prefix": "mod",
     "description": "Module constant",
     "body": "__MODULE__"
-  },
+  }
 }

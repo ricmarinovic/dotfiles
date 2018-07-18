@@ -15,7 +15,7 @@
   "editor.renderIndentGuides": true,
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [ 80 ],
+  "editor.rulers": [ 98 ],
   "editor.scrollbar.vertical": "visible",
   "editor.scrollBeyondLastLine": true,
   "editor.snippetSuggestions": "top",
@@ -49,8 +49,6 @@
     "editor.rulers": [ 100 ]
   },
   "[elixir]": {
-    "editor.wordWrapColumn": 92,
-    "editor.rulers": [ 92 ],
     "editor.quickSuggestions": true
   },
   "[git-commit]": {
@@ -77,8 +75,12 @@
     "suppressLineUncommittedWarning": false,
     "suppressNoRepositoryWarning": false,
     "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
     "suppressUpdateNotice": true,
     "suppressWelcomeNotice": true
   },
-  "git.autofetch": true
+  "git.autofetch": true,
+  "gitlens.keymap": "none",
+  "zenMode.centerLayout": false,
+  "liveshare.guestApprovalRequired": true
 }

@@ -139,6 +139,8 @@
 | Replace in files                       | ⇧ ⌘ R      |
 | Replace one                            | ⌃ R        |
 | Replace all                            | ⌃ ⇧ R      |
+| Toggle Case Sensitive                  | ⌘ ⌥ C      |
+| Toggle Whole Word                      | ⌘ ⌥ W      |
 
 
 ### Navigation [G]
@@ -177,8 +179,12 @@
 | Focus # editor                         | ⌃ #        |
 | Move editor left                       | ⌃ ⌘ [      |
 | Move editor right                      | ⌃ ⌘ ]      |
-| Move editor into previous group        | ⌘ E ←      |
-| Move editor into next group            | ⌘ E → or ⌘ E ⌘ / |
+| Move editor into above group           | ⌘ E ↑      |
+| Move editor into below group           | ⌘ E ↓      |
+| Move editor into left group            | ⌘ E ←      |
+| Move editor into right group           | ⌘ E →      |
+| Move editor group up                   | ⌘ E ⌘ ↑    |
+| Move editor group down                 | ⌘ E ⌘ ↓    |
 | Move editor group left                 | ⌘ E ⌘ ←    |
 | Move editor group right                | ⌘ E ⌘ →    |
 | Join editors groups                    | ⌘ E J      |
@@ -271,7 +277,7 @@
 | Open file to side                      | ⌃ ⇧ L      |
 | Expand                                 | ⌃ L        |
 | Collapse                               | ⌃ H        |
-| Collapse all                           | ⌃ ⇧ H      |
+| Collapse all                           | ⌃ ⌘ H      |
 
 
 ### Terminal
