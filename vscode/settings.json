@@ -8,6 +8,7 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
   "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
@@ -15,7 +16,9 @@
   "editor.renderIndentGuides": true,
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [ 98 ],
+  "editor.rulers": [
+    98
+  ],
   "editor.scrollbar.vertical": "visible",
   "editor.scrollBeyondLastLine": true,
   "editor.snippetSuggestions": "top",
@@ -46,13 +49,17 @@
     "editor.wordWrap": "bounded",
     "editor.quickSuggestions": false,
     "editor.wordWrapColumn": 100,
-    "editor.rulers": [ 100 ]
+    "editor.rulers": [
+      100
+    ]
   },
   "[elixir]": {
     "editor.quickSuggestions": true
   },
   "[git-commit]": {
-    "editor.rulers": [ 72 ]
+    "editor.rulers": [
+      72
+    ]
   },
   "[rust]": {
     "editor.tabSize": 4,
@@ -82,5 +89,6 @@
   "git.autofetch": true,
   "gitlens.keymap": "none",
   "zenMode.centerLayout": false,
-  "liveshare.guestApprovalRequired": true
+  "liveshare.guestApprovalRequired": true,
+  "debug.enableAllHovers": true
 }

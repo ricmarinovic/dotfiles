@@ -251,13 +251,16 @@
 | Start                                  | ⌘ B S      |
 | Start (without debugging)              | ⌘ B ⌘ S    |
 | Restart                                | ⌘ B R      |
-| Continue                               | ⌘ B C      |
+| Continue                               | ⌘ B ⌘ →    |
 | Pause                                  | ⌘ B P      |
-| Step into                              | ⌘ B I      |
-| Step out                               | ⌘ B O      |
-| Step over                              | ⌘ B ⌘ O    |
+| Step into                              | ⌘ B ↓      |
+| Step out                               | ⌘ B ↑      |
+| Step over                              | ⌘ B →      |
 | Stop                                   | ⌘ B T      |
 | Show hover                             | ⌘ B H      |
+| Disable all breakpoints                | ⌘ B [      |
+| Enable all breakpoints                 | ⌘ B ]      |
+| Remove all breakpoints                 | ⌘ B ⌫      |
 
 
 ### Tasks [T]

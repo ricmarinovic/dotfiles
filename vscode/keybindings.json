@@ -1,7 +1,6 @@
 // Keybindings MAC
 [
   // # BASIC EDITING
-
   // ## CURSOR
   // Move cursor up                         ctrl+p
   {
@@ -75,7 +74,7 @@
   },
   {
     "key": "ctrl+u",
-    "command": "workbench.action.terminal.scrollDownUp",
+    "command": "workbench.action.terminal.scrollUpPage",
     "when": "terminalFocus"
   },
   {
@@ -180,7 +179,7 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "cmd+up",
+    "key": "ctrl+k",
     "command": "workbench.action.terminal.scrollUp",
     "when": "terminalFocus"
   },
@@ -191,12 +190,10 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "cmd+down",
+    "key": "ctrl+j",
     "command": "workbench.action.terminal.scrollDown",
     "when": "terminalFocus"
   },
-
-
   // SCROLL
   // Scroll line up                         ctrl+cmd+k
   {
@@ -222,8 +219,6 @@
     "command": "scrollPageDown",
     "when": "editorTextFocus"
   },
-
-
   // SELECT
   // Select up                              ctrl+shift+p
   {
@@ -381,8 +376,6 @@
     "command": "editor.action.selectHighlights",
     "when": "editorFocus"
   },
-
-
   // ## DELETE
   // Delete line                            shift cmd K
   {
@@ -434,8 +427,6 @@
     "command": "deleteWordPartLeft",
     "when": "textInputFocus && !editorReadonly"
   },
-
-
   // ## Line editing
   // Insert line up                         shift cmd enter
   {
@@ -460,7 +451,7 @@
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
   },
-    // Move line down                         ctrl cmd N
+  // Move line down                         ctrl cmd N
   {
     "key": "ctrl+cmd+n",
     "command": "editor.action.moveLinesDownAction",
@@ -472,8 +463,6 @@
     "command": "editor.action.joinLines",
     "when": "editorTextFocus && !editorReadonly"
   },
-
-
   // ## COPY
   // Cut selection                          cmd X
   {
@@ -535,8 +524,6 @@
     "command": "filesExplorer.paste",
     "when": "explorerViewletVisible && filesExplorerFocus"
   },
-
-
   // ## MULTIPLE CURSORS
   // Insert cursor up                       ctrl cmd up
   {
@@ -580,8 +567,6 @@
     "command": "cursorColumnSelectRight",
     "when": "editorTextFocus"
   },
-
-
   // ## INDENTATION
   // Indent line                            cmd ]
   {
@@ -601,8 +586,6 @@
     "command": "editor.action.reindentlines",
     "when": "editorTextFocus"
   },
-
-
   // ## FOLDING
   // Fold                                   cmd L -
   {
@@ -686,8 +669,6 @@
     "command": "editor.foldLevel9",
     "when": "editorTextFocus"
   },
-
-
   // ## OTHERS
   // Comment line toggle                    cmd /
   {
@@ -735,8 +716,6 @@
     "key": "cmd+l d",
     "command": "editor.action.sortLinesDescending"
   },
-
-
   // # SEARCH
   // Find                                   cmd F
   {
@@ -836,18 +815,16 @@
     "when": "searchInputBoxFocus && searchViewletVisible"
   },
   // Toggle Whole Word                         cmd alt W
-    {
-      "key": "alt+cmd+w",
-      "command": "toggleFindWholeWord",
-      "when": "editorFocus"
-    },
-    {
-      "key": "alt+cmd+w",
-      "command": "toggleSearchWholeWord",
-      "when": "searchInputBoxFocus && searchViewletVisible"
-    },
-
-
+  {
+    "key": "alt+cmd+w",
+    "command": "toggleFindWholeWord",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+cmd+w",
+    "command": "toggleSearchWholeWord",
+    "when": "searchInputBoxFocus && searchViewletVisible"
+  },
   // # NAVIGATION
   // Show all commands                      cmd P
   {
@@ -942,8 +919,6 @@
     "command": "workbench.action.navigateForward",
     "when": "editorTextFocus"
   },
-
-
   // # EDITOR
   // New file                               cmd N
   {
@@ -1198,8 +1173,6 @@
     "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
     "when": "inEditorsPicker && inQuickOpen"
   },
-
-
   // # DISPLAY
   // Sidebar toggle                         cmd M /
   {
@@ -1348,8 +1321,6 @@
     "key": "shift+cmd+-",
     "command": "workbench.action.zoomReset"
   },
-
-
   // # PREFERENCES
   // Open preferences                       cmd ,
   {
@@ -1435,8 +1406,6 @@
     "key": "ctrl+shift+cmd+i",
     "command": "workbench.action.toggleDevTools"
   },
-
-
   // # DEBUG
   // Breakpoint toggle                      cmd B cmd B
   {
@@ -1462,9 +1431,9 @@
     "command": "workbench.action.debug.restart",
     "when": "inDebugMode"
   },
-  // Continue                               cmd B C
+  // Continue                               cmd B cmd right
   {
-    "key": "cmd+b c",
+    "key": "cmd+b cmd+right",
     "command": "workbench.action.debug.continue",
     "when": "inDebugMode"
   },
@@ -1474,21 +1443,21 @@
     "command": "workbench.action.debug.pause",
     "when": "inDebugMode"
   },
-  // Step into                              cmd B I
+  // Step into                              cmd B down
   {
-    "key": "cmd+b i",
+    "key": "cmd+b down",
     "command": "workbench.action.debug.stepInto",
     "when": "inDebugMode"
   },
-  // Step out                               cmd B O
+  // Step out                               cmd B up
   {
-    "key": "cmd+b o",
+    "key": "cmd+b up",
     "command": "workbench.action.debug.stepOut",
     "when": "inDebugMode"
   },
-  // Step over                              cmd B cmd O
+  // Step over                              cmd B right
   {
-    "key": "cmd+b cmd+o",
+    "key": "cmd+b right",
     "command": "workbench.action.debug.stepOver",
     "when": "inDebugMode"
   },
@@ -1504,8 +1473,30 @@
     "command": "editor.debug.action.showDebugHover",
     "when": "editorTextFocus && inDebugMode"
   },
-
-
+  {
+    "key": "cmd+b [",
+    "command": "workbench.debug.viewlet.action.disableAllBreakpoints"
+  },
+  {
+    "key": "cmd+b cmd+[",
+    "command": "workbench.debug.viewlet.action.disableAllBreakpoints"
+  },
+  {
+    "key": "cmd+b ]",
+    "command": "workbench.debug.viewlet.action.enableAllBreakpoints"
+  },
+  {
+    "key": "cmd+b cmd+]",
+    "command": "workbench.debug.viewlet.action.enableAllBreakpoints"
+  },
+  {
+    "key": "cmd+b backspace",
+    "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
+  },
+  {
+    "key": "cmd+b cmd+backspace",
+    "command": "workbench.debug.viewlet.action.reapplyBreakpointsAction"
+  },
   // # TASKS
   // Run task                               cmd T cmd T
   {
@@ -1522,8 +1513,6 @@
     "key": "cmd+t t",
     "command": "workbench.action.tasks.test"
   },
-
-
   // # EXPLORER
   // New file                               cmd N
   {
@@ -1576,8 +1565,6 @@
     "key": "ctrl+cmd+h",
     "command": "workbench.files.action.collapseExplorerFolders"
   },
-
-
   // # TERMINAL
   // New terminal                           cmd T N
   {
@@ -1614,8 +1601,6 @@
     "command": "workbench.action.terminal.clear",
     "when": "terminalFocus"
   },
-
-
   // # GIT
   // Open changes                           cmd G C
   {
@@ -1677,8 +1662,6 @@
     "command": "editor.action.dirtydiff.next",
     "when": "editorTextFocus"
   },
-
-
   // # Bookmarks
   // Bookmark toggle                        cmd L B
   {
@@ -1725,7 +1708,6 @@
     "key": "cmd+l cmd+backspace",
     "command": "bookmarks.clearFromAllFiles"
   },
-
   // REMOVED CONFLICTS
   {
     "key": "enter",
@@ -1805,5 +1787,5 @@
   {
     "key": "cmd+e",
     "command": "-actions.findWithSelection"
-  }
+  },
 ]
