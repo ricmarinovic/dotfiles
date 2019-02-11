@@ -1,17 +1,10 @@
-# Git Config
-
 [user]
 	name = Ricardo Marinovic
 	email = marinovic.ricardo@gmail.com
 [core]
 	editor = code --wait
-	excludesfile = /Users/rkma/.gitignore_global
+	excludesfile = ~/.gitignore
 	autocrlf = input
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
 [color]
 	ui = true
 [pull]
@@ -19,22 +12,21 @@
 [merge]
 	ff = false
 [alias]
-  a = add
-  b = branch
-  bd = branch -D
-  c = commit
-  cm = commit -m
-  cl = clone
-  co = checkout
-  cob = checkout -b
-  d = diff
-  f = fetch
-  i = init
-	l = log --oneline --decorate
-  m = merge
-  p = pull
-  ps = push
-  r = rebase
-  rs = reset
-  rl = reflog
-  s = status
+	a = add
+	b = branch
+	bd = branch -D
+	c = commit
+	cl = clone
+	co = checkout
+	cob = checkout -b
+	d = diff
+	f = fetch
+	i = init
+	l = log
+	m = merge
+	p = pull
+	ps = push
+	r = rebase
+	rs = reset
+	rl = reflog
+	s = status

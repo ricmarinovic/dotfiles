@@ -5,21 +5,21 @@ set -e
 dir=$(pwd -P)
 cd $dir
 
-ln -shf $dir/git/gitconfig.symlink ~/.gitconfig
-ln -shf $dir/git/gitignore.symlink ~/.gitignore_global
-ln -shf $dir/system/bash_profile.symlink ~/.bash_profile
-ln -shf $dir/system/hyper.symlink ~/.hyper.js
+ln -sf $dir/git/gitconfig.symlink ~/.gitconfig
+ln -sf $dir/git/gitignore.symlink ~/.gitignore
+ln -sf $dir/system/bash_profile.symlink ~/.bashrc
 
-mkdir -p ~/Library/Application\ Support/Code/User
-ln -shf $dir/vscode/settings.json ~/Library/Application\ Support/Code/User/
-ln -shf $dir/vscode/keybindings.json ~/Library/Application\ Support/Code/User/
+mkdir -p ~/.config/Code/User
+ln -sf $dir/vscode/settings.json ~/.config/Code/User/
+ln -sf $dir/vscode/keybindings.json ~/.config/Code/User/
 
-ln -shf $dir/vscode/snippets/elixir.json ~/Library/Application\ Support/Code/User/snippets
-ln -shf $dir/vscode/snippets/javascript.json ~/Library/Application\ Support/Code/User/snippets
-ln -shf $dir/vscode/snippets/json.json ~/Library/Application\ Support/Code/User/snippets
-ln -shf $dir/vscode/snippets/jsonc.json ~/Library/Application\ Support/Code/User/snippets
-ln -shf $dir/vscode/snippets/markdown.json ~/Library/Application\ Support/Code/User/snippets
-ln -shf $dir/vscode/snippets/ruby.json ~/Library/Application\ Support/Code/User/snippets
-ln -shf $dir/vscode/snippets/rust.json ~/Library/Application\ Support/Code/User/snippets
+mkdir -p ~/.config/Code/User/snippets
+ln -sf $dir/vscode/snippets/elixir.json ~/.config/Code/User/snippets/elixir.json
+ln -sf $dir/vscode/snippets/javascript.json ~/.config/Code/User/snippets/javascript.json
+ln -sf $dir/vscode/snippets/json.json ~/.config/Code/User/snippets/json.json
+ln -sf $dir/vscode/snippets/jsonc.json ~/.config/Code/User/snippets/jsonc.json
+ln -sf $dir/vscode/snippets/markdown.json ~/.config/Code/User/snippets/markdown.json
+ln -sf $dir/vscode/snippets/ruby.json ~/.config/Code/User/snippets/ruby.json
+ln -sf $dir/vscode/snippets/rust.json ~/.config/Code/User/snippets/rust.json
 
 echo "Files linked!"

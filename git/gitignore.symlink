@@ -1,4 +1,5 @@
 .vscode
+.elixir_ls
 Podfile.lock
 
 # Compiled source #

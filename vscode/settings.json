@@ -1,17 +1,18 @@
 {
+  "breadcrumbs.enabled": false,
+  "debug.enableAllHovers": true,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.cursorBlinking": "blink",
   "editor.cursorStyle": "block",
   "editor.detectIndentation": false,
   "editor.dragAndDrop": false,
-  "editor.fontFamily": "'Fira Code', 'Source Code Pro', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'Fira Code', ' Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "editor.minimap.enabled": false,
-  "editor.multiCursorModifier": "ctrlCmd",
   "editor.occurrencesHighlight": false,
   "editor.renderIndentGuides": true,
   "editor.renderLineHighlight": "all",
@@ -24,7 +25,7 @@
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
   "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 80,
+  "editor.wordWrapColumn": 98,
   "explorer.autoReveal": true,
   "explorer.confirmDelete": true,
   "explorer.confirmDragAndDrop": true,
@@ -32,10 +33,13 @@
   "explorer.openEditors.visible": 9,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
   "html.format.endWithNewline": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "Fira Code",
   "terminal.integrated.fontSize": 13,
+  "window.enableMenuBarMnemonics": false,
+  "window.menuBarVisibility": "hidden",
   "window.newWindowDimensions": "fullscreen",
   "window.restoreFullscreen": true,
   "window.restoreWindows": "all",
@@ -45,6 +49,7 @@
   "workbench.quickOpen.closeOnFocusLost": false,
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
+  "zenMode.centerLayout": false,
   "[markdown]": {
     "editor.wordWrap": "bounded",
     "editor.quickSuggestions": false,
@@ -70,7 +75,9 @@
   "[python]": {
     "editor.tabSize": 4
   },
-  "bookmarks.treeview.visible": false,
+  "[cpp]": {
+    "editor.tabSize": 4
+  },
   "gitlens.codeLens.enabled": false,
   "gitlens.statusBar.enabled": false,
   "gitlens.gitExplorer.enabled": false,
@@ -86,9 +93,6 @@
     "suppressUpdateNotice": true,
     "suppressWelcomeNotice": true
   },
-  "git.autofetch": true,
   "gitlens.keymap": "none",
-  "zenMode.centerLayout": false,
-  "liveshare.guestApprovalRequired": true,
-  "debug.enableAllHovers": true
+  "gitlens.views.repositories.enabled": false,
 }
