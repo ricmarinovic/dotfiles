@@ -124,7 +124,6 @@ alias ll='ls -AlF'
 alias la='ls -A'
 alias l='ls -CF'
 alias mv='mv -iv'
-alias rm='rm -rf --'
 
 alias show='apt show'
 alias update='sudo apt-get update'
