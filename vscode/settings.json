@@ -80,7 +80,6 @@
   },
   "gitlens.codeLens.enabled": false,
   "gitlens.statusBar.enabled": false,
-  "gitlens.gitExplorer.enabled": false,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
