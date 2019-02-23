@@ -141,4 +141,5 @@ mcd () { command mkdir -p "$1" && cd "$1"; }
 export FZF_DEFAULT_OPTS="--bind='alt-o:execute(code {})'"
 export FZF_DEFAULT_COMMAND='fd --type f'
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$(yarn global bin):$PATH"
 eval "$(rbenv init -)"

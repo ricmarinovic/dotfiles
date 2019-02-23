@@ -1353,7 +1353,12 @@
   // Copy path of active file               alt K P
   {
     "key": "alt+k p",
-    "command": "workbench.action.files.copyPathOfActiveFile"
+    "command": "copyFilePath"
+  },
+  // Copy path of active file               alt K P
+  {
+    "key": "alt+k alt+p",
+    "command": "copyRelativeFilePath"
   },
   // Toggle minimap                         alt K M
   {

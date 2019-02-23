@@ -11,7 +11,7 @@
       "task": "phx.server",
       "taskArgs": [],
       "projectDir": "${workspaceRoot}",
-      "internalConsoleOptions": "neverOpen"
+      "internalConsoleOptions": "openSessionStart"
     },
     {
       "type": "mix_task",
