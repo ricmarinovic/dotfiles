@@ -1,6 +1,9 @@
+rkma_todo.md
+
+# Editor configuration #
+########################
 .vscode
 .elixir_ls
-Podfile.lock
 
 # Compiled source #
 ###################

@@ -1103,7 +1103,7 @@
     "key": "alt+e /",
     "command": "workbench.action.splitEditor"
   },
-  // Toggle editor group horizontal         alt E -
+  // Toggle editor group horizontal         alt E H
   {
     "key": "alt+e h",
     "command": "workbench.action.toggleEditorGroupLayout"
@@ -1365,7 +1365,7 @@
     "key": "alt+k m",
     "command": "editor.action.toggleMinimap"
   },
-  // TM Scopes                              ^alt I
+  // TM Scopes                              ctrl alt I
   {
     "key": "ctrl+alt+i",
     "command": "editor.action.inspectTMScopes",
@@ -1502,7 +1502,7 @@
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus"
   },
-  // Open file                              alt O | enter
+  // Open file                              alt L | enter
   {
     "key": "enter",
     "command": "list.select",
@@ -1513,7 +1513,7 @@
     "command": "list.select",
     "when": "listFocus"
   },
-  // Open file to side                      ctrl+shift+l
+  // Open file to side                      ctrl shift l
   {
     "key": "alt+enter",
     "command": "explorer.openToSide",
@@ -1530,7 +1530,7 @@
     "command": "list.collapse",
     "when": "listFocus"
   },
-  // Collapse all                           ctrl+shift+h
+  // Collapse all                           ctrl+alt+h
   {
     "key": "ctrl+alt+h",
     "command": "workbench.files.action.collapseExplorerFolders"

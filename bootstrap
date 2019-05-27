@@ -21,5 +21,6 @@ ln -sf $dir/vscode/snippets/jsonc.json ~/.config/Code/User/snippets/jsonc.json
 ln -sf $dir/vscode/snippets/markdown.json ~/.config/Code/User/snippets/markdown.json
 ln -sf $dir/vscode/snippets/ruby.json ~/.config/Code/User/snippets/ruby.json
 ln -sf $dir/vscode/snippets/rust.json ~/.config/Code/User/snippets/rust.json
+ln -sf $dir/vscode/snippets/global.code-snippets ~/.config/Code/User/snippets/global.code-snippets
 
 echo "Files linked!"

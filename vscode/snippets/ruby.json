@@ -1,5 +1,5 @@
 {
-  "Do...end block": {
+  "do/end block": {
     "prefix": "do",
     "body": [
       "do",
@@ -7,16 +7,30 @@
       "end"
     ]
   },
-
   "Pry": {
     "prefix": "pry",
     "body": "require 'pry'; binding.pry"
   },
-
-  "todo": {
-    "prefix": "todo",
+  "context": {
+    "prefix": "context",
     "body": [
-      "# TODO: $0"
+      "context \"$1\" do",
+      "\t$0",
+      "end"
+    ]
+  },
+  "should": {
+    "prefix": "should",
+    "body": [
+      "should \"$1\" do",
+      "\t$0",
+      "end"
+    ]
+  },
+  "assert": {
+    "prefix": "assert",
+    "body": [
+      "assert_equal($1, $2)"
     ]
   }
 }

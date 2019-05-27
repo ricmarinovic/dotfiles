@@ -8,7 +8,6 @@
     ],
     "description": "function"
   },
-
   "main": {
     "prefix": "main",
     "body": [
@@ -18,7 +17,6 @@
     ],
     "description": "main function"
   },
-
   "testmod": {
     "prefix": "testmod",
     "body": [
@@ -34,7 +32,6 @@
     ],
     "description": "module test"
   },
-
   "test": {
     "prefix": "test",
     "body": [
@@ -44,7 +41,6 @@
       "}"
     ]
   },
-
   "struct": {
     "prefix": "struct",
     "body": [
@@ -53,7 +49,6 @@
       "}"
     ]
   },
-
   "enum": {
     "prefix": "enum",
     "body": [
@@ -62,7 +57,6 @@
       "}"
     ]
   },
-
   "trait": {
     "prefix": "trait",
     "body": [
@@ -71,7 +65,6 @@
       "}"
     ]
   },
-
   "impl": {
     "prefix": "impl",
     "body": [
@@ -80,7 +73,6 @@
       "}"
     ]
   },
-
   "drop": {
     "prefix": "drop",
     "body": [
@@ -91,14 +83,6 @@
       "}"
     ]
   },
-
-  "todo": {
-    "prefix": "todo",
-    "body": [
-      "// TODO: $0"
-    ]
-  },
-
   "closure": {
     "prefix": "af",
     "body": [
@@ -107,7 +91,6 @@
       "}"
     ]
   },
-
   "match": {
     "prefix": "match",
     "body": [
@@ -116,14 +99,12 @@
       "}"
     ]
   },
-
   "derive": {
     "prefix": "derive",
     "body": [
       "#[derive(${1:Trait})]$0"
     ]
   },
-
   "assert_eq": {
     "prefix": "assert",
     "body": [

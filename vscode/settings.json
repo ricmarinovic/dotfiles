@@ -8,7 +8,6 @@
   "editor.dragAndDrop": false,
   "editor.fontFamily": "'Fira Code', ' Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
-  "editor.fontSize": 13,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
@@ -37,13 +36,13 @@
   "html.format.endWithNewline": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "Fira Code",
-  "terminal.integrated.fontSize": 13,
   "window.enableMenuBarMnemonics": false,
   "window.menuBarVisibility": "hidden",
   "window.newWindowDimensions": "fullscreen",
   "window.restoreFullscreen": true,
   "window.restoreWindows": "all",
   "window.zoomLevel": 0,
+  "window.titleBarStyle": "custom",
   "workbench.colorTheme": "Academie Syntax",
   "workbench.editor.enablePreview": false,
   "workbench.quickOpen.closeOnFocusLost": false,
@@ -72,11 +71,21 @@
   "[ruby]": {
     "editor.wordWrap": "off"
   },
+  "ruby.lint": {
+    "rubocop": {
+      "lint": true,
+      "rails": true
+    },
+  },
+  "ruby.lintDebounceTime": 500,
   "[python]": {
     "editor.tabSize": 4
   },
   "[cpp]": {
     "editor.tabSize": 4
+  },
+  "[vue]": {
+    "editor.formatOnSave": false
   },
   "gitlens.codeLens.enabled": false,
   "gitlens.statusBar.enabled": false,
@@ -95,5 +104,8 @@
   "gitlens.keymap": "none",
   "gitlens.views.repositories.enabled": false,
   "vetur.format.defaultFormatter.html": "js-beautify-html",
-  "window.titleBarStyle": "custom"
+  "vetur.experimental.templateInterpolationService": false,
+  "editor.fontSize": 13,
+  "workbench.editor.showTabs": true,
+  "workbench.panel.defaultLocation": "right"
 }
