@@ -8,6 +8,7 @@
   "editor.dragAndDrop": false,
   "editor.fontFamily": "'Fira Code', ' Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
+  "editor.fontSize": 13,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
@@ -34,6 +35,9 @@
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
   "html.format.endWithNewline": true,
+  "search.exclude": {
+    "**/.elixir_ls": true
+  },
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "Fira Code",
   "window.enableMenuBarMnemonics": false,
@@ -45,7 +49,9 @@
   "window.titleBarStyle": "custom",
   "workbench.colorTheme": "Academie Syntax",
   "workbench.editor.enablePreview": false,
+  "workbench.editor.showTabs": true,
   "workbench.quickOpen.closeOnFocusLost": false,
+  "workbench.panel.defaultLocation": "right",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "newUntitledFile",
   "zenMode.centerLayout": false,
@@ -104,8 +110,5 @@
   "gitlens.keymap": "none",
   "gitlens.views.repositories.enabled": false,
   "vetur.format.defaultFormatter.html": "js-beautify-html",
-  "vetur.experimental.templateInterpolationService": false,
-  "editor.fontSize": 13,
-  "workbench.editor.showTabs": true,
-  "workbench.panel.defaultLocation": "right"
+  "vetur.experimental.templateInterpolationService": false
 }
