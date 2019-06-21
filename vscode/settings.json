@@ -8,7 +8,6 @@
   "editor.dragAndDrop": false,
   "editor.fontFamily": "'Fira Code', ' Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
-  "editor.fontSize": 13,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,

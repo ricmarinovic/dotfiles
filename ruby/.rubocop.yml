@@ -1,0 +1,53 @@
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/Documentation:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: true
+  AllowParenthesesInMultilineCall: true
+  AllowParenthesesInChaining: true
+  EnforcedStyle: require_parentheses
+  IgnoreMacros: true
+  IgnoredMethods: ["require", "require_relative", "include", "test", "raise"]
+  IncludedMacros: []
+
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: true
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+Metrics/LineLength:
+  Max: 98
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Layout/AlignParameters:
+  Enabled: false
+
+Layout/AlignArguments:
+  Enabled: false
