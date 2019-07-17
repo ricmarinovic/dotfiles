@@ -125,6 +125,7 @@ alias e='code'
 alias bat='bat --theme TwoDark'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias be='bundle exec'
+alias bi='bundle install'
 
 alias ll='ls -AlF'
 alias la='ls -A'

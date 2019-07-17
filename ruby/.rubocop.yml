@@ -16,7 +16,17 @@ Style/MethodCallWithArgsParentheses:
   AllowParenthesesInChaining: true
   EnforcedStyle: require_parentheses
   IgnoreMacros: true
-  IgnoredMethods: ["require", "require_relative", "include", "test", "raise"]
+  IgnoredMethods:
+    [
+      "require",
+      "require_relative",
+      "include",
+      "test",
+      "raise",
+      "ruby",
+      "gem",
+      "source",
+    ]
   IncludedMacros: []
 
 Style/MethodCallWithoutArgsParentheses:

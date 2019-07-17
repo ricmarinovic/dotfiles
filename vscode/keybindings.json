@@ -1788,5 +1788,10 @@
     "key": "ctrl+p",
     "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
     "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "alt+f",
+    "command": "list.toggleKeyboardNavigation",
+    "when": "filesExplorerFocus"
   }
 ]

@@ -19,6 +19,7 @@
 	cl = clone
 	co = checkout
 	cob = checkout -b
+  cp = cherry-pick
 	d = diff
 	f = fetch
 	i = init

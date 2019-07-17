@@ -6,5 +6,19 @@
       "| :------------- | :------------- |",
       "| ${3:Item One      } | ${4:Item Two      } |$0"
     ]
+  },
+  "front matter": {
+    "prefix": "frontmatter",
+    "body": [
+      "---",
+      "date: $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND",
+      "title: \"$1\"",
+      "description: \"$2\"",
+      "featured_image: \"/images/posts/${3:mountains-lake.jpeg}\"",
+      "tags: $4",
+      "---",
+      "",
+      "$0"
+    ]
   }
 }
