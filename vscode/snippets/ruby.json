@@ -1,18 +1,18 @@
 {
-  "do/end block": {
-    "prefix": "do",
-    "body": [
-      "do",
-      "\t$1",
-      "end"
-    ]
-  },
   "Pry": {
     "prefix": "pry",
     "body": "require 'pry'; binding.pry"
   },
   "context": {
     "prefix": "context",
+    "body": [
+      "context \"$1\" do",
+      "\t$0",
+      "end"
+    ]
+  },
+  "describe": {
+    "prefix": "describe",
     "body": [
       "context \"$1\" do",
       "\t$0",

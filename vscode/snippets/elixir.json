@@ -11,13 +11,6 @@
       "def ${1:name}($2), do: $0"
     ]
   },
-  "Annonymous function": {
-    "prefix": "af",
-    "description": "Annonymous function",
-    "body": [
-      "fn (${1:}) -> $2 end$3"
-    ]
-  },
   "pry": {
     "prefix": "pry",
     "body": [
@@ -41,7 +34,7 @@
   "test": {
     "prefix": "test",
     "body": [
-      "test \"$1\" do",
+      "test \"$1\"${2:, %{$3\\}} do",
       "\t$0",
       "end"
     ]
@@ -50,8 +43,8 @@
     "description": "describe test",
     "prefix": "describe",
     "body": [
-      "describe $1 do",
-      "\t$2",
+      "describe \"$1\" do",
+      "\t$0",
       "end"
     ]
   },
@@ -59,5 +52,28 @@
     "prefix": "mod",
     "description": "Module constant",
     "body": "__MODULE__"
+  },
+  "assert": {
+    "prefix": "assert",
+    "body": [
+      "assert $0"
+    ]
+  },
+  "setup": {
+    "prefix": "setup",
+    "body": [
+      "setup ${1: %{$2\\}} do}",
+      "\t$3",
+      "\n\t{:ok, $4}",
+      "end"
+    ]
+  },
+  "do/end": {
+    "prefix": "do",
+    "body": [
+      "do",
+      "\t$0",
+      "end"
+    ]
   }
 }

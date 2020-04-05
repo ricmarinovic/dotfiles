@@ -6,7 +6,7 @@
   "editor.cursorStyle": "block",
   "editor.detectIndentation": false,
   "editor.dragAndDrop": false,
-  "editor.fontFamily": "'Fira Code', ' Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontFamily": "'Fira Code', 'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": false,
@@ -16,13 +16,14 @@
   "editor.renderIndentGuides": true,
   "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "boundary",
-  "editor.rulers": [98],
+  "editor.rulers": [98, 220],
   "editor.scrollbar.vertical": "visible",
   "editor.scrollBeyondLastLine": true,
   "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 98,
+  "emmet.includeLanguages": {"erb": "html", "HTML (EEx)": "html"},
   "explorer.autoReveal": true,
   "explorer.confirmDelete": true,
   "explorer.confirmDragAndDrop": true,
@@ -33,7 +34,9 @@
   "git.autofetch": true,
   "html.format.endWithNewline": true,
   "search.exclude": {
-    "**/.elixir_ls": true
+    "**/.elixir_ls": true,
+    "_build/*": true,
+    "deps": true
   },
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "Fira Code",
@@ -44,7 +47,6 @@
   "window.restoreWindows": "all",
   "window.zoomLevel": 0,
   "window.titleBarStyle": "custom",
-  "workbench.colorTheme": "Academie Syntax",
   "workbench.editor.enablePreview": false,
   "workbench.editor.showTabs": true,
   "workbench.quickOpen.closeOnFocusLost": false,
@@ -63,12 +65,16 @@
     "editor.formatOnSave": true
   },
   "[git-commit]": {
-    "editor.rulers": [72]
+    "editor.rulers": [80],
+    "editor.wordWrapColumn": 80
   },
   "[rust]": {
     "editor.tabSize": 4
   },
   "[ruby]": {
+    "editor.wordWrap": "off"
+  },
+  "[erb]": {
     "editor.wordWrap": "off"
   },
   "ruby.lint": {
@@ -83,6 +89,13 @@
   },
   "[cpp]": {
     "editor.tabSize": 4
+  },
+  "[c]": {
+    "editor.tabSize": 4
+  },
+  "[asm]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false
   },
   "gitlens.codeLens.enabled": false,
   "gitlens.statusBar.enabled": false,
@@ -103,5 +116,19 @@
   "vetur.format.defaultFormatter.html": "js-beautify-html",
   "vetur.experimental.templateInterpolationService": false,
   "workbench.list.automaticKeyboardNavigation": false,
-  "workbench.list.keyboardNavigation": "filter"
+  "workbench.list.keyboardNavigation": "filter",
+  "telemetry.enableTelemetry": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "scm.defaultViewMode": "tree",
+  "workbench.colorTheme": "Academie Syntax",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "task.autoDetect": "off",
+  "files.watcherExclude": {
+    "**/node_modules": true
+  },
+  "editor.fontSize": 15
 }

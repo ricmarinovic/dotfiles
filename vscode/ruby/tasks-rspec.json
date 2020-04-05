@@ -4,13 +4,10 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "test all",
+      "label": "rspec all",
       "type": "shell",
-      "command": "mix test --color",
-      "group": {
-        "kind": "test",
-        "isDefault": true
-      },
+      "command": "bundle exec rspec",
+      "group": "test",
       "presentation": {
         "echo": true,
         "reveal": "always",
@@ -23,15 +20,17 @@
         "cwd": "${workspaceFolder}"
       },
       "dependsOn": [
-        "linter"
+        "check rubocop",
+        "check erblint",
+        "check eslint"
       ],
-      "dependsOrder": "parallel",
-      "problemMatcher": "$mixTestFailure"
+      "dependsOrder": "sequence",
+      "problemMatcher": []
     },
     {
-      "label": "test stale",
+      "label": "rspec file",
       "type": "shell",
-      "command": "mix test --color --trace --stale",
+      "command": "bundle exec rspec ${file}",
       "group": "test",
       "presentation": {
         "echo": true,
@@ -44,66 +43,12 @@
       "options": {
         "cwd": "${workspaceFolder}"
       },
-      "problemMatcher": "$mixTestFailure"
+      "problemMatcher": []
     },
     {
-      "label": "test failed",
+      "label": "rspec line",
       "type": "shell",
-      "command": "mix test --color --trace --failed",
-      "group": "test",
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": false,
-        "clear": false
-      },
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "problemMatcher": "$mixTestFailure"
-    },
-    {
-      "label": "test file",
-      "type": "shell",
-      "command": "mix test ${file} --color",
-      "group": "test",
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": false,
-        "clear": false
-      },
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "problemMatcher": "$mixTestFailure"
-    },
-    {
-      "label": "test line",
-      "type": "shell",
-      "command": "mix test ${file}:${lineNumber} --color",
-      "group": "test",
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": false,
-        "clear": false
-      },
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "problemMatcher": "$mixTestFailure"
-    },
-    {
-      "label": "linter",
-      "type": "shell",
-      "command": "mix credo",
+      "command": "bundle exec rspec ${file}:${lineNumber}",
       "group": "test",
       "presentation": {
         "echo": true,
@@ -116,7 +61,76 @@
       "options": {
         "cwd": "${workspaceFolder}"
       },
-      "problemMatcher": "$mixTestFailure"
+      "problemMatcher": []
+    },
+    {
+      "label": "rspec failures",
+      "type": "shell",
+      "command": "bundle exec rspec --only-failures",
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "check rubocop",
+      "type": "shell",
+      "command": "bundle exec rubocop",
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "check erblint",
+      "type": "shell",
+      "command": "bundle exec erblint app/",
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "check eslint",
+      "type": "shell",
+      "command": "yarn eslint",
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false
+      },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
     }
   ]
 }

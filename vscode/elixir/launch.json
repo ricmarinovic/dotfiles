@@ -11,7 +11,7 @@
       "task": "phx.server",
       "taskArgs": [],
       "projectDir": "${workspaceRoot}",
-      "internalConsoleOptions": "openSessionStart"
+      "internalConsoleOptions": "openOnSessionStart"
     },
     {
       "type": "mix_task",
@@ -28,7 +28,7 @@
         "test/**/test_helper.exs",
         "test/**/*_test.exs"
       ],
-      "internalConsoleOptions": "openOnFirstSessionStart"
+      "internalConsoleOptions": "openOnSessionStart"
     }
   ]
 }

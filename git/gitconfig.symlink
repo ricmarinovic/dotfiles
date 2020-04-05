@@ -31,3 +31,6 @@
 	rs = reset
 	rl = reflog
 	s = status
+  st = stash
+  stp = stash pop
+  sta = stash apply
