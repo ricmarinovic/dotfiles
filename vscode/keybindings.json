@@ -694,16 +694,6 @@
     "command": "editor.foldLevel7",
     "when": "editorTextFocus"
   },
-  {
-    "key": "alt+l 8",
-    "command": "editor.foldLevel8",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+l 9",
-    "command": "editor.foldLevel9",
-    "when": "editorTextFocus"
-  },
   // ## OTHERS
   // Comment line toggle                    alt /
   {
@@ -1452,97 +1442,97 @@
     "key": "ctrl+shift+alt+i",
     "command": "workbench.action.toggleDevTools"
   },
-  // # DEBUG
-  // Breakpoint toggle                      alt B alt B
-  {
-    "key": "alt+b alt+b",
-    "command": "editor.debug.action.toggleBreakpoint",
-    "when": "editorTextFocus"
-  },
-  // Start                                  alt B S
-  {
-    "key": "alt+b s",
-    "command": "workbench.action.debug.start",
-    "when": "!inDebugMode"
-  },
-  // Start (without debugging)              alt B alt S
-  {
-    "key": "alt+b alt+s",
-    "command": "workbench.action.debug.run",
-    "when": "!inDebugMode"
-  },
-  // Restart                                alt B R
-  {
-    "key": "alt+b r",
-    "command": "workbench.action.debug.restart",
-    "when": "inDebugMode"
-  },
-  // Continue                               alt B alt right
-  {
-    "key": "alt+b alt+right",
-    "command": "workbench.action.debug.continue",
-    "when": "inDebugMode"
-  },
-  // Pause                                  alt B P
-  {
-    "key": "alt+b p",
-    "command": "workbench.action.debug.pause",
-    "when": "inDebugMode"
-  },
-  // Step into                              alt B down
-  {
-    "key": "alt+b down",
-    "command": "workbench.action.debug.stepInto",
-    "when": "inDebugMode"
-  },
-  // Step out                               alt B up
-  {
-    "key": "alt+b up",
-    "command": "workbench.action.debug.stepOut",
-    "when": "inDebugMode"
-  },
-  // Step over                              alt B right
-  {
-    "key": "alt+b right",
-    "command": "workbench.action.debug.stepOver",
-    "when": "inDebugMode"
-  },
-  // Stop                                   alt B T
-  {
-    "key": "alt+b t",
-    "command": "workbench.action.debug.stop",
-    "when": "inDebugMode"
-  },
-  // Show hover                             alt B H
-  {
-    "key": "alt+b h",
-    "command": "editor.debug.action.showDebugHover",
-    "when": "editorTextFocus && inDebugMode"
-  },
-  {
-    "key": "alt+b [",
-    "command": "workbench.debug.viewlet.action.disableAllBreakpoints"
-  },
-  {
-    "key": "alt+b alt+[",
-    "command": "workbench.debug.viewlet.action.disableAllBreakpoints"
-  },
-  {
-    "key": "alt+b ]",
-    "command": "workbench.debug.viewlet.action.enableAllBreakpoints"
-  },
-  {
-    "key": "alt+b alt+]",
-    "command": "workbench.debug.viewlet.action.enableAllBreakpoints"
-  },
-  {
-    "key": "alt+b backspace",
-    "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
-  },
-  {
-    "key": "alt+b alt+backspace",
-    "command": "workbench.debug.viewlet.action.reapplyBreakpointsAction"
-  },
+  // // # DEBUG
+  // // Breakpoint toggle                      alt B alt B
+  // {
+  //   "key": "alt+b alt+b",
+  //   "command": "editor.debug.action.toggleBreakpoint",
+  //   "when": "editorTextFocus"
+  // },
+  // // Start                                  alt B S
+  // {
+  //   "key": "alt+b s",
+  //   "command": "workbench.action.debug.start",
+  //   "when": "!inDebugMode"
+  // },
+  // // Start (without debugging)              alt B alt S
+  // {
+  //   "key": "alt+b alt+s",
+  //   "command": "workbench.action.debug.run",
+  //   "when": "!inDebugMode"
+  // },
+  // // Restart                                alt B R
+  // {
+  //   "key": "alt+b r",
+  //   "command": "workbench.action.debug.restart",
+  //   "when": "inDebugMode"
+  // },
+  // // Continue                               alt B alt right
+  // {
+  //   "key": "alt+b alt+right",
+  //   "command": "workbench.action.debug.continue",
+  //   "when": "inDebugMode"
+  // },
+  // // Pause                                  alt B P
+  // {
+  //   "key": "alt+b p",
+  //   "command": "workbench.action.debug.pause",
+  //   "when": "inDebugMode"
+  // },
+  // // Step into                              alt B down
+  // {
+  //   "key": "alt+b down",
+  //   "command": "workbench.action.debug.stepInto",
+  //   "when": "inDebugMode"
+  // },
+  // // Step out                               alt B up
+  // {
+  //   "key": "alt+b up",
+  //   "command": "workbench.action.debug.stepOut",
+  //   "when": "inDebugMode"
+  // },
+  // // Step over                              alt B right
+  // {
+  //   "key": "alt+b right",
+  //   "command": "workbench.action.debug.stepOver",
+  //   "when": "inDebugMode"
+  // },
+  // // Stop                                   alt B T
+  // {
+  //   "key": "alt+b t",
+  //   "command": "workbench.action.debug.stop",
+  //   "when": "inDebugMode"
+  // },
+  // // Show hover                             alt B Hs
+  // {
+  //   "key": "alt+b h",
+  //   "command": "editor.debug.action.showDebugHover",
+  //   "when": "editorTextFocus && inDebugMode"
+  // },
+  // {
+  //   "key": "alt+b [",
+  //   "command": "workbench.debug.viewlet.action.disableAllBreakpoints"
+  // },
+  // {
+  //   "key": "alt+b alt+[",
+  //   "command": "workbench.debug.viewlet.action.disableAllBreakpoints"
+  // },
+  // {
+  //   "key": "alt+b ]",
+  //   "command": "workbench.debug.viewlet.action.enableAllBreakpoints"
+  // },
+  // {
+  //   "key": "alt+b alt+]",
+  //   "command": "workbench.debug.viewlet.action.enableAllBreakpoints"
+  // },
+  // {
+  //   "key": "alt+b backspace",
+  //   "command": "workbench.debug.viewlet.action.removeAllBreakpoints"
+  // },
+  // {
+  //   "key": "alt+b alt+backspace",
+  //   "command": "workbench.debug.viewlet.action.reapplyBreakpointsAction"
+  // },
   // # TASKS
   // Run task                               alt T alt T
   {
@@ -1831,5 +1821,10 @@
     "key": "shift+alt+o",
     "command": "-editor.action.organizeImports",
     "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+  },
+  {
+    "key": "alt+]",
+    "command": "toggleSearchEditorContextLines",
+    "when": "inSearchEditor"
   }
 ]

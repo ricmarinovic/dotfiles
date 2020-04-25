@@ -23,7 +23,7 @@
         "cwd": "${workspaceFolder}"
       },
       "dependsOn": [
-        "linter"
+        // "linter"
       ],
       "dependsOrder": "parallel",
       "problemMatcher": "$mixTestFailure"

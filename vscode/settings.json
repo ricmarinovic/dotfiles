@@ -33,6 +33,7 @@
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
   "html.format.endWithNewline": true,
+  "search.quickOpen.history.filterSortOrder": "recency",
   "search.exclude": {
     "**/.elixir_ls": true,
     "_build/*": true,
@@ -69,7 +70,8 @@
     "editor.wordWrapColumn": 80
   },
   "[rust]": {
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true
   },
   "[ruby]": {
     "editor.wordWrap": "off"
@@ -91,7 +93,8 @@
     "editor.tabSize": 4
   },
   "[c]": {
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true
   },
   "[asm]": {
     "editor.tabSize": 4,
@@ -113,15 +116,12 @@
   },
   "gitlens.keymap": "none",
   "gitlens.views.repositories.enabled": false,
-  "vetur.format.defaultFormatter.html": "js-beautify-html",
-  "vetur.experimental.templateInterpolationService": false,
   "workbench.list.automaticKeyboardNavigation": false,
   "workbench.list.keyboardNavigation": "filter",
   "telemetry.enableTelemetry": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "scm.defaultViewMode": "tree",
   "workbench.colorTheme": "Academie Syntax",
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -130,5 +130,21 @@
   "files.watcherExclude": {
     "**/node_modules": true
   },
-  "editor.fontSize": 15
+  "terminal.integrated.fontSize": 15,
+  "editor.fontSize": 15,
+  "terminal.integrated.allowMnemonics": true,
+  "scm.alwaysShowProviders": true,
+  "git.autoRepositoryDetection": "openEditors",
+  "debug.console.closeOnEnd": true,
+  "debug.console.fontSize": 15,
+  "debug.openDebug": "openOnDebugBreak",
+  "debug.showInStatusBar": "never",
+  "debug.toolBarLocation": "docked",
+  "debug.showBreakpointsInOverviewRuler": true,
+  "debug.openExplorerOnEnd": true,
+  "debug.onTaskErrors": "showErrors",
+  "debug.internalConsoleOptions": "neverOpen",
+  "files.associations": {
+    "*.html.leex": "HTML (EEx)"
+  }
 }

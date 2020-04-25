@@ -62,7 +62,7 @@
   "setup": {
     "prefix": "setup",
     "body": [
-      "setup ${1: %{$2\\}} do}",
+      "setup ${1: %{$2\\}} do",
       "\t$3",
       "\n\t{:ok, $4}",
       "end"
