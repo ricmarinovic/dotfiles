@@ -1,36 +1,36 @@
 [user]
-	name = Ricardo Marinovic
-	email = marinovic.ricardo@gmail.com
+  name = Ricardo Marinovic
+  email = marinovic.ricardo@gmail.com
 [core]
-	editor = code --wait
-	excludesfile = ~/.gitignore
-	autocrlf = input
+  editor = code --wait
+  excludesfile = ~/.gitignore
+  autocrlf = input
 [color]
-	ui = true
+  ui = true
 [pull]
-	rebase = true
+  rebase = true
 [merge]
-	ff = false
+  ff = false
 [alias]
-	a = add
-	b = branch
-	bd = branch -D
-	c = commit
-	cl = clone
-	co = checkout
-	cob = checkout -b
+  a = add
+  b = branch
+  bd = branch -D
+  c = commit
+  cl = clone
+  co = checkout
+  cob = checkout -b
   cp = cherry-pick
-	d = diff
-	f = fetch
-	i = init
-	l = log
-	m = merge
-	p = pull
-	ps = push
-	r = rebase
-	rs = reset
-	rl = reflog
-	s = status
-  st = stash
+  d = diff
+  f = fetch
+  i = init
+  l = log
+  m = merge
+  p = pull
+  ps = push
+  r = rebase
+  rs = reset
+  rl = reflog
+  s = status
+  st = stash --include-untracked
   stp = stash pop
   sta = stash apply

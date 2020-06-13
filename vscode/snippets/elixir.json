@@ -75,5 +75,254 @@
       "\t$0",
       "end"
     ]
+  },
+  "lv_module": {
+    "prefix": "lv",
+    "body": [
+      "defmodule $1.${2}Live do",
+      "  use $1, :live_view$0",
+      "end"
+    ],
+    "description": "LiveView module"
+  },
+  "lv_mount": {
+    "prefix": "mount",
+    "body": [
+      "def mount(_params, _session, socket) do",
+      "  socket = assign(socket, ${1:key}: ${2:value})",
+      "  {:ok, socket}",
+      "end"
+    ],
+    "description": "LiveView mount function"
+  },
+  "lv_rend": {
+    "prefix": "render",
+    "body": [
+      "def render(assigns) do",
+      "  ~L\"\"\"",
+      "  ${0}",
+      "  \"\"\"",
+      "end"
+    ],
+    "description": "LiveView render function"
+  },
+  "lv_handle_event": {
+    "prefix": "he",
+    "body": [
+      "def handle_event(${1:event}, _, socket) do",
+      "  socket = assign(socket, ${2:key}: ${3:value})",
+      "  {:noreply, socket}",
+      "end"
+    ],
+    "description": "LiveView handle_event function"
+  },
+  "lv_handle_info": {
+    "prefix": "hi",
+    "body": [
+      "def handle_info(${1:message}, socket) do",
+      "  socket = assign(socket, ${2:key}: ${3:value})",
+      "  {:noreply, socket}",
+      "end"
+    ],
+    "description": "LiveView handle_info function"
+  },
+  "eex_render_block": {
+    "prefix": "et",
+    "body": [
+      "<%= $1 %>"
+    ],
+    "description": "<%= %> render block"
+  },
+  "eex_end_tag": {
+    "prefix": "eend",
+    "body": [
+      "<% end %>$1"
+    ],
+    "description": "<% end %> end tag"
+  },
+  "eex_h1": {
+    "prefix": "h1",
+    "body": [
+      "<h1>${0}</h1>"
+    ],
+    "description": "EEx h1"
+  },
+  "eex_div_class": {
+    "prefix": "div",
+    "body": [
+      "<div class=\"${1}\">",
+      "  ${0}",
+      "</div>",
+      ""
+    ],
+    "description": "EEx div with class"
+  },
+  "eex_span_class": {
+    "prefix": "span",
+    "body": [
+      "<span class=\"${1}\">",
+      "  ${0}",
+      "</span>",
+      ""
+    ],
+    "description": "EEx span with class"
+  },
+  "eex_span_style": {
+    "prefix": "spans",
+    "body": [
+      "<span style=\"${1}\">",
+      "  ${0}",
+      "</span>",
+      ""
+    ],
+    "description": "EEx span with width"
+  },
+  "eex_div_id": {
+    "prefix": "divi",
+    "body": [
+      "<div id=\"${1}\">",
+      "  ${0}",
+      "</div>",
+      ""
+    ],
+    "description": "EEx div with id"
+  },
+  "eex_form": {
+    "prefix": "form",
+    "body": [
+      "<form>",
+      "  ${0}",
+      "</form>",
+      ""
+    ],
+    "description": "EEx form"
+  },
+  "eex_button": {
+    "prefix": "button",
+    "body": [
+      "<button>",
+      "  ${0}",
+      "</button>"
+    ],
+    "description": "EEx button"
+  },
+  "eex_img": {
+    "prefix": "img",
+    "body": [
+      "<img src=\"${1}\">"
+    ],
+    "description": "EEx img"
+  },
+  "eex_input": {
+    "prefix": "input",
+    "body": [
+      "<input type=\"text\" name=\"${1}\" value=\"${2}\"",
+      "       placeholder=\"${3}\" />"
+    ],
+    "description": "LiveView text input"
+  },
+  "for": {
+    "prefix": "efor",
+    "body": [
+      "<%= for ${1:item} <- @$1s do %>",
+      "  $2",
+      "<% end %>"
+    ],
+    "description": "EEx for"
+  },
+  "eex_if": {
+    "prefix": "eif",
+    "body": [
+      "<%= if $1 do %>",
+      "  $2",
+      "<% end %>"
+    ],
+    "description": "EEx if"
+  },
+  "eex_if_else": {
+    "prefix": "eife",
+    "body": [
+      "<%= if $1 do %>",
+      "  $2",
+      "<% else %>",
+      "  $3",
+      "<% end %>"
+    ],
+    "description": "EEx if else"
+  },
+  "eex_else": {
+    "prefix": "eelse",
+    "body": [
+      "<% else %>"
+    ],
+    "description": "EEx else"
+  },
+  "eex_form_for": {
+    "prefix": "eff",
+    "body": [
+      "<%= form_for @${1:changeset}, ${2:url}, ${3:[]}, fn f -> %>",
+      "  $4",
+      "<% end %>"
+    ],
+    "description": "EEx form_for"
+  },
+  "eex_error_tag": {
+    "prefix": "eet",
+    "body": [
+      "<%= error_tag ${1:f}, :${2:field} %>"
+    ],
+    "description": "EEx form error tag"
+  },
+  "eex_label": {
+    "prefix": "ela",
+    "body": [
+      "<%= label ${1:f}, :${2:field}, \"${3:Text}\" %>"
+    ],
+    "description": "EEx form label"
+  },
+  "eex_submit": {
+    "prefix": "esub",
+    "body": [
+      "<%= submit ${1:Text} %>"
+    ],
+    "description": "EEx form submit"
+  },
+  "eex_submit_c": {
+    "prefix": "esubc",
+    "body": [
+      "<%= submit ${1:Text}, class: \"${3:btn btn-primary}\" %>"
+    ],
+    "description": "eex form submit with class"
+  },
+  "eex_text_input": {
+    "prefix": "eti",
+    "body": [
+      "<%= text_input ${1:f}, :${2:field} %>"
+    ],
+    "description": "eex form text input"
+  },
+  "eex_password_input": {
+    "prefix": "epi",
+    "body": [
+      "<%= password_input ${1:f}, :${2:field} %>"
+    ],
+    "description": "eex form password input"
+  },
+  "eex_option": {
+    "prefix": "option",
+    "body": [
+      "<option value=\"${1}\">${0}</option>"
+    ],
+    "description": "eex option"
+  },
+  "eex_datalist": {
+    "prefix": "data",
+    "body": [
+      "<datalist id=\"${1}\">",
+      "  ${0}",
+      "</datalist>",
+      ""
+    ],
+    "description": "eex datalist"
   }
 }

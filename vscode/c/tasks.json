@@ -35,9 +35,10 @@
         "${fileDirname}/**.c",
         "-o",
         "${fileDirname}/${fileBasenameNoExtension}",
-        "-Wall"
-        // "-Wrestrict",
-        // "-Wpedantic"
+        "-Wall",
+        "-Wextra",
+        "-Wrestrict",
+        "-Wpedantic"
       ],
       "options": {
         "cwd": "/usr/bin"

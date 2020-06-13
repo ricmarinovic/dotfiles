@@ -8,19 +8,25 @@
   "fixme": {
     "prefix": "fixme",
     "body": [
-      "$LINE_COMMENT FIXME: $0"
+      "$LINE_COMMENT FIX: $0"
+    ]
+  },
+  "note": {
+    "prefix": "note",
+    "body": [
+      "$LINE_COMMENT NOTE: $0"
     ]
   },
   "optimization opportunity": {
-    "prefix": "optm",
+    "prefix": "optmize",
     "body": [
-      "$LINE_COMMENT ! Optimization opportunity: $0"
+      "$LINE_COMMENT OPTIMIZE: $0"
     ]
   },
-  "date": {
-    "prefix": "date",
+  "nocommit": {
+    "prefix": "nocommit",
     "body": [
-      "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE"
+      "$LINE_COMMENT !nocommit"
     ]
   }
 }

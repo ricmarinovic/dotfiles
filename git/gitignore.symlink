@@ -1,10 +1,12 @@
 rkma_todo.md
 .env.*.local
+*.todo
 
 # Editor configuration #
 ########################
 .vscode
 .elixir_ls
+.tool-versions
 
 # Compiled source #
 ###################

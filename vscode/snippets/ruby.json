@@ -14,7 +14,7 @@
   "describe": {
     "prefix": "describe",
     "body": [
-      "context \"$1\" do",
+      "describe \"$1\" do",
       "\t$0",
       "end"
     ]
@@ -31,6 +31,42 @@
     "prefix": "assert",
     "body": [
       "assert_equal($1, $2)"
+    ]
+  },
+  "let": {
+    "prefix": "let",
+    "body": [
+      "let(:$1) { $0 }"
+    ]
+  },
+  "letp": {
+    "prefix": "letp",
+    "body": [
+      "let(:$1) do",
+      "\t$0",
+      "end"
+    ]
+  },
+  "it": {
+    "prefix": "it",
+    "body": [
+      "it do",
+      "\t$0",
+      "end"
+    ]
+  },
+  "expect": {
+    "prefix": "expect",
+    "body": [
+      "expect($1).to $0"
+    ]
+  },
+  "before": {
+    "prefix": "before",
+    "body": [
+      "before do",
+      "\t$0",
+      "end"
     ]
   }
 }

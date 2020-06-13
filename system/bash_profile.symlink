@@ -138,6 +138,11 @@ alias show='apt show'
 alias update='sudo apt-get update'
 alias install='update && sudo apt-get install'
 alias upgrade='update && sudo apt-get install --only-upgrade'
+alias grafeno='cd ~/work/grafeno/pagamentos'
+alias egrafeno='cd ~/work/grafeno/pagamentos && code .'
+alias dotfiles='code ~/.dotfiles'
+alias rreset='rails db:drop && rails db:create && rails db:migrate && rails db:seed'
+alias docker='sudo docker'
 
 cd () { builtin cd "$@"; ls; }
 mcd () { command mkdir -p "$1" && cd "$1"; }
@@ -145,10 +150,8 @@ mcd () { command mkdir -p "$1" && cd "$1"; }
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 export FZF_DEFAULT_OPTS="--bind='alt-o:execute(code {})'"
 export FZF_DEFAULT_COMMAND='fd --type f'
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.cargo/env:$PATH"
-export PATH="$(yarn global bin):$PATH"
-eval "$(rbenv init -)"
 export PATH=~/bin:$PATH
 export PLUG_EDITOR='vscode://file/__FILE__:__LINE__'
 export ERL_AFLAGS="-kernel shell_history enabled"
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash

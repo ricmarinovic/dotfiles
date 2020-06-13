@@ -144,11 +144,6 @@
   },
   {
     "key": "ctrl+u",
-    "command": "workbench.action.terminal.scrollUpPage",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+u",
     "command": "selectPrevPageSuggestion",
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
@@ -162,11 +157,6 @@
     "key": "ctrl+d",
     "command": "cursorPageDown",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+d",
-    "command": "workbench.action.terminal.scrollDownPage",
-    "when": "terminalFocus"
   },
   {
     "key": "ctrl+d",
@@ -556,8 +546,13 @@
   },
   {
     "key": "alt+v",
+    "command": "editor.action.clipboardPasteAction",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "alt+v",
     "command": "filesExplorer.paste",
-    "when": "explorerViewletVisible && filesExplorerFocus"
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
   },
   // ## MULTIPLE CURSORS
   // Insert cursor up                       ctrl alt up
@@ -822,11 +817,6 @@
     "command": "workbench.action.replaceInFiles"
   },
   // Replace one                            ctrl R
-  {
-    "key": "ctrl+r",
-    "command": "editor.action.replaceOne",
-    "when": "editorFocus && findWidgetVisible"
-  },
   {
     "key": "ctrl+r",
     "command": "search.action.replace",
@@ -1826,5 +1816,103 @@
     "key": "alt+]",
     "command": "toggleSearchEditorContextLines",
     "when": "inSearchEditor"
+  },
+  {
+    "key": "f12",
+    "command": "search.action.openInEditor",
+    "when": "searchViewletVisible"
+  },
+  {
+    "key": "alt+t d",
+    "command": "todo.toggleDone",
+    "when": "editorTextFocus && editorLangId == 'todo'"
+  },
+  {
+    "key": "alt+t c",
+    "command": "todo.toggleCancelled",
+    "when": "editorTextFocus && editorLangId == 'todo'"
+  },
+  {
+    "key": "alt+t s",
+    "command": "todo.toggleStart",
+    "when": "editorTextFocus && editorLangId == 'todo'"
+  },
+  {
+    "key": "alt+t alt+enter",
+    "command": "todo.toggleBox",
+    "when": "editorTextFocus && editorLangId == 'todo'"
+  },
+  {
+    "key": "alt+t enter",
+    "command": "todo.toggleBox",
+    "when": "editorTextFocus && editorLangId == 'todo'"
+  },
+  {
+    "key": "alt+t a",
+    "command": "todo.archive",
+    "when": "editorTextFocus && editorLangId == 'todo'"
+  },
+  {
+    "key": "alt+g t",
+    "command": "todo.open"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-liveshare.join",
+    "when": "liveshare:state != 'Joined' && liveshare:state != 'Shared'"
+  },
+  {
+    "key": "ctrl+alt+/",
+    "command": "-liveshare.followToTheSide",
+    "when": "liveshare:hasCollaborators"
+  },
+  {
+    "key": "ctrl+alt+f",
+    "command": "-liveshare.unfollow",
+    "when": "liveshare:hasCollaborators && liveshare:isFollowing"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "-liveshare.join",
+    "when": "liveshare:state != 'Joined' && liveshare:state != 'Shared'"
+  },
+  {
+    "key": "ctrl+alt+f",
+    "command": "-liveshare.follow",
+    "when": "liveshare:hasCollaborators && !liveshare:isFollowing"
+  },
+  {
+    "key": "alt+k enter",
+    "command": "workbench.action.pinEditor",
+    "when": "config.workbench.editor.showTabs && !editorSticky"
+  },
+  {
+    "key": "ctrl+k shift+enter",
+    "command": "-workbench.action.pinEditor",
+    "when": "config.workbench.editor.showTabs && !editorSticky"
+  },
+  {
+    "key": "alt+k enter",
+    "command": "workbench.action.unpinEditor",
+    "when": "config.workbench.editor.showTabs && editorSticky"
+  },
+  {
+    "key": "ctrl+k shift+enter",
+    "command": "-workbench.action.unpinEditor",
+    "when": "config.workbench.editor.showTabs && editorSticky"
+  },
+  {
+    "key": "alt+w",
+    "command": "workbench.action.closeGroup",
+    "when": "activeEditorGroupEmpty && multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.closeGroup",
+    "when": "activeEditorGroupEmpty && multipleEditorGroups"
   }
 ]
