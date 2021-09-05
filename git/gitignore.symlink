@@ -1,6 +1,7 @@
 rkma_todo.md
 .env.*.local
 *.todo
+.~lock*
 
 # Editor configuration #
 ########################

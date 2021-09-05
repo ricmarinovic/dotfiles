@@ -18,7 +18,7 @@
   "Console log": {
     "prefix": "log",
     "description": "Console log",
-    "body": "console.log($1)"
+    "body": "console.log($1);"
   },
 
   "Class": {

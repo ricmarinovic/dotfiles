@@ -15,8 +15,7 @@
     "prefix": "pry",
     "body": [
       "require IEx",
-      "IEx.pry",
-      "$0"
+      "IEx.pry()"
     ]
   },
   "puts": {
@@ -324,5 +323,22 @@
       ""
     ],
     "description": "eex datalist"
+  },
+  "genserver": {
+    "prefix": "genserver",
+    "body": [
+      "defmodule $1 do",
+      "\tuse GenServer\n",
+      "\tdef start_link",
+      "\t\tGenServer.start_link(__MODULE__, nil)",
+      "\tend\n",
+      "\tdef init(_) do",
+      "\t\t{:ok, nil}",
+      "\tend\n",
+      "\tdef $2 do",
+      "\t\t$0",
+      "\tend",
+      "end"
+    ]
   }
 }

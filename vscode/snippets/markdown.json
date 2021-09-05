@@ -21,10 +21,73 @@
       "| ${3:Item One      } | ${4:Item Two      } |$0"
     ]
   },
+  "row": {
+    "prefix": "row",
+    "body": [
+      "| ${1:Item One      } | ${2:Item Two      } |$0"
+    ]
+  },
+  "col": {
+    "prefix": "col",
+    "body": [
+      " ${1:Item Two      } |$0"
+    ]
+  },
   "date": {
     "prefix": "date",
     "body": [
       "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE"
+    ]
+  },
+  "date entry": {
+    "prefix": "dd",
+    "body": [
+      "## $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE $CURRENT_DAY_NAME_SHORT"
+    ]
+  },
+  "entry": {
+    "prefix": "hh",
+    "body": [
+      "- [$CURRENT_HOUR:$CURRENT_MINUTE] "
+    ]
+  },
+  "ruby": {
+    "prefix": "ruby",
+    "body": [
+      "```ruby",
+      "$0",
+      "```",
+      ""
+    ]
+  },
+  "elixir": {
+    "prefix": "elixir",
+    "body": [
+      "```elixir",
+      "$0",
+      "```",
+      ""
+    ]
+  },
+  "shell": {
+    "prefix": "shell",
+    "body": [
+      "```shell",
+      "$0",
+      "```",
+      ""
+    ]
+  },
+  "link": {
+    "prefix": "link",
+    "body": [
+      "[$2]($1)$0"
+    ]
+  },
+  "rule": {
+    "prefix": "rule",
+    "body": [
+      "-------------------------------------\n\n"
     ]
   }
 }
